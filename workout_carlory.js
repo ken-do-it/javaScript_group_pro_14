@@ -1,19 +1,14 @@
-let exercisesPhoto = document.getElementById('exercises-photo')
-
 document.getElementById('weight').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         calculateCalories();
-    } //엔터키 활성화
+    }
 });
-
 
 function calculateCalories() {
     let exerciseType = document.getElementById('exerciseType').value;
     let intensity = document.getElementById('intensity').value;
     let duration = document.getElementById('duration').value;
     let weight = document.getElementById('weight').value;
-
-    
 
     if (!duration || !weight) {
         alert('Please fill out all input fields.');
@@ -46,28 +41,38 @@ function calculateCalories() {
     }
 
     const caloriesBurned = (metValue * weight * duration) / 60;
-    document.getElementById('result').textContent = `Calories Burned: ${caloriesBurned.toFixed(2)} kcal`;
+    document.getElementById('result').innerHTML = `<i class="fa-solid fa-fire" style=color:red;></i> Calories Burned: ${caloriesBurned.toFixed(2)} kcal`;
+
+    // Store values in localStorage
+    localStorage.setItem('caloriesBurned', caloriesBurned);
+    localStorage.setItem('workoutTime', duration);
 }
 
 document.getElementById('exerciseType').addEventListener('change', function() {
     const exerciseType = document.getElementById('exerciseType').value;
     const exerciseImage = document.getElementById('exerciseImage');
-    if (exerciseType === 'boxing') {
-        exerciseImage.src = 'imgYR//boxing52.jpg';
-    } else if (exerciseType === 'weightlifting') {
-        exerciseImage.src = 'imgYR//weight2.jpg';
-    } else if (exerciseType === 'aerobic') {
-        exerciseImage.src = 'imgYR//aerobic52.jpg';
-    } else if (exerciseType === 'squash') {
-        exerciseImage.src = 'imgYR//squash52.jpg';
-    } else if (exerciseType === 'swimming') {
-        exerciseImage.src = 'imgYR//swimming52.jpg';
-    }  else if (exerciseType === 'running') {
-        exerciseImage.src = 'imgYR//running52.jpg';
-    } 
+    switch (exerciseType) {
+        case 'boxing':
+            exerciseImage.src = 'imgYR/boxing52.jpg';
+            break;
+        case 'weightlifting':
+            exerciseImage.src = 'imgYR/weight2.jpg';
+            break;
+        case 'aerobic':
+            exerciseImage.src = 'imgYR/aerobic52.jpg';
+            break;
+        case 'squash':
+            exerciseImage.src = 'imgYR/squash52.jpg';
+            break;
+        case 'swimming':
+            exerciseImage.src = 'imgYR/swimming52.jpg';
+            break;
+        case 'running':
+            exerciseImage.src = 'imgYR/running52.jpg';
+            break;
+    }
 });
 
-
-//enter 기능 추가시키기
-//에어로빅 운동을 선택하면 에어로빅 운동사진이 
-// 수영을 선택하면 수영 사진이 img src에 나와야한다 
+function goBack() {
+    window.history.back();
+}

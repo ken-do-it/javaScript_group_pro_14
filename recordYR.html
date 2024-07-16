@@ -5,30 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous">
+
+    </script>
+    <link rel="stylesheet" href="record.css">
 </head>
 
 <body>
 
-    <div>
+    <div class="container">
 
-        <div>
+        <div class="heading">
             Today my total workout time?
         </div>
 
-        <div>
-            ${} minutes
+        <div class="time">
+            <span id="workoutTime">
+                
+                <minutes id="workoutTimeDisplay">0 minutes</span>
+        </div>
+
+
+
+        <div class="calories">
+            <span id="caloriesBurned">  kcal</span> 
+        </div>
+
+        <div class="record-link">
+            <a href="workout_calory.html">Record</a>
+
         </div>
 
     </div>
 
-    <div>
-        Burn calories ${} kal
-    </div>
 
-    <div>
-        <a href="workout_calory.html">Record</a>
-    </div>
-
+    <script src="record.js"></script>
 </body>
 
+<!-- <i class="fa-solid fa-fire"></i> fire -->
 </html>
+
+
