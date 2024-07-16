@@ -50,21 +50,23 @@ const render = (recipes) => {
     // converting api values to strings
     const label = recipe.recipe.label;
     const image = recipe.recipe.image;
-    const calories = recipe.recipe.calories.toFixed(2); // 칼로리 소수점 2자리로 표시제한
+    const calories = recipe.recipe.calories.toFixed(0); // 칼로리 소수점 빼고 표시
     const ingredients = recipe.recipe.ingredients.length;
 
     box.innerHTML = `
     <div>
-    <div>
-    Recipe ${index + 1}</div>
-    <br />
     <div class="recipe-label"> ${label}</div>
     <br />
     <div>
     <img src="${image}" alt="${label}" style="max-width: 100%"</div>
     <br />
-    <div>Calories: ${calories}</div>
-    <div>Ingredients: ${ingredients}</div>
+    <div class="recipe-info">
+    <span class="calories"> Calories: <span class="calories-number">${calories} 
+    </span></span> 
+    <span class="ingredients"> Ingredients: 
+    <span class="ingredients-number">${ingredients}
+    </span></span>
+    </div>
     </div>
     `;
 
