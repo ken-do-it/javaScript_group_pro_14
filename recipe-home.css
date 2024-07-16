@@ -85,7 +85,7 @@ main {
   display: grid;
   grid-gap: 1em;
   padding: 1em;
-  height: 90vh;
+  /* height: 80vh; */
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-columns: auto auto auto auto; */
 }
@@ -94,20 +94,57 @@ main {
   background-color: (255, 266, 255, 0.8);
   border: 1px solid #ff6f61;
   border-radius: 10px;
-  padding: 2em;
+  padding: 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 250;
   text-transform: capitalize;
+}
+
+.box:hover {
+  cursor: pointer;
 }
 
 .recipe-label {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 17px;
   color: #f04232;
+  padding-top: 5px;
+}
+
+.recipe-info {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid lightgray;
+  border-top: 2px solid lightgray;
+  /* float: center; */
+  /* width: 250px; */
+}
+
+.calories {
+  padding-right: 25px;
+}
+
+.calories-number {
+  color: #f04232;
+}
+
+.ingredients-number {
+  color: #f04232;
+}
+
+.box img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }
 
 .error-message {
