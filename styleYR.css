@@ -9,7 +9,6 @@
 .head-img {
     width: 100%;
     height: 25rem;
-    margin-top: 2rem;
     
 }
 
@@ -20,7 +19,7 @@
 
 .img-text {
     position: absolute; 
-    top: 10rem; /* 원하는 위치 조정 */
+    top: 30rem; /* 원하는 위치 조정 */
     left: 50%; /* 가운데 정렬을 위해 50% 위치로 */
     transform: translateX(-50%); /* 가운데 정렬을 위한 보정 */
     width: 700px;
@@ -32,6 +31,24 @@
   font-weight: 800;
   font-style: italic;
   font-size:50px;
+  color: black;
+}
+
+
+.download_app_btn {
+    position: absolute; 
+    top: 37rem; /* 원하는 위치 조정 */
+    left: 51%; /* 가운데 정렬을 위해 50% 위치로 */
+    transform: translateX(-50%); /* 가운데 정렬을 위한 보정 */
+    width: 150px;
+    /* height: 130px; */
+    padding: 10px; 
+    /* border-radius: 5px; */
+    text-align: center; 
+    font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  /* font-size:50px; */
   color: black;
 }
 
