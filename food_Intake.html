@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noona's Diet</title>
+    <link rel="stylesheet" href="food_intake.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Noona's Diet</h1>
+    
+    <div class="input-group">
+        <label for="date">날짜:</label>
+        <input type="date" id="date">
+    </div>
+    
+    <div class="input-group">
+        <label for="food">오늘 먹은 음식:</label>
+        <input type="text" id="food" placeholder="음식명을 입력하세요">
+    </div>
+    
+    <div class="input-group">
+        <label for="calories">섭취한 칼로리:</label>
+        <input type="text" id="calories" placeholder="칼로리를 입력하세요">
+    </div>
+    
+    <div class="input-group">
+        <button onclick="addLog()">추가하기</button>
+    </div>
+    
+    <div class="log" id="log"></div>
+    <div class="total-calories" id="totalCalories">총 칼로리: 0</div>
+</div>
+
+<script src="food_Intake.js"></script>
+
+</body>
+</html>
