@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const yearElement = document.getElementById('year');
     const prevMonthButton = document.getElementById('prevMonth');
     const nextMonthButton = document.getElementById('nextMonth');
+    const exerciseRecord = document.getElementById('exercise-record');
     const today = new Date();
     let currentDate = new Date();
 
@@ -67,19 +68,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const timeContainer = document.createElement('div');
         timeContainer.classList.add('time');
-        timeContainer.innerHTML = `<span id="workoutTime">Time: ${workoutTime}</span>`;
+        timeContainer.innerHTML = `<span id="workoutTime"> Exercise - Time: ${workoutTime}</span>`;
         dayElement.appendChild(timeContainer);
 
         const caloriesContainer = document.createElement('div');
         caloriesContainer.classList.add('calories');
         
-        caloriesBurned = parseFloat(caloriesBurned).toFixed(1)
-        caloriesContainer.innerHTML = `<span id="caloriesBurned">calories: ${caloriesBurned}</span>`;
-        dayElement.appendChild(caloriesContainer);
+        caloriesBurned = parseFloat(caloriesBurned).toFixed(1);
+        caloriesContainer.innerHTML = `<span id="caloriesBurned">Calories: ${caloriesBurned}</span>`;
+        exerciseRecord.innerHTML = "";
+        exerciseRecord.appendChild(timeContainer);
+        exerciseRecord.appendChild(caloriesContainer);
     }
-
-    const dayElements = daysContainer.querySelectorAll('.days div');
-    dayElements.forEach(day => {
-        day.style.padding = '50px'; // Adjusting space between days
-    });
 });

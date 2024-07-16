@@ -10,8 +10,8 @@ body {
 }
 
 .calendar {
-    width: 80%;
-    height: 80%;
+    width: 55%;
+    height: 60%;
     border: 2px solid #fdd835;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -83,3 +83,42 @@ body {
 
 /* status */
 
+.status {
+    margin-top: 20px;
+}
+
+.memo {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #fffacd 0%, #fff9c4 100%);
+    position: relative;
+    margin-top: 20px;
+}
+
+.memo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #8b4513;
+}
+
+.memo-header button {
+    background: transparent;
+    border: none;
+    color: #8b4513;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.memo-body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #8b4513;
+    display: flex;
+    flex-direction: column;
+}

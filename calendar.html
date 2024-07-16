@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <link rel="stylesheet" href="calendar.css">
 </head>
+
 <body>
     <div class="calendar">
         <div class="calendar-header">
@@ -26,13 +28,28 @@
                 <div>Sat</div>
             </div>
             <div class="days" id="days"></div>
-        </div> <!-- 여기까지가 calendar div의 닫는 태그 -->
+        </div>
     </div>
-    
+
     <div class="status">
-        <input>
+        <div class="memo">
+            <div class="memo-header">
+                Today Date
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+
+            <div class="memo-body">
+                <div id="exercise-record" >운동기록</div>
+                <div >식단기록</div>
+                <div>물기록</div>
+            </div>
+        </div>
     </div>
+
     
+
     <script src="calendar.js"></script>
 </body>
+
 </html>
