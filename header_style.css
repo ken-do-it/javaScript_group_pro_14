@@ -59,23 +59,33 @@
 
 .headMid {
   display: flex;
-  justify-content: end  ;
+  justify-content: center; /* 중앙 정렬 */
   align-items: center;
   height: 140px;
+  position: relative; /* 아이콘을 절대 위치로 정렬하기 위해 추가 */
 }
-.headMid a {
-  display: inline-block;
-  /* padding-top: 10px; */
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: black;
+
+.headMid .logo-container {
+  flex-grow: 1; /* 로고 컨테이너를 가득 채우도록 설정 */
+  display: flex;
+  justify-content: center; /* 로고를 컨테이너 가운데 정렬 */
 }
 
 .headMid img {
+  max-width: 100%; /* 이미지의 최대 너비를 부모 컨테이너에 맞춤 */
+  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+}
+
+.iconContainer {
+  position: absolute; /* 절대 위치 */
+  right: 0; /* 오른쪽에 정렬 */
   display: flex;
-  /* justify-content: end; */
-  /* width: 250px; */
-  /* margin-bottom: 50px; */
+  gap: 10px; /* 아이콘 간격 */
+}
+
+.iconContainer a {
+  text-decoration: none;
+  color: black;
 }
 
 .header_btm {
