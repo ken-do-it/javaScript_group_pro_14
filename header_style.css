@@ -67,6 +67,14 @@
   text-decoration: none;
   color: black;
 }
+
+.headMid img {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin-bottom: 50px;
+}
+
 .header_btm {
   display: flex;
   position: relative;
