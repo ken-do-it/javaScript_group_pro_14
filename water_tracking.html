@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>물 섭취량 계산</title>
+    <link rel="stylesheet" href="water_tracking_style.css" />
+  </head>
+  <body>
+    <h2>오늘 물 섭취량은?</h2>
+    <h1 id="water_figure">0.00L</h1>
+    <div class="cup-container">
+      <div class="water" id="water"></div>
+    </div>
+    <form id="waterIntakeForm">
+      <label for="waterAmount">섭취한 물의 양 (ml):</label>
+      <input
+        type="number"
+        id="waterAmount"
+        name="waterAmount"
+        class="water_input"
+        required
+      />
+      <button type="submit">기록하기</button>
+    </form>
+
+    <div id="result" style="display: none">
+      <h3>물 섭취량 평가:</h3>
+      <p id="evaluationResult"></p>
+      <p id="additionalWater"></p>
+    </div>
+
+    <script src="water_tracking_function.js"></script>
+  </body>
+</html>
