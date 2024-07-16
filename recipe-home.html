@@ -8,24 +8,33 @@
       src="https://kit.fontawesome.com/4365acded3.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="recipe-main.css" />
+    <link rel="stylesheet" href="recipe-home.css" />
   </head>
   <body>
     <header>
-      <div id="logo">Logo</div>
+      <div id="logo">
+        <!-- <img src="/assets/Noona_s_Diet_logo_removebg.png" /> -->
+        Logo
+      </div>
       <div class="search-input-section">
-        <input type="text" id="search-input" />
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Please enter a recipe or ingredients here..."
+        />
         <button class="search-button" onClick="getRecipesByKeyword()">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
-      <i class="fa-solid fa-bars"></i>
+      <button class="menu-tab"><i class="fa-solid fa-bars"></i></button>
     </header>
 
     <main>
       <div class="container"></div>
     </main>
 
-    <script src="recipe-main.js"></script>
+    <div class="pagination">pagination</div>
+
+    <script src="recipe-home.js"></script>
   </body>
 </html>
