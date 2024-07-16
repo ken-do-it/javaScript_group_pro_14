@@ -3,19 +3,27 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 200px;
     font-family: Arial, sans-serif;
 }
 
 .form-container {
     text-align: center;
-    border: 1px solid #ccc;
-    padding: 20px;
+    border: 2px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-evenly;
+    padding:40px;
+    
 }
-
+.bmr-form input {
+    margin:5px;
+    padding-top: 5px;
+     padding-bottom: 5px;
+    
+}
 .form-container form div {
     margin-bottom: 15px;
 }
@@ -61,5 +69,28 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
+}
+
+.result-table{
+    display: flex;
+    margin: 20px;
+}
+
+table {
+    width: 100% ; /* Adjust width as needed */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse;
+    margin-left: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+#activity-level {
+    width:80%;
+
 }
 

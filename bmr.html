@@ -13,7 +13,7 @@
 
   <body>
     <div class="form-container">
-      <form id="bmr-form">
+      <form class="bmr-form">
         <div>
           <label>Gender:</label>
           <input type="radio" name="gender" value="Male"> Male
@@ -32,9 +32,49 @@
           <label for="age">Age:</label>
           <input type="number" id="age" name="age">
         </div>
-        <button type="button" id="calculate-button">Calculate BMR</button>
+        <button type="calculate-button" id="calculate-button">Calculate BMR</button>
+        <button type="reset-button" id="reset-button">Reset</button>
       </form>
+
       <div id="bmr-result"></div>
+
+      <div class="result-table">
+        <table>
+          <tr>
+            <th id="activity-level">Activity Level</th>
+            <th id="calorie">Calorie / day</th>
+          </tr>
+          <tr>
+            <td>Sedentary: little or no exercise </td>
+            <td>Row 1, Cell 2</td>
+          </tr>
+          <tr>
+            <td>Exercise 1-3 times/week </td>
+            <td>Row 2, Cell 2</td>
+          </tr>
+          <tr>
+            <td>Daily exercise or intense exercise 3-4 times/week</td>
+            <td>Row 3, Cell 2</td>
+          </tr>
+          <tr>
+            <td>Intense exercise 6-7 times/week</td>
+            <td>Row 4, Cell 2</td>
+          </tr>
+          <tr>
+            <td>Very intense exercise daily, or physical job</td>
+            <td>Row 5, Cell 2</td>
+          </tr>
+          <p>
+            <label for="exercis">Exercise: 15-30 minutes of elevated heart rate activity.</label>
+          </p>
+          <p>
+            <label for="intense-exercise">Intense exercise: 45-120 minutes of elevated heart rate activity.</label>
+          </p>
+          <p>
+            <label for="very-intense-exercise">Very intense exercise: 2+ hours of elevated heart rate activity.</label>
+          </p>
+        </table>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

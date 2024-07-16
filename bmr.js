@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let ageInput = document.getElementById("age");
     let genderSelect = document.querySelector('input[name="gender"]:checked');
     let calculateButton = document.getElementById("calculate-button");
+    let resetButton = document.getElementById("reset-button");
     let bmrResultDiv = document.getElementById("bmr-result");
 
     const validateInput = (event) => {
@@ -16,15 +17,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     ageInput.addEventListener('input', validateInput);
 
     const checkForm = () => {
-        if (weightInput.value === '') {
-            alert("Please enter your weight");
-            weightInput.focus();
-            return false;
-        }
-
+        
         if (heightInput.value === '') {
             alert("Please enter your height");
             heightInput.focus();
+            return false;
+        }
+
+        if (weightInput.value === '') {
+            alert("Please enter your weight");
+            weightInput.focus();
             return false;
         }
 
@@ -33,6 +35,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             ageInput.focus();
             return false;
         }
+
+
+
 
         // Check if gender is selected (for radio buttons)
         const selectedGender = document.querySelector('input[name="gender"]:checked');
@@ -87,8 +92,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
 
     calculateButton.addEventListener("click", calculateBMR);
+    resetButton.addEventListener("click", resetForm);
+
+    const dailyCalories = (bmr) => {
+        
+    }
+
+
+
 });
 
-const dailyCalories = (bmr) => {
+    
 
-}
+
