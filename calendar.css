@@ -6,11 +6,12 @@ body {
     height: 100vh;
     margin: 0;
     background: #fff9c4;
+    flex-direction: column;
 }
 
 .calendar {
-    width: 560px;
-    height: 550px;
+    width: 80%;
+    height: 80%;
     border: 2px solid #fdd835;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -40,14 +41,12 @@ body {
     font-size: 18px;
 }
 
-.calendar-body {
-    padding: 10px;
-}
+
 
 .day-names {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    margin-bottom: 10px;
+    
 }
 
 .day-names div {
@@ -60,11 +59,13 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
+    
 }
 
 .days div {
     text-align: center;
-    padding: 10px;
+    padding-top: 30px;
+    padding-bottom:30px;
     border-radius: 5px;
     transition: background 0.3s;
 }
@@ -79,3 +80,6 @@ body {
     background: #fbc02d;
     color: #fff;
 }
+
+/* status */
+

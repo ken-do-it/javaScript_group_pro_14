@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let workoutTime = localStorage.getItem('workoutTime');
     
     if (caloriesBurned) {
-        caloriesBurned = parseFloat(caloriesBurned).toFixed(2);//소수점 2자리까지 반올림
+        caloriesBurned = parseFloat(caloriesBurned).toFixed(0);//소수점 반올림
         document.getElementById('caloriesBurned').innerHTML = `<i class="fa-solid fa-fire" style=color:red;></i> Burn calories: ${caloriesBurned} kcal`;
     } else {
         document.getElementById('caloriesBurned').textContent = 'Burn calories: 0 kcal';
