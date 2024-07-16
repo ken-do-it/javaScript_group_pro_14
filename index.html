@@ -33,6 +33,8 @@
 
     <!-- 예라님 css 링크 -->
     <link rel="stylesheet" href="styleYR.css" />
+
+    <link rel="stylesheet" href="styleHJ.css">
   </head>
 
   <body>
@@ -52,24 +54,25 @@
               <li>
                 <a href="">테스트</a>
               </li>
-            </ul>
-            <div class="iconContainer">
-              <a href=""><i class="fas fa-bell"></i></a>
-              <a href=""><i class="far fa-user"></i></a>
-            </div>
+            </ul>   
           </div>
           <div class="headMid">
-            <a href=""><img src="./img_ke/Noona_s_Diet_logo_고화질_1-removebg-preview.png" alt=""></a>
+            <a href=""><img src="./img_ke/Noona_s_Diet_logo_고화질_1-removebg-250X126px.png" alt=""></a>
+         
+          <div class="iconContainer">
+            <a href=""><i class="fas fa-bell"></i></a>
+            <a href=""><i class="far fa-user"></i></a>
           </div>
+        </div>
+         
           <div class="header_btm">
             <div class="menu_button">
               <ul class="menuLeft">
-                <li><a href="">카테고리</a></li>
-                <li><a href="">테스트</a></li>
-                <li><a href="">테스트</a></li>
-                <li><a href="">테스트</a></li>
-                <li><a href="">테스트</a></li>
-                <li><a href="">테스트</a></li>
+                <li><a href="recipe-main.html">Recipes</a></li>
+                <li><a href="recordYR.html">Today's workout</a></li>
+                <li><a href="food_Intake.html">Diet</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="#">Water</a></li>
               </ul>
             </div>
             <div class="search_container">
@@ -81,27 +84,20 @@
           </div>
         </div>
 
-      <main>
-        <div class="BMI-icon">
-          <div>
-            <i class="fa-solid fa-file-circle-question"></i>
-            check my BMI
-          </div>
-          <div>
-            <i class="fa-solid fa-file-medical"></i>
-            Get my prescription calories
-          </div>
-          <div>
-            <i class="fa-solid fa-dumbbell"></i>
-            Search nearby gym
-          </div>
+        <div class="head-img-containerYR">
+
+          <img src="imgYR/What-is-diet-culture.webp" class="head-img" alt="no-image">
+          <div class="img-text">A Better Version of Myself</div>
+          <button type="button" class="btn btn-warning download_app_btn">Download App</button>
         </div>
 
-        <div class="mt-4 mb-4">
-          <h2>Today's recommend recipe</h2>
-          <div>레시피 API 자리</div>
+    
+
+      <div class="mt-4 mb-4">
+        <h2> Today's recommend recipe</h2>
+        <div class='recipe-container'></div>
         </div>
-      </main>
+      
 
       <footer class="site-footer">
         <div class="row">
@@ -153,4 +149,11 @@
     ></script>
     <script src="mainYR.js"></script>
   </body>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+        <script src="mainHJ.JS"></script>
+      <script src="mainYR.js"></script>
+</body>
+
 </html>
