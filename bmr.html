@@ -27,16 +27,13 @@
           <label for="weight-input">Weight (kg):</label>
           <input type="number" id="weight-input" name="weight">
         </div>
-
         <div class="form-row">
-          <label for="age">Age:</label>
-          <input type="number" id="age" name="age">
+          <label for="age-input">Age:</label>
+          <input type="number" id="age-input" name="age">
         </div>
-        <button type="calculate-button" id="calculate-button">Calculate BMR</button>
-        <button type="reset-button" id="reset-button">Reset</button>
+        <button type="button" id="calculate-button">Calculate BMR</button>
+        <button type="button" id="reset-button">Reset</button>
       </form>
-
-      <div id="bmr-result"></div>
 
       <div class="result-table">
         <table>
@@ -64,17 +61,10 @@
             <td>Very intense exercise daily, or physical job</td>
             <td>Row 5, Cell 2</td>
           </tr>
-          <p>
-            <label for="exercis">Exercise: 15-30 minutes of elevated heart rate activity.</label>
-          </p>
-          <p>
-            <label for="intense-exercise">Intense exercise: 45-120 minutes of elevated heart rate activity.</label>
-          </p>
-          <p>
-            <label for="very-intense-exercise">Very intense exercise: 2+ hours of elevated heart rate activity.</label>
-          </p>
         </table>
       </div>
+
+      <div id="bmr-result"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

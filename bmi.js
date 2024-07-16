@@ -40,16 +40,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return true;
     };
 
+
+ 
+
     const calculateBMI = () => {
         if (!checkForm()) {
             return;
         }
-
-        const height = parseFloat(heightInput.value);
-        const weight = parseFloat(weightInput.value);
-        const age = parseFloat(ageInput.value);
-        const genderInput = document.querySelector('input[name="gender"]:checked');
-        const gender = genderInput.value;
+        
+        let height = parseFloat(heightInput.value);
+        let weight = parseFloat(weightInput.value);
+        let age = parseFloat(ageInput.value);
+        let genderInput = document.querySelector('input[name="gender"]:checked');
+        let gender = genderInput.value;
         let bmi = (weight / ((height / 100) * (height / 100))).toFixed(1);
 
         document.getElementById('bmi-result').innerHTML = `
@@ -61,6 +64,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
         `;
         resetForm();
     };
+
+    const calculateBMR = () => {
+        if (!checkForm()) {
+            return;
+        }
+        if (gender === "Male") {
+            bmr = (66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age)).toFixed(2);
+        } else if (gender === "Female") {
+            bmr = (655.1 + (9.563 * weight) + (1.85 * height) - (4.676 * age)).toFixed(2);
+        }
+
+        console.log("Calculated BMR:", bmr);
+
+
+    }
+        
 
     const resetForm = () => {
         heightInput.value = '';
