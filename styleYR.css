@@ -19,9 +19,11 @@
 
 .img-text {
     position: absolute; 
-    top: 30rem; /* 원하는 위치 조정 */
+    top: 10rem; /* 원하는 위치 조정 */
     left: 50%; /* 가운데 정렬을 위해 50% 위치로 */
     transform: translateX(-50%); /* 가운데 정렬을 위한 보정 */
+    width: 700px;
+    height: 130px;
     padding: 10px; 
     border-radius: 5px;
     text-align: center; 
@@ -29,7 +31,7 @@
   font-weight: 800;
   font-style: italic;
   font-size:50px;
-  color: rgb(252, 214, 2);
+  color: black;
 }
 
 .BMI-icon{
