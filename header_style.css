@@ -55,14 +55,17 @@
   background-color: rgba(33, 33, 33, 0.171);
   margin-right: 20px;
 }
+
+
 .headMid {
-  display: block;
+  display: flex;
+  justify-content: end  ;
+  align-items: center;
   height: 140px;
-  text-align: center;
 }
 .headMid a {
   display: inline-block;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   letter-spacing: 1px;
   text-decoration: none;
   color: black;
@@ -70,9 +73,9 @@
 
 .headMid img {
   display: flex;
-  justify-content: center;
-  width: 250px;
-  margin-bottom: 50px;
+  /* justify-content: end; */
+  /* width: 250px; */
+  /* margin-bottom: 50px; */
 }
 
 .header_btm {
@@ -80,17 +83,18 @@
   position: relative;
   justify-content: flex-end;
   align-items: center;
-  margin: 0 160px;
+  margin-top: 25px;
   height: 35px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.242);
 }
 .menu_button {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .menuLeft {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0;
   list-style: none;
 }
@@ -139,11 +143,11 @@
 }
 .iconContainer {
   display: flex;
-  position: relative;
+  /* position: relative; */
   justify-content: flex-end;
-  padding-top: 25px;
+  /* padding-top: 25px;
   font-size: 25px;
-  margin-right: 10px;
+  margin-right: 10px; */
 }
 .iconContainer a {
   color: rgba(28, 28, 28, 0.728);
