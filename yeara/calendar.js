@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         caloriesContainer.classList.add('calories');
         
         caloriesBurned = parseFloat(caloriesBurned).toFixed(1);
-        caloriesContainer.innerHTML = `<span id="caloriesBurned">, Burn calories: ${caloriesBurned}</span>`;
+        caloriesContainer.innerHTML = `<span id="caloriesBurned">,&nbspBurn calories: ${caloriesBurned}</span>`;
         const exerciseRecord = document.getElementById('exercise-record');
         exerciseRecord.innerHTML = "";
         exerciseRecord.appendChild(timeContainer);
