@@ -47,4 +47,7 @@ document.getElementById('date').addEventListener('change', (event) => {
 document.getElementById('calories').addEventListener('input', (event) => {
     const value = event.target.value.replace(/,/g, '');
     event.target.value = parseInt(value).toLocaleString();
+
+    localStorage.setItem('caloriesBurned', caloriesBurned);
+    localStorage.setItem('workoutTime', duration);
 });
