@@ -6,26 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const yearElement = document.getElementById('year');
     const prevMonthButton = document.getElementById('prevMonth');
     const nextMonthButton = document.getElementById('nextMonth');
-    const exerciseRecord = document.getElementById('exercise-record');
     const today = new Date();
     let currentDate = new Date();
 
-    // 이전 월 버튼 클릭 시
     prevMonthButton.addEventListener('click', () => {
         currentDate.setMonth(currentDate.getMonth() - 1);
         renderCalendar(currentDate);
     });
 
-    // 다음 월 버튼 클릭 시
     nextMonthButton.addEventListener('click', () => {
         currentDate.setMonth(currentDate.getMonth() + 1);
         renderCalendar(currentDate);
     });
 
-    // 캘린더 초기 렌더링
     renderCalendar(currentDate);
 
-    // 캘린더 렌더링 함수
     function renderCalendar(date) {
         const year = date.getFullYear();
         const month = date.getMonth();
@@ -58,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 오늘의 운동 정보 렌더링 함수
     function renderWorkoutInfo(dayElement) {
         let workoutTime = localStorage.getItem('workoutTime');
         let caloriesBurned = localStorage.getItem('caloriesBurned');
@@ -75,9 +69,56 @@ document.addEventListener('DOMContentLoaded', function() {
         caloriesContainer.classList.add('calories');
         
         caloriesBurned = parseFloat(caloriesBurned).toFixed(1);
-        caloriesContainer.innerHTML = `<span id="caloriesBurned">Calories: ${caloriesBurned}</span>`;
+        caloriesContainer.innerHTML = `<span id="caloriesBurned">, Burn calories: ${caloriesBurned}</span>`;
+        const exerciseRecord = document.getElementById('exercise-record');
         exerciseRecord.innerHTML = "";
         exerciseRecord.appendChild(timeContainer);
         exerciseRecord.appendChild(caloriesContainer);
     }
+
+    function renderDietRecord() {
+        const foodLogs = JSON.parse(localStorage.getItem('foodLogs')) || {};
+        const dietRecord = document.getElementById('diet-record');
+        dietRecord.innerHTML = '';
+
+        if (foodLogs) {
+            for (const date in foodLogs) {
+                foodLogs[date].forEach(entry => {
+                    dietRecord.innerHTML += `<div>${entry.food}: ${entry.calories.toLocaleString()} kcal</div>`;
+                });
+            }
+        }
+    }
+
+    // 캘린더 렌더링 시 식단 기록을 자동으로 표시
+    renderDietRecord();
 });
+
+let totalWater = localStorage.getItem('totalWater');
+    
+    // Update #waterIntake content
+    if (totalWater !== null) {
+        document.getElementById('waterIntake').textContent = `${(totalWater / 1000).toFixed(2)}L`;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const emojiContainer = document.getElementById('emoji');
+        const selectedMood = localStorage.getItem('selectedMood');
+        const selectedSleepIcon = localStorage.getItem('selectedSleepIcon');
+        const selectedPoopIcon = localStorage.getItem('selectedPoopIcon');
+
+        if (selectedMood && selectedSleepIcon && selectedPoopIcon) {
+            const moodElement = document.createElement('div');
+            moodElement.textContent = `기분: ${selectedMood}`;
+
+            const sleepElement = document.createElement('div');
+            sleepElement.textContent = `수면: ${selectedSleepIcon}`;
+
+            const poopElement = document.createElement('div');
+            poopElement.textContent = `응가: ${selectedPoopIcon}`;
+
+            emojiContainer.appendChild(moodElement);
+            emojiContainer.appendChild(sleepElement);
+            emojiContainer.appendChild(poopElement);
+        }
+    });

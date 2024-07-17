@@ -11,7 +11,7 @@
     align-items: center;
     height: 375px;
     margin: 0;
-    background-color: #fee2c0;
+    
 }
 
 .form-container {
@@ -104,10 +104,6 @@
     align-items: center;
     margin-bottom: 15px;
 
-}
-
-.form-row input {
-    
 }
 
 .form-container input[type="radio"] {

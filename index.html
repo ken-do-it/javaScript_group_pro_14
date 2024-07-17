@@ -11,32 +11,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-    </style>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+  </style>
 
-    <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
 
-    <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/ebf5d5da1d.js" crossorigin="anonymous"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <script src="https://kit.fontawesome.com/ebf5d5da1d.js" crossorigin="anonymous"></script>
+  <!-- 승혁님 css 링크 -->
+  <link rel="stylesheet" href="indexAll/header_style.css"/>
 
-    <!-- 승혁님 css 링크 -->
-    <link rel="stylesheet" href="header_style.css" />
+  <!-- 예라님 css 링크 -->
+  <link rel="stylesheet" href="indexAll/styleYR.css"/>
+  
+  <!-- 혜정님 css 링크 -->
+  <link rel="stylesheet" href="indexAll/styleHJ.css">
 
-    <!-- 예라님 css 링크 -->
-    <link rel="stylesheet" href="styleYR.css" />
+  <!-- <link rel="stylesheet" href="calculator.css"> -->
+  
+  <!-- 찬우님 css 링크 -->
+  <link rel="stylesheet" href="indexAll/calculator.css">
+</head>
 
-    <link rel="stylesheet" href="styleHJ.css">
 
-    <link rel="stylesheet" href="calculator.css">
-  </head>
-
-  <body>
-    <div class="container">
-      <!-- banner -->
+  <div class="container">
+    <nav>
+<!-- banner -->
       <div class="banner">
         <a href="">배너 부분</a>
       </div>
@@ -68,11 +71,13 @@
         <div class="header_btm">
           <div class="menu_button">
             <ul class="menuLeft">
-              <li><a href="recipe-main.html">Recipes</a></li>
-              <li><a href="recordYR.html">Today's workout</a></li>
-              <li><a href="food_Intake.html">Diet</a></li>
-              <li><a href="calendar.html">Calendar</a></li>
-              <li><a href="#">Water</a></li>
+              <li><a href="/HJ/recipe-main.html">Recipes</a></li>
+              <li><a href="/yeara/recordYR.html">Today's workout</a></li>
+              <li><a href="/yeara/workout_calory.html">Diet</a></li>
+              <li><a href="/yeara/calendar.html">Calendar</a></li>
+              <li><a href="water_tracking.html">Water consumption</a></li>
+              <li><a href="/yeara/emoji.html">Mood</a></li>
+
             </ul>
           </div>
           <div class="search_container">
@@ -83,14 +88,17 @@
           </div>
         </div>
       </div>
-      </div>
+      
 
       <div class="head-img-containerYR">
-
         <img src="imgYR/What-is-diet-culture.webp" class="head-img" alt="no-image">
         <div class="img-text">A Better Version of Myself</div>
         <button type="button" class="btn btn-warning download_app_btn">Download App</button>
       </div>
+    </nav>
+
+
+    <main>
 
       <!--Calculator container-->
       <div class="calculator-container-CW">
@@ -117,7 +125,7 @@
                   <input type="number" id="age-input" name="age">
                 </div>
               </div>
-  
+
               <div class="calculator-buttons">
                 <button class="btn btn-warning bmr" type="button" id="calculate-bmr">Calculate BMR</button><br>
                 <button class="btn btn-warning bmi" type="button" id="calculate-bmi">Calculate BMI</button><br>
@@ -130,131 +138,50 @@
       </div>
       <!--Calculator container-->
 
-<!-- 여기까지 내가 가지고 있는 버전  -->
-
-
-
-
-
-
-
-<!-- 승혁님 브렌치  여기서 부터 -->
- 
-        <!-- header
-        <div id="headerArea">
-          <div class="headTop">
-            <ul class="menuRight">
-              <li><a href="">로그인</a></li>
-              <li>
-                <a href="">테스트</a>
-              </li>
-              <li>
-                <a href="">테스트</a>
-              </li>
-            </ul>   
-          </div>
-          <div class="headMid">
-            <div class="logoContainer">
-            <a href=""><img src="./img_ke/Noona_s_Diet_logo_고화질_1-removebg-250X126px.png" alt="" class="logo"></a>
-          </div>
-          <div class="iconWrapper">
-          <div class="iconContainer">
-            <a href=""><i class="fas fa-bell"></i></a>
-            <a href=""><i class="far fa-user"></i></a>
-          </div>
-          </div>
-        </div>
-         
-          <div class="header_btm">
-            <div class="menu_button">
-              <ul class="menuLeft">
-                <li><a href="recipe-main.html">Recipes</a></li>
-                <li><a href="recordYR.html">Today's workout</a></li>
-                <li><a href="food_Intake.html">Diet</a></li>
-                <li><a href="calendar.html">Calendar</a></li>
-                <li><a href="#">Water</a></li>
-              </ul>
-            </div>
-            <div class="search_container">
-              <input type="text" placeholder="검색어를 입력하세요." />
-              <button type="submit">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
-          </div>
-        </div> -->
-
-
-
-<!-- 승혁님 브렌치 여기까지 -->
-
-
-
-
-
-
-
-
-    
-
       <div class="mt-4 mb-4">
         <h2> Today's recommend recipe</h2>
         <div class='recipe-container'></div>
       </div>
+    </main>
 
 
-      <footer class="site-footer">
-        <div class="row">
-          <div class="col-md-4">
-            <h3>Company Information</h3>
-            <p>Address: 16 james st, Northbridge, AU</p>
-            <p>Phone: 0429-432-942</p>
-          </div>
-          <div class="col-md-4">
-            <h3>Links</h3>
-            <ul class="footer-links">
-              <li><a href="#">Diet Plan</a></li>
-              <li><a href="#">Recipes</a></li>
-              <li><a href="#">About Us</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h3>Follow Us</h3>
-            <p>Follow us on:</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+    <footer class="site-footer">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Company Information</h3>
+          <p>Address: 16 james st, Northbridge, AU</p>
+          <p>Phone: 0429-432-942</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Diet Plan</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Follow Us</h3>
+          <p>Follow us on:</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
+  </div>
+ 
 
 
-
-
-
-
-
-
-    <!-- 승혁님  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-    <!-- 승혁님 -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"></script>
-    <script src="mainYR.js"></script>
-  </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
-  <script src="mainHJ.JS"></script>
   <script src="mainYR.js"></script>
-<script src="calculator.js"></script>
-  </body>
+
+  <script src="HJ/mainHJ.JS"></script>
+  <script src="indexAll/calculator.js"></script>
+</body>
 
 </html>

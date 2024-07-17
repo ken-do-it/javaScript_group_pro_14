@@ -13,10 +13,13 @@ function addLog() {
         logs[date].push({ food, calories: parseInt(calories) });
         updateLog(date);
 
+        // Store logs in localStorage
+        localStorage.setItem('foodLogs', JSON.stringify(logs));
+
         document.getElementById('food').value = '';
         document.getElementById('calories').value = '';
     } else {
-        alert('날짜, 음식명과 칼로리를 입력하세요.');
+        alert('Please enter the date, food name, and calories.');
     }
 }
 
@@ -30,14 +33,15 @@ function updateLog(date) {
         logs[date].forEach(entry => {
             const logItem = document.createElement('div');
             logItem.className = 'log-item';
-            logItem.textContent = `${entry.food}: ${entry.calories.toLocaleString()} 칼로리`;
+            logItem.textContent = `${entry.food}: ${entry.calories.toLocaleString()} calories`;
             log.appendChild(logItem);
 
             totalCalories += entry.calories;
         });
     }
 
-    document.getElementById('totalCalories').textContent = `총 칼로리: ${totalCalories.toLocaleString()}`;
+    document.getElementById('totalCalories').textContent = `Total Calories: ${totalCalories.toLocaleString()}`;
+    localStorage.setItem('totalCalories', totalCalories);
 }
 
 document.getElementById('date').addEventListener('change', (event) => {
