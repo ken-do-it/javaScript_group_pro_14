@@ -30,10 +30,14 @@ document
       goodHeart.classList.remove('great_heart');
       document.getElementById('container_cup').style.borderColor = '#e20202';
     } else if (totalWater >= recommendedWaterAmount) {
+
       showResult('충분한 섭취량 입니다!', '', false);
       document.getElementById('container_cup').style.borderColor = '#4beaff';
       goodHeart.classList.add('great_heart');
-    } else {
+      showResult('충분한 섭취량 입니다!', '');
+
+      fireConfetti();
+} else {
       let additionalWater = recommendedWaterAmount - totalWater;
       showResult(
         '수분 섭취가 부족합니다.',
@@ -49,7 +53,11 @@ document
       ? parseInt(localStorage.getItem(currentDate))
       : 0;
     dailyTotalWater += waterAmount;
-    localStorage.setItem(currentDate, dailyTotalWater);
+
+    // 확인 필요 2
+    // localStorage.setItem(currentDate, dailyTotalWater); 승혁님꺼 
+
+    localStorage.setItem('totalWater', totalWater);//예라
   });
 
 function showResult(message, additionalMessage, isWarning) {
@@ -66,7 +74,7 @@ function showResult(message, additionalMessage, isWarning) {
 
   if (message === '충분한 섭취량 입니다!') {
     smileyElement.textContent = '😊';
-    fireConfetti();
+    // fireConfetti();
   } else if (message === '수분 섭취가 부족합니다.') {
     smileyElement.textContent = '😔';
   } else {
@@ -111,45 +119,92 @@ function checkResetTime() {
   }
 }
 
+
+// 승혁님꺼
 //confetti
+// function fireConfetti() {
+//   const count = 200,
+//     defaults = {
+//       origin: { y: 0.7 },
+//     };
+
+//   function fire(particleRatio, opts) {
+//     confetti(
+//       Object.assign({}, defaults, opts, {
+//         particleCount: Math.floor(count * particleRatio),
+//       })
+//     );
+//   }
+
+//   fire(0.25, {
+//     spread: 26,
+//     startVelocity: 55,
+//   });
+
+//   fire(0.2, {
+//     spread: 60,
+//   });
+
+//   fire(0.35, {
+//     spread: 100,
+//     decay: 0.91,
+//     scalar: 0.8,
+//   });
+
+//   fire(0.1, {
+//     spread: 120,
+//     startVelocity: 25,
+//     decay: 0.92,
+//     scalar: 1.2,
+//   });
+
+//   fire(0.1, {
+//     spread: 120,
+//     startVelocity: 45,
+//   });
+// }
+
+//승혁님꺼 
+
+
 function fireConfetti() {
   const count = 200,
-    defaults = {
-      origin: { y: 0.7 },
-    };
+      defaults = {
+          origin: { y: 0.7 },
+      };
 
   function fire(particleRatio, opts) {
-    confetti(
-      Object.assign({}, defaults, opts, {
-        particleCount: Math.floor(count * particleRatio),
-      })
-    );
+      confetti(
+          Object.assign({}, defaults, opts, {
+              particleCount: Math.floor(count * particleRatio),
+          })
+      );
   }
 
   fire(0.25, {
-    spread: 26,
-    startVelocity: 55,
+      spread: 26,
+      startVelocity: 55,
   });
 
   fire(0.2, {
-    spread: 60,
+      spread: 60,
   });
 
   fire(0.35, {
-    spread: 100,
-    decay: 0.91,
-    scalar: 0.8,
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8,
   });
 
   fire(0.1, {
-    spread: 120,
-    startVelocity: 25,
-    decay: 0.92,
-    scalar: 1.2,
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2,
   });
 
   fire(0.1, {
-    spread: 120,
-    startVelocity: 45,
+      spread: 120,
+      startVelocity: 45,
   });
 }
