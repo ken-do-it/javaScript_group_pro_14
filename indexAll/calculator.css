@@ -1,6 +1,6 @@
 .calculator-container-CW {
     text-align: center;
-    border: 1px solid black;
+   
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
@@ -33,7 +33,7 @@
     width: 100px;
     padding: 8px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    
     border-radius: 5px;
     background-color: #ffc107;
 }
