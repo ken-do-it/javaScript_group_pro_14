@@ -1,17 +1,16 @@
 const API_TYPE = 'public';
 const APP_ID = 'eca0d2ce';
-const APP_KEY = '5c7761a24073cbd7ea715a9b3b7ae84a';
+const APP_KEY = config.apiKey;
 
 const BASE_URL = `https://api.edamam.com/api/recipes/v2?type=${API_TYPE}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
 let url = '';
 
 const container = document.querySelector('.container');
-
 //pagination
 const paginationContainer = document.querySelector('.pagination');
 let currentPage = 1;
-let itemsPerPage = 12;
+let itemsPerPage = 8;
 let allRecipes = [];
 
 const getRecipesByKeyword = () => {
@@ -33,10 +32,10 @@ const getRecipes = async () => {
     if (data.count === 0) {
       container.classList.add('container-error');
       container.innerHTML = `<div class="error-message">No result for this search. </div>`;
-      pagination.style.display = 'none'; // Hide pagination
+      paginationContainer.style.display = 'none'; // Hide pagination
     } else {
       container.classList.remove('container-error');
-      pagination.style.display = 'flex'; // Show pagination if there are results
+      paginationContainer.style.display = 'flex'; // Show pagination if there are results
     }
   } catch (error) {
     pagination.style.display = 'none';
@@ -61,9 +60,11 @@ const render = (recipes, page = 1) => {
     const image = recipe.recipe.image;
     const calories = recipe.recipe.calories.toFixed(0); // 칼로리 소수점 빼고 표시
     const ingredients = recipe.recipe.ingredients.length;
+    const url = recipe.recipe.url;
 
     box.innerHTML = `
     <div>
+    <a href="${url}" target="_blank" class="recipe-url">
     <div class="recipe-label"> ${label}</div>
     <br />
     <div>
@@ -76,6 +77,7 @@ const render = (recipes, page = 1) => {
     <span class="ingredients-number">${ingredients}
     </span></span>
     </div>
+    </a>
     </div>
     `;
 
@@ -85,38 +87,29 @@ const render = (recipes, page = 1) => {
   renderPagination(recipes.length, page);
 };
 
-const renderPagination = (totalItems, page) => {
-  paginationContainer.innerHTML = '';
+const renderPagination = (totalItems, currentPage) => {
+  paginationContainer.innerHTML = ''; // Clear the existing pagination area
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-  if (page > 1) {
-    const prevButton = document.createElement('button');
-    prevButton.innerText = 'Previous';
-    prevButton.addEventListener('click', () => {
-      currentPage--;
-      render(allRecipes, currentPage);
-    });
-    paginationContainer.appendChild(prevButton);
-  } else {
-    const prevButton = document.createElement('button');
-    prevButton.innerText = 'Previous';
-    prevButton.classList.add('disabled');
-    paginationContainer.appendChild(prevButton);
-  }
+  // Loop through each page to create pagination buttons
+  for (let i = 1; i <= totalPages; i++) {
+    const pageButton = document.createElement('button');
+    pageButton.innerText = i;
+    pageButton.classList.add('pagination-button');
 
-  if (page < totalPages) {
-    const nextButton = document.createElement('button');
-    nextButton.innerText = 'Next';
-    nextButton.addEventListener('click', () => {
-      currentPage++;
-      render(allRecipes, currentPage);
-    });
-    paginationContainer.appendChild(nextButton);
-  } else {
-    const nextButton = document.createElement('button');
-    nextButton.innerText = 'Next';
-    nextButton.classList.add('disabled');
-    paginationContainer.appendChild(nextButton);
+    // Capture the current value of i
+    ((pageNumber) => {
+      pageButton.addEventListener('click', () => {
+        render(allRecipes, pageNumber);
+      });
+
+      // Add 'active' class if the button corresponds to the current page
+      if (pageNumber === currentPage) {
+        pageButton.classList.add('active');
+      }
+    })(i); // Pass i as pageNumber to the IIFE
+
+    paginationContainer.appendChild(pageButton);
   }
 };
 

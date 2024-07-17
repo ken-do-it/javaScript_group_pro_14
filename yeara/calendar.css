@@ -1,4 +1,5 @@
 body {
+    /* font-family: "Ubuntu", sans-serif; */
     font-family: 'Indie Flower', cursive;
     display: flex;
     justify-content: center;
@@ -88,7 +89,7 @@ body {
 }
 
 .memo {
-    width: 300px;
+    width: 350px;
     padding: 20px;
     border: 1px solid #d4af37;
     border-radius: 10px;
@@ -121,4 +122,9 @@ body {
     color: #8b4513;
     display: flex;
     flex-direction: column;
+}
+
+.exercise-record{
+    display: flex;
+    /* justify-content: space-between; */
 }

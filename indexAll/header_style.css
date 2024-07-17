@@ -1,3 +1,4 @@
+/* Banner */
 .banner {
   display: block;
   position: relative;
@@ -20,14 +21,22 @@
   letter-spacing: 2px;
 }
 
+/* Head Top */
 .headTop {
-  display: block;
-  height: 40px;
-  line-height: 17.5px;
-  margin: 0 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+/* Hide hamburger icon by default */
+.headTop i {
+  display: none;
+}
+
+/* Menu Right */
 .menuRight {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   list-style-type: none;
   margin-top: 25px;
@@ -56,40 +65,92 @@
   margin-right: 20px;
 }
 
+/* Slide Menu */
+.slide-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.slide-menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.slide-menu a:hover {
+  color: #f1f1f1;
+}
+.slide-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
+/* Head Mid */
 .headMid {
   display: flex;
-  justify-content: end  ;
+  justify-content: center;
   align-items: center;
-  height: 140px;
-}
-.headMid a {
-  display: inline-block;
-  /* padding-top: 10px; */
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: black;
+  height: 120px;
+  position: relative;
 }
 
-.headMid img {
+/* Logo Container */
+.logoContainer {
   display: flex;
-  /* justify-content: end; */
-  /* width: 250px; */
-  /* margin-bottom: 50px; */
+  justify-content: center;
+  flex-grow: 1;
 }
 
+/* Logo Image */
+.headMid img {
+  width: 370px;
+  height: 160px;
+  padding-bottom: 20px;
+}
+
+/* Icon Container */
+.headMid .iconContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.headMid .iconContainer a {
+  color: rgba(28, 28, 28, 0.728);
+  font-size: 25px;
+}
+.headMid .iconContainer a:not(:first-child) {
+  padding-left: 20px;
+}
+
+/* Header Bottom */
 .header_btm {
   display: flex;
-  position: relative;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 25px;
-  height: 35px;
+  margin-top: 45px;
+  height: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.242);
 }
 .menu_button {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding-left: 30px;
+  margin-right: 57px;
 }
 .menuLeft {
   display: flex;
@@ -111,6 +172,8 @@
 .menuLeft li a:hover {
   color: rgb(0, 134, 90);
 }
+
+/* Search Container */
 .search_container {
   position: relative;
   display: flex;
@@ -141,15 +204,19 @@
   opacity: 95%;
   color: rgb(0, 134, 90);
 }
-.iconContainer {
-  display: flex;
-  /* position: relative; */
-  justify-content: flex-end;
-  /* padding-top: 25px;
-  font-size: 25px;
-  margin-right: 10px; */
-}
-.iconContainer a {
-  color: rgba(28, 28, 28, 0.728);
-  padding-left: 65px;
+
+/* Media Query */
+@media (max-width: 700px) {
+  .headTop i {
+    display: flex;
+    margin-left: 20px;
+  }
+
+  .iconContainer a {
+    display: none;
+  }
+
+  .menu_button {
+    display: none;
+  }
 }
