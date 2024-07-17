@@ -93,7 +93,7 @@
           <form class="bmr-form">
             <div class="flex-form-container">
               <div class="input-area">
-                <div>
+                <div class="form-radio">
                   <label>Gender:</label>
                   <input type="radio" name="gender" value="Male"> Male
                   <input type="radio" name="gender" value="Female"> Female
@@ -113,14 +113,14 @@
               </div>
   
               <div class="calculator-buttons">
-                <button type="button" id="calculate-bmr">Calculate BMR</button><br>
-                <button type="button" id="calculate-bmi">Calculate BMI</button><br>
-                <button type="button" id="reset-button">Reset</button>
+                <button class="btn btn-warning bmr" type="button" id="calculate-bmr">Calculate BMR</button><br>
+                <button class="btn btn-warning bmi" type="button" id="calculate-bmi">Calculate BMI</button><br>
+                <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
               </div>
             </div>
           </form>
         </div>
-        <div id="bmr-result"></div>
+        <div id="calculator-result"></div>
       </div>
       <!--Calculator container-->
 

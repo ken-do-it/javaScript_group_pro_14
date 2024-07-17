@@ -1,6 +1,6 @@
 .calculator-container-CW {
     text-align: center;
-    border: 2px solid #ffbc04d2;
+    border: 1px solid black;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
@@ -11,8 +11,7 @@
     align-items: center;
     height: 375px;
     margin: 0;
-    font-family: Arial, sans-serif;
-
+    background-color: #fee2c0;
 }
 
 .form-container {
@@ -20,8 +19,8 @@
     padding: 20px;
     border-radius: 10px;
     height: 375px;
-    flex: 1; 
-    width:50%;
+    flex: 1;
+    width: 50%;
 }
 
 .calculator-container-CW input {
@@ -40,7 +39,7 @@
 }
 
 .calculator-buttons button {
-    margin:5px;
+    margin: 5px;
     border: none;
     border-radius: 5px;
     background-color: #ffc107;
@@ -56,14 +55,15 @@
     display: flex;
     justify-content: space-between;
 
-    
+
 }
 
+
 .input-area {
-    flex:1;
+    flex: 1;
     border: 2px solid black;
     padding: 10px;
-    margin:10px;
+    margin: 10px;
     background-color: #fee2c0;
 }
 
@@ -78,38 +78,41 @@
     justify-content: center;
 
 }
+
 .form-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 15px;
-    
+
 }
+
 .form-row label {
-    width: 60%; /* Adjust the width as needed */
+    width: 60%;
+    /* Adjust the width as needed */
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.form-radio {
+    width: 60%;
+    /* Adjust the width as needed */
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
 }
 
 .form-row input {
-    width: %; /* Adjust the width as needed */
+    
 }
-
 
 .form-container input[type="radio"] {
     margin: 0 10px;
 }
-
-
-
-.form-container button:hover {
-    background-color: #0056b3;
-}
-
-#bmi-result {
-    margin-top: 20px;
-    font-size: 1.2em;
-}
-
-
 
 .result-table {
     display: flex;
