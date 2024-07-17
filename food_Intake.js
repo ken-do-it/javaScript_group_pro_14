@@ -13,6 +13,9 @@ function addLog() {
         logs[date].push({ food, calories: parseInt(calories) });
         updateLog(date);
 
+        // Store logs in localStorage
+        localStorage.setItem('foodLogs', JSON.stringify(logs));
+
         document.getElementById('food').value = '';
         document.getElementById('calories').value = '';
     } else {
@@ -38,6 +41,7 @@ function updateLog(date) {
     }
 
     document.getElementById('totalCalories').textContent = `Total Calories: ${totalCalories.toLocaleString()}`;
+    localStorage.setItem('totalCalories', totalCalories);
 }
 
 document.getElementById('date').addEventListener('change', (event) => {
