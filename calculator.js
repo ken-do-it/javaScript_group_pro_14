@@ -6,13 +6,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let bmrResetButton = document.getElementById("bmr-reset-button");
     let bmrResultDiv = document.getElementById("bmr-result");
 
-    let bmiWeightInput = document.getElementById("bmi-weight-input");
-    let bmiHeightInput = document.getElementById("bmi-height-input");
-    let bmiAgeInput = document.getElementById("bmi-age-input");
-    let bmiCalculateButton = document.getElementById("bmi-calculate-button");
-    let bmiResetButton = document.getElementById("bmi-reset-button");
-    let bmiResultDiv = document.getElementById("bmi-result");
-
     const validateInput = (event) => {
         const input = event.target;
         input.value = input.value.replace(/[^0-9]/g, '');

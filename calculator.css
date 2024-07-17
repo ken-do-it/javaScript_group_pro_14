@@ -1,29 +1,27 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 .calculator-container-CW {
     text-align: center;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    border: 2px solid #ffbc04d2;
+    border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     display: flex;
     justify-content: space-evenly;
     padding: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 375px;
+    margin: 0;
+    font-family: Arial, sans-serif;
 
 }
 
 .form-container {
-    border: 2px solid black;
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
+    height: 375px;
+    flex: 1; 
+    width:50%;
 }
 
 .calculator-container-CW input {
@@ -41,7 +39,7 @@ body {
     background-color: #ffc107;
 }
 
-.form-container button {
+.calculator-buttons button {
     margin:5px;
     border: none;
     border-radius: 5px;
@@ -50,14 +48,50 @@ body {
     cursor: pointer;
     font-family: "Ubuntu", sans-serif;
     font-style: italic;
-    font-weight: 800;;
+    font-weight: 800;
+
 }
 
+.flex-form-container {
+    display: flex;
+    justify-content: space-between;
 
+    
+}
 
+.input-area {
+    flex:1;
+    border: 2px solid black;
+    padding: 10px;
+    margin:10px;
+    background-color: #fee2c0;
+}
 
+.calculator-buttons {
+    flex: 1;
+    border: 2px solid black;
+    margin: 10px;
+    background-color: #fee2c0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
+}
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+}
+.form-row label {
+    width: 60%; /* Adjust the width as needed */
+}
 
+.form-row input {
+    width: %; /* Adjust the width as needed */
+}
 
 
 .form-container input[type="radio"] {
@@ -75,12 +109,7 @@ body {
     font-size: 1.2em;
 }
 
-.form-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
+
 
 .result-table {
     display: flex;
