@@ -76,3 +76,4 @@ document.getElementById('exerciseType').addEventListener('change', function() {
 function goBack() {
     window.history.back();
 }
+

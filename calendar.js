@@ -93,3 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // 캘린더 렌더링 시 식단 기록을 자동으로 표시
     renderDietRecord();
 });
+
+let totalWater = localStorage.getItem('totalWater');
+    
+    // Update #waterIntake content
+    if (totalWater !== null) {
+        document.getElementById('waterIntake').textContent = `${(totalWater / 1000).toFixed(2)}L`;
+    }

@@ -31,6 +31,8 @@ document
       );
     }
     document.getElementById('waterAmount').value = '';
+
+    localStorage.setItem('totalWater', totalWater);//예라
   });
 
 function showResult(message, additionalMessage) {
@@ -56,3 +58,5 @@ function checkResetTime() {
     }
   }
 }
+
+
