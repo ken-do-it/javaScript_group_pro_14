@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +10,33 @@
 
 <div class="container">
     <h1>Noona's Diet</h1>
-    
-    <div class="input-group">
-        <label for="date">날짜:</label>
-        <input type="date" id="date">
+
+    <div>
+        <img class="food_intake_illustration" src="./img_ke/food illustration.png" alt="">
     </div>
     
     <div class="input-group">
-        <label for="food">오늘 먹은 음식:</label>
-        <input type="text" id="food" placeholder="음식명을 입력하세요">
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date">
+    </div>
+    
+    
+    <div class="input-group">
+        <label for="food">Food eaten today:</label>
+        <input type="text" id="food" placeholder="Enter the food name">
     </div>
     
     <div class="input-group">
-        <label for="calories">섭취한 칼로리:</label>
-        <input type="text" id="calories" placeholder="칼로리를 입력하세요">
+        <label for="calories">Calories consumed:</label>
+        <input type="text" id="calories" placeholder="Enter the calories">
     </div>
     
     <div class="input-group">
-        <button onclick="addLog()">추가하기</button>
+        <button onclick="addLog()">Add</button>
     </div>
     
     <div class="log" id="log"></div>
-    <div class="total-calories" id="totalCalories">총 칼로리: 0</div>
+    <div class="total-calories" id="totalCalories">Total Calories: 0</div>
 </div>
 
 <script src="food_Intake.js"></script>
