@@ -33,6 +33,11 @@ header {
   height: 10%; */
 }
 
+/* #logo img {
+  width: 20%;
+  height: 10%;
+} */
+
 .fa-magnifying-glass:hover {
   cursor: pointer;
   transform: scale(1.2);

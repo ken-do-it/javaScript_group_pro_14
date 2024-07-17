@@ -24,7 +24,7 @@
   display: block;
   height: 40px;
   line-height: 17.5px;
-  margin: 0 160px;
+  margin: 0 auto;
 }
 .menuRight {
   display: flex;
@@ -56,12 +56,16 @@
   margin-right: 20px;
 }
 
-
 .headMid {
   display: flex;
-  justify-content: end  ;
   align-items: center;
-  height: 140px;
+  height: 120px;
+}
+
+.logoContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 .headMid a {
   display: inline-block;
@@ -72,24 +76,35 @@
 }
 
 .headMid img {
-  display: flex;
-  /* justify-content: end; */
-  /* width: 250px; */
-  /* margin-bottom: 50px; */
+  width: 370px;
+  height: 160px;
+  padding-left: 100px;
+  padding-bottom: 20px;
 }
-
+.headMid .iconContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.headMid .iconContainer a {
+  color: rgba(28, 28, 28, 0.728);
+  font-size: 25px;
+}
+.headMid .iconContainer a:not(:first-child) {
+  padding-left: 60px;
+}
 .header_btm {
   display: flex;
-  position: relative;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 25px;
-  height: 35px;
+  margin-top: 45px;
+  height: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.242);
 }
 .menu_button {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding-left: 130px;
+  margin-right: 57px;
 }
 .menuLeft {
   display: flex;
@@ -141,15 +156,30 @@
   opacity: 95%;
   color: rgb(0, 134, 90);
 }
-.iconContainer {
+
+
+
+
+
+
+
+
+
+/* 여기서부터  */
+
+
+/* .iconContainer {
   display: flex;
-  /* position: relative; */
+  position: relative;
   justify-content: flex-end;
-  /* padding-top: 25px;
+  padding-top: 25px;
   font-size: 25px;
-  margin-right: 10px; */
+  margin-right: 10px;
 }
 .iconContainer a {
   color: rgba(28, 28, 28, 0.728);
   padding-left: 65px;
-}
+} */
+
+
+/* 여기까시 승혁님이 고친거에는 없음  */
