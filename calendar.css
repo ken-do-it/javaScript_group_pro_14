@@ -122,3 +122,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.exercise-record{
+    display: flex;
+    justify-content: space-around;
+}
