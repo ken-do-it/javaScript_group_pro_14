@@ -12,40 +12,83 @@
   </head>
 
   <body>
+    
+    <!--Calculator container-->
     <div class="calculator-container-CW">
-
       <div class="form-container">
         <form class="bmr-form">
           <div class="flex-form-container">
-            <div class="input-area" id="calculator-result">
-              <div class="form-radio">
-                <label>Gender:</label>
-                <input type="radio" name="gender" value="Male"> Male
-                <input type="radio" name="gender" value="Female"> Female
-              </div>
-              <div class="form-row">
-                <label for="height-input">Height (cm):</label>
-                <input type="number" id="height-input" name="height">
-              </div>
-              <div class="form-row">
-                <label for="weight-input">Weight (kg):</label>
-                <input type="number" id="weight-input" name="weight">
-              </div>
-              <div class="form-row">
-                <label for="age-input">Age:</label>
-                <input type="number" id="age-input" name="age">
-              </div>
-            </div>
 
-            <div class="calculator-buttons">
-              <button class="btn btn-warning bmr" type="button" id="bmr-calculate-button">Calculate BMR</button><br>
-              <button class="btn btn-warning bmi" type="button" id="bmi-calculate-button">Calculate BMI</button><br>
-              <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
+            <div class="input-area">
+
+              <div class="body-info">
+                
+                <div>
+                  <img src="imgCW/man369.png">
+                </div>
+
+                <div class="body-chart">
+
+                  <div class="form-radio mt-4 mb-2">
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                  </div>
+
+                  <!-- 
+
+                  <div class="form-row">
+                    <label for="age-input">Age:</label>
+                    <input type="number"  class="question" id="age-input" name="age">
+                  </div>
+
+
+                  <div class="form-row">
+                    <label for="height-input">Height (cm):</label>
+                    <input type="number"  class="question" id="height-input" name="height">
+                  </div>
+
+                  <div class="form-row">
+                    <label for="weight-input">Weight (kg):</label>
+                    <input type="number"  class="question" id="weight-input" name="weight">
+                  </div> -->
+
+                  <form class="form-row">
+                    <input type="text" name="name" class="question" id="age-input" required autocomplete="off" />
+                    <label for="nme"><span>What's your age?</span></label>
+                    <input type="text" name="name" class="question" id="height-input" required autocomplete="off" />
+                    <label for="nme"><span>What's your height?</span></label>
+                    <input type="text" name="name" class="question" id="weight-input" required autocomplete="off" />
+                    <label for="nme"><span>What's your weight?</span></label>
+                    <!-- <textarea name="message" rows="2" class="question" id="msg" required autocomplete="off"></textarea>
+                    <label for="msg"><span>What's your weight?</span></label>
+                    <input type="submit" value="Submit!" /> -->
+                  </form>
+
+                  <div class="calculator-buttons">
+                    <button class="btn btn-warning bmr mt-4" type="button" id="calculate-bmr">Check my BMR</button><br>
+                    <button class="btn btn-warning bmi" type="button" id="calculate-bmi">Check my BMI</button><br>
+                    <!-- <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button> -->
+                  </div>
+
+                  
+                </div>
+
+                <div class="mt-5 ms-5">
+                  check my bmr 나오는 곳
+                </div>
+                
+              </div>
             </div>
           </div>
+
+
+
         </form>
       </div>
+      <div id="calculator-result"></div>
     </div>
+    <!--Calculator container-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
