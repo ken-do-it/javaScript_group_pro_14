@@ -53,22 +53,22 @@ document.getElementById('exerciseType').addEventListener('change', function() {
     const exerciseImage = document.getElementById('exerciseImage');
     switch (exerciseType) {
         case 'boxing':
-            exerciseImage.src = 'imgYR/boxing52.jpg';
+            exerciseImage.src = '../imgYR/boxing52.jpg';
             break;
         case 'weightlifting':
-            exerciseImage.src = 'imgYR/weight2.jpg';
+            exerciseImage.src = '../imgYR/weight2.jpg';
             break;
         case 'aerobic':
-            exerciseImage.src = 'imgYR/aerobic52.jpg';
+            exerciseImage.src = '../imgYR/aerobic52.jpg';
             break;
         case 'squash':
-            exerciseImage.src = 'imgYR/squash52.jpg';
+            exerciseImage.src = '../imgYR/squash52.jpg';
             break;
         case 'swimming':
-            exerciseImage.src = 'imgYR/swimming52.jpg';
+            exerciseImage.src = '../imgYR/swimming52.jpg';
             break;
         case 'running':
-            exerciseImage.src = 'imgYR/running52.jpg';
+            exerciseImage.src = '../imgYR/running52.jpg';
             break;
     }
 });
