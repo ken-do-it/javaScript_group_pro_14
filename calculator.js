@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    let bmrWeightInput = document.getElementById("bmr-weight-input");
-    let bmrHeightInput = document.getElementById("bmr-height-input");
-    let bmrAgeInput = document.getElementById("bmr-age-input");
+    let weightInput = document.getElementById("bmr-weight-input");
+    let heightInput = document.getElementById("bmr-height-input");
+    let ageInput = document.getElementById("bmr-age-input");
     let bmrCalculateButton = document.getElementById("bmr-calculate-button");
-    let bmrResetButton = document.getElementById("bmr-reset-button");
-    let bmrResultDiv = document.getElementById("bmr-result");
+    let bmiCalculateButton = document.getElementById("bmi-calculate-button")
+    let resetButton = document.getElementById("reset-button");
+    let resultDiv = document.getElementById("calculate-result");
 
     const validateInput = (event) => {
         const input = event.target;
@@ -15,12 +16,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     bmrHeightInput.addEventListener('input', validateInput);
     bmrAgeInput.addEventListener('input', validateInput);
 
-    bmiWeightInput.addEventListener('input', validateInput);
-    bmiHeightInput.addEventListener('input', validateInput);
-    bmiAgeInput.addEventListener('input', validateInput);
 
-
-    const bmrFromCheck = () => {
+    const formCheck = () => {
         if (bmrHeightInput.value === '') {
             alert("Please enter your height");
             bmrHeightInput.focus();
