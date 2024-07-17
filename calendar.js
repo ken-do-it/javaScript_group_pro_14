@@ -100,3 +100,25 @@ let totalWater = localStorage.getItem('totalWater');
     if (totalWater !== null) {
         document.getElementById('waterIntake').textContent = `${(totalWater / 1000).toFixed(2)}L`;
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const emojiContainer = document.getElementById('emoji');
+        const selectedMood = localStorage.getItem('selectedMood');
+        const selectedSleepIcon = localStorage.getItem('selectedSleepIcon');
+        const selectedPoopIcon = localStorage.getItem('selectedPoopIcon');
+
+        if (selectedMood && selectedSleepIcon && selectedPoopIcon) {
+            const moodElement = document.createElement('div');
+            moodElement.textContent = `기분: ${selectedMood}`;
+
+            const sleepElement = document.createElement('div');
+            sleepElement.textContent = `수면: ${selectedSleepIcon}`;
+
+            const poopElement = document.createElement('div');
+            poopElement.textContent = `응가: ${selectedPoopIcon}`;
+
+            emojiContainer.appendChild(moodElement);
+            emojiContainer.appendChild(sleepElement);
+            emojiContainer.appendChild(poopElement);
+        }
+    });
