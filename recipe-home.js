@@ -7,11 +7,17 @@ const BASE_URL = `https://api.edamam.com/api/recipes/v2?type=${API_TYPE}&app_id=
 let url = '';
 
 const container = document.querySelector('.container');
-const pagination = document.getElementsByClassName('pagination')[0]; // Access the first element
+
+//pagination
+const paginationContainer = document.querySelector('.pagination');
+let currentPage = 1;
+let itemsPerPage = 12;
+let allRecipes = [];
 
 const getRecipesByKeyword = () => {
   const keyword = document.getElementById('search-input').value;
   url = new URL(`${BASE_URL}&q=${keyword}&`);
+  currentPage = 1; // 검색 시작하기전 currentPage를 1로 초기화
   // console.log(keyword);
   getRecipes();
 };
@@ -20,8 +26,9 @@ const getRecipes = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
+    allRecipes = data.hits;
     console.log(data);
-    render(data.hits);
+    render(allRecipes, currentPage);
 
     if (data.count === 0) {
       container.classList.add('container-error');
@@ -32,18 +39,20 @@ const getRecipes = async () => {
       pagination.style.display = 'flex'; // Show pagination if there are results
     }
   } catch (error) {
-    console.log('Error fetching the recipes');
     pagination.style.display = 'none';
-    // container.classList.add('container-error');
-    // container.innerHTML = `<div class="error-message">Error fetching the recipes</div>`;
+    container.classList.add('container-error');
+    container.innerHTML = `<div class="error-message">Error fetching the recipes</div>`;
   }
 };
 
-const render = (recipes) => {
+const render = (recipes, page = 1) => {
   container.innerHTML = '';
 
-  const limitedRecipes = recipes.slice(0, 12); // Limit to only 12 recipes are rendered (default value is 20)
-  limitedRecipes.forEach((recipe, index) => {
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const limitedRecipes = recipes.slice(start, end);
+
+  limitedRecipes.forEach((recipe) => {
     const box = document.createElement('div');
     box.classList.add('box');
 
@@ -72,6 +81,43 @@ const render = (recipes) => {
 
     container.appendChild(box);
   });
+
+  renderPagination(recipes.length, page);
+};
+
+const renderPagination = (totalItems, page) => {
+  paginationContainer.innerHTML = '';
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  if (page > 1) {
+    const prevButton = document.createElement('button');
+    prevButton.innerText = 'Previous';
+    prevButton.addEventListener('click', () => {
+      currentPage--;
+      render(allRecipes, currentPage);
+    });
+    paginationContainer.appendChild(prevButton);
+  } else {
+    const prevButton = document.createElement('button');
+    prevButton.innerText = 'Previous';
+    prevButton.classList.add('disabled');
+    paginationContainer.appendChild(prevButton);
+  }
+
+  if (page < totalPages) {
+    const nextButton = document.createElement('button');
+    nextButton.innerText = 'Next';
+    nextButton.addEventListener('click', () => {
+      currentPage++;
+      render(allRecipes, currentPage);
+    });
+    paginationContainer.appendChild(nextButton);
+  } else {
+    const nextButton = document.createElement('button');
+    nextButton.innerText = 'Next';
+    nextButton.classList.add('disabled');
+    paginationContainer.appendChild(nextButton);
+  }
 };
 
 document.addEventListener('DOMContentLoaded', function () {
