@@ -23,6 +23,9 @@ document
       showResult('수분 섭취량이 과다합니다!', '권장량은 2 ~ 2.1L 입니다.');
     } else if (totalWater >= recommendedWaterAmount) {
       showResult('충분한 섭취량 입니다!', '');
+
+      fireConfetti();
+
     } else {
       let additionalWater = recommendedWaterAmount - totalWater;
       showResult(
@@ -59,4 +62,46 @@ function checkResetTime() {
   }
 }
 
+//confetti
 
+function fireConfetti() {
+  const count = 200,
+      defaults = {
+          origin: { y: 0.7 },
+      };
+
+  function fire(particleRatio, opts) {
+      confetti(
+          Object.assign({}, defaults, opts, {
+              particleCount: Math.floor(count * particleRatio),
+          })
+      );
+  }
+
+  fire(0.25, {
+      spread: 26,
+      startVelocity: 55,
+  });
+
+  fire(0.2, {
+      spread: 60,
+  });
+
+  fire(0.35, {
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8,
+  });
+
+  fire(0.1, {
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2,
+  });
+
+  fire(0.1, {
+      spread: 120,
+      startVelocity: 45,
+  });
+}
