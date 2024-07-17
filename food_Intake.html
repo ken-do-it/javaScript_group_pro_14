@@ -1,40 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noona's Diet</title>
-    <link rel="stylesheet" href="food_intake.css">
+ <!-- bootstrap latest version -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+ <!-- font family Ubuntu -->
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+</style>
+
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
+
+<!-- 승혁님 css 링크 -->
+<link rel="stylesheet" href="indexAll/header_style.css"/>
+
+<!-- 예라님 css 링크 -->
+<link rel="stylesheet" href="indexAll/styleYR.css"/>
+
+<!-- 혜정님 css 링크 -->
+<!-- <link rel="stylesheet" href="indexAll/styleHJ.css"> -->
+
+<!-- <link rel="stylesheet" href="calculator.css"> -->
+
+<!-- 찬우님 css 링크 -->
+<!-- <link rel="stylesheet" href="indexAll/calculator.css"> -->
+
+
+<link rel="stylesheet" href="food_intake.css">
 </head>
 <body>
+    
 
 <div class="container">
+
+     <!-- start header part -->
+     <div id="headerArea">
+        <div class="headTop_App">
+          <div class="side_menu_button">
+              <i class="fas fa-bars" onclick="openMenu()"></i>
+          </div>
+          <ul class="menuRight">
+            <li><a href="">로그인</a></li>
+            <li>
+              <a href="">테스트</a>
+            </li>
+            <li>
+              <a href="">테스트</a>
+            </li>
+          </ul>   
+        </div>
+
+        <!-- Start Slide Menu -->
+      <div id="slideMenu" class="slide-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="/HJ/recipe-home.html">Recipes</a>
+        <a href="/yeara/recordYR.html">Today's workout</a>
+        <a href="food_Intake.html">Diet</a>
+        <a href="/yeara/calendar.html">Calendar</a>
+        <a href="water_tracking.html">Water consumption</a>
+        <a href="/yeara/emoji.html">Mood</a>
+
+        <div class="iconContainer">
+            <a href=""><i class="fas fa-bell"></i></a>
+            <a href=""><i class="far fa-user"></i></a>
+          </div>
+      </div>
+
+      <!-- End Slide Menu -->
+
+        <div class="headMid headMid_app">
+          <div class="logoContainer">
+          <a href=""><img src="./img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png" alt="" class="logo"></a>
+        </div>
+        <!-- <div class="iconWrapper"> -->
+        <div class="iconContainer">
+          <a href=""><i class="fas fa-bell"></i></a>
+          <a href=""><i class="far fa-user"></i></a>
+        </div>
+        <!-- </div> -->
+      </div>
+       
+        <div class="header_btm_app ">
+          
+        </div>
+      </div>
+      <!-- End header part  -->
+
+      
     <h1>Noona's Diet</h1>
+    <div class="diet_food_img_ke">
+        <img src="./img_ke/diet_food.png" alt="">
+    </div>
     
     <div class="input-group">
-        <label for="date">날짜:</label>
+        <label for="date">Date:</label>
         <input type="date" id="date">
     </div>
     
     <div class="input-group">
-        <label for="food">오늘 먹은 음식:</label>
-        <input type="text" id="food" placeholder="음식명을 입력하세요">
+        <label for="food">Food consumed today:</label>
+        <input type="text" id="food" placeholder="Enter the name of the food">
     </div>
     
     <div class="input-group">
-        <label for="calories">섭취한 칼로리:</label>
-        <input type="text" id="calories" placeholder="칼로리를 입력하세요">
+        <label for="calories">Calories consumed:</label>
+        <input type="text" id="calories" placeholder="Enter the calories">
     </div>
     
-    <div class="input-group">
-        <button onclick="addLog()">추가하기</button>
+    <div class="input-group input-group_addBtn">
+        <button onclick="addLog()">Add</button>
     </div>
     
     <div class="log" id="log"></div>
-    <div class="total-calories" id="totalCalories">총 칼로리: 0</div>
+    <div class="total-calories" id="totalCalories">Total Calories: 0</div>
 </div>
 
-<script src="food_Intake.js"></script>
+<script src="food_intake.js"></script>
+<script>
+function openMenu() {
+    document.getElementById("slideMenu").style.width = "250px";
+}
+
+function closeMenu() {
+    document.getElementById("slideMenu").style.width = "0";
+}
+
+document.querySelectorAll('.slide-menu a').forEach(item => {
+    item.addEventListener('click', event => {
+        closeMenu();
+    });
+});
+</script>
 
 </body>
 </html>
