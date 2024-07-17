@@ -5,17 +5,17 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   background-color: #f8f8f8;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 10px;
-  background-color: #ff6f61;
+  background-color: rgb(0, 134, 90);
   color: white;
 }
 
@@ -78,36 +78,90 @@ header {
 }
 
 main {
-  padding: 20px;
+  padding: 10px;
+}
+
+.main-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(23, 67, 57);
+  margin: 10px 0px 10px 0px;
 }
 
 .container {
   display: grid;
   grid-gap: 1em;
   padding: 1em;
-  height: 90vh;
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-columns: auto auto auto auto; */
 }
 
 .box {
   background-color: (255, 266, 255, 0.8);
-  border: 1px solid #ff6f61;
+  border: 1px solid rgb(0, 134, 90);
   border-radius: 10px;
-  padding: 2em;
+  padding: 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 250;
   text-transform: capitalize;
+}
+
+.box:hover {
+  cursor: pointer;
+}
+
+.recipe-url {
+  text-decoration: none;
+  color: black;
 }
 
 .recipe-label {
   font-weight: bold;
-  font-size: 20px;
-  color: #f04232;
+  font-size: 17px;
+  color: rgb(0, 134, 90);
+  padding-top: 5px;
+}
+
+.recipe-info {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid lightgray;
+  border-top: 2px solid lightgray;
+  /* float: center; */
+  /* width: 250px; */
+}
+
+.calories {
+  padding-right: 25px;
+}
+
+.calories-number {
+  /* color: #f04232; */
+  color: rgb(0, 134, 90);
+}
+
+.ingredients-number {
+  color: rgb(0, 134, 90);
+}
+
+.box img {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+}
+
+.box img:hover {
+  transform: scale(1.1);
 }
 
 .error-message {
@@ -116,7 +170,7 @@ main {
   justify-content: center;
   text-align: center;
   font-size: 23px;
-  border: 1px solid #ff6f61;
+  border: 1px solid rgb(0, 134, 90);
   border-radius: 10px;
   height: 70px;
   width: 50%;
@@ -134,4 +188,27 @@ main {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
+}
+
+.pagination-button {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 2px 10px;
+  cursor: pointer;
+  font-size: 17px;
+  border: 1px solid rgb(0, 134, 90);
+  border-radius: 30%;
+  background-color: transparent;
+}
+
+.pagination-button:hover {
+  /* cursor: pointer; */
+  transform: scale(1.1);
+  background-color: rgb(0, 134, 90);
+  color: white;
+}
+
+.pagination-button.active {
+  background-color: rgb(0, 134, 90);
+  color: white;
 }
