@@ -9,7 +9,7 @@
   font-size: 20px;
   font-weight: 700px;
   color: white;
-  padding: 12px 0;
+ 
 }
 .banner a {
   font-size: 20px;
@@ -33,10 +33,36 @@
   display: none;
 }
 
+/* 예라수정 */
+.icon-yr{
+  font-size:25px;
+  margin-right: 20px;
+}
+
+/* .menuLeft a:hover{
+  background-color: bisque;
+  padding: 5px;
+
+} */
+
+.menuLeft a {
+  box-shadow: inset 0 0 0 0 blanchedalmond;
+  padding: 10px;
+ 
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.menuLeft a:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 blanchedalmond;
+ 
+}
+
+
+
 /* Menu Right */
 .menuRight {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   justify-content: flex-end;
   list-style-type: none;
   margin-top: 25px;
@@ -55,7 +81,7 @@
 .menuRight li a:hover {
   color: rgb(0, 134, 90);
 }
-.menuRight li:nth-child(2)::before,
+/* .menuRight li:nth-child(2)::before,
 .menuRight li:nth-child(3)::before {
   content: '';
   display: inline-block;
@@ -63,7 +89,9 @@
   height: 13px;
   background-color: rgba(33, 33, 33, 0.171);
   margin-right: 20px;
-}
+} */
+
+
 
 /* Slide Menu */
 .slide-menu {
@@ -143,14 +171,15 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 45px;
-  height: 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.242);
+  height: 3.5rem;
+  box-shadow:0px 1px 1.5px #187a31;
+  /* 수정 */
 }
 .menu_button {
   display: flex;
   justify-content: center;
   padding-left: 30px;
-  margin-right: 57px;
+  
 }
 .menuLeft {
   display: flex;
