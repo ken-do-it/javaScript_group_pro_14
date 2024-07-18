@@ -222,12 +222,6 @@
     padding-left: 55px;
     padding-top: 5px;
   }
-}
-@media (max-width: 990px) {
-  .menuLeft {
-    padding-left: 55px;
-    padding-top: 5px;
-  }
   .menuLeft li a {
     margin-right: 50px;
     letter-spacing: 1px;
