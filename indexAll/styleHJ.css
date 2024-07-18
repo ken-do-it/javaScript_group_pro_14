@@ -3,33 +3,55 @@
 }
 
 h2 {
+  padding-top: 5px;
   padding-bottom: 10px;
 }
 
 .mb-4 {
   text-align: center;
   color: rgb(0, 134, 90);
+  margin: 8em;
 }
 
 .carousel-item .row {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* margin: 25px 0px 5px 0px; */
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .carousel-item img {
-  max-height: 300px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
-  border-radius: 30px;
+  border-radius: 50px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: rgb(0, 134, 90);
-  border-radius: 5px;
+  border-radius: 10px;
   width: 35%;
   height: 20%;
-  /* filter: brightness(0.9); */
+  filter: brightness(0.8);
+}
+
+@media (max-width: 900px) {
+  .mb-4 {
+    margin: 0.8em;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 22px;
+  }
+  .mb-4 {
+    margin: 0.5em;
+  }
 }
 
 /* styleHJ.css */
