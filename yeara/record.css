@@ -1,6 +1,8 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff; /* 부드러운 파란색 배경 */
+/* record.css */
+
+html{
+    font-family: "Ubuntu", sans-serif;
+    background-color: antiquewhite;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,46 +12,57 @@ body {
 }
 
 .container {
+    background-image: url('../imgYR/last.jpg');
+    border-color: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 0rem;
+    width: 100%;
     text-align: center;
-    margin-top: 50px;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .heading {
     font-size: 24px;
-    color: #333333;
-    margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:rgb(248, 245, 241);
+    margin-top: 7rem;
 }
 
-.time {
-    font-size: 36px;
-    color: #ff69b4; /* 핑크색 글자 */
-    margin-bottom: 30px;
+.time, .calories {
+    font-size: 20px;
+    font-weight: 700;
+    color: #136403;
+    margin: 15px 0;
 }
 
-.calories {
-    font-size: 18px;
-    color: #555555;
-    text-align: center;
-    margin-top: 30px;
+#workoutTimeDisplay {
+    font-weight: bold;
+    color: #136403;
 }
 
-.record-link {
-    margin-top: 20px;
+#caloriesBurned {
+    font-weight: bold;
+    color: #333b31;
 }
 
 .record-link a {
-    background-color: #ff69b4; /* 핑크색 배경 */
-    color: #ffffff; /* 흰색 글자 */
+    display: inline-block;
     padding: 10px 20px;
-    text-decoration: none; /* 링크 밑줄 제거 */
+    background-color: #2275e2;
+    color: #ffffff;
+    text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-top: 2rem;
 }
 
 .record-link a:hover {
-    background-color: #ff1493; /* 호버 시 더 진한 핑크색 */
-}
-
-.fa-fire{
-    color: red;
+    background-color: #3c86e6;
 }
