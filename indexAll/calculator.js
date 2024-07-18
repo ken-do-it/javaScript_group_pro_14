@@ -1,12 +1,15 @@
-
 document.addEventListener('DOMContentLoaded', (event) => {
     let weightInput = document.getElementById("weight-input");
     let heightInput = document.getElementById("height-input");
     let ageInput = document.getElementById("age-input");
-    let bmrCalculateButton = document.getElementById("bmr-calculate-button");
-    let bmiCalculateButton = document.getElementById("bmi-calculate-button");
+    let bmrCalculateButton = document.getElementById("calculate-bmr");
+    let bmiCalculateButton = document.getElementById("calculate-bmi");
     let resetButton = document.getElementById("reset-button");
-    let resultDiv = document.getElementById("calculator-result");
+    let resultDiv = document.querySelector(".result-section");
+    let femaleRadio = document.getElementById("female-radio");
+    let maleRadio = document.getElementById("male-radio");
+    let femaleImage = document.getElementById("female-image");
+    let maleImage = document.getElementById("male-image");
 
     const validateInput = (event) => {
         const input = event.target;
@@ -16,6 +19,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     weightInput.addEventListener('input', validateInput);
     heightInput.addEventListener('input', validateInput);
     ageInput.addEventListener('input', validateInput);
+
+    femaleRadio.addEventListener('change', () => {
+        if (femaleRadio.checked) {
+            femaleImage.style.display = 'block';
+            maleImage.style.display = 'none';
+        }
+    });
+
+    maleRadio.addEventListener('change', () => {
+        if (maleRadio.checked) {
+            femaleImage.style.display = 'none';
+            maleImage.style.display = 'block';
+        }
+    });
 
     const checkForm = () => {
         if (heightInput.value === '') {
@@ -33,12 +50,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (ageInput.value === '') {
             alert("Please enter your age");
             ageInput.focus();
-            return false;
-        }
-
-        const selectedGender = document.querySelector('input[name="gender"]:checked');
-        if (!selectedGender) {
-            alert("Please select your gender");
             return false;
         }
 
@@ -120,12 +131,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const genderInputs = document.querySelectorAll('input[name="gender"]');
         genderInputs.forEach(input => input.checked = false);
         resultDiv.innerHTML = ''; // Clear the result div
+    
+        // Hide the images
+        femaleImage.style.display = 'none';
+        maleImage.style.display = 'none';
+    
+        // Optionally, you can set a placeholder text or adjust height of container
+        // bodyImgContainer.style.height = '200px'; // Adjust the height as needed
     };
 
     bmrCalculateButton.addEventListener("click", calculateBMR);
     bmiCalculateButton.addEventListener("click", calculateBMI);
     resetButton.addEventListener("click", resetForm);
 });
-
-
-
