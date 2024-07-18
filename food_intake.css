@@ -157,6 +157,9 @@ input:focus {
 
 /* 슬라이드 메뉴 스타일 */
 .slide-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     height: 100%;
     width: 0;
     position: fixed;
@@ -170,7 +173,7 @@ input:focus {
 }
 
 .slide-menu a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
