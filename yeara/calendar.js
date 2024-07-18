@@ -109,13 +109,13 @@ let totalWater = localStorage.getItem('totalWater');
 
         if (selectedMood && selectedSleepIcon && selectedPoopIcon) {
             const moodElement = document.createElement('div');
-            moodElement.textContent = `기분: ${selectedMood}`;
+            moodElement.textContent = `Mood: ${selectedMood}`;
 
             const sleepElement = document.createElement('div');
-            sleepElement.textContent = `수면: ${selectedSleepIcon}`;
+            sleepElement.textContent = `Sleep: ${selectedSleepIcon}`;
 
             const poopElement = document.createElement('div');
-            poopElement.textContent = `응가: ${selectedPoopIcon}`;
+            poopElement.textContent = `Poop: ${selectedPoopIcon}`;
 
             emojiContainer.appendChild(moodElement);
             emojiContainer.appendChild(sleepElement);
