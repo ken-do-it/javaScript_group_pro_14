@@ -91,13 +91,13 @@ button:hover {
   opacity: 1;
 }
 .warning_water {
-  background-color: #e20202;
+  background-color: #f1627d;
 }
 .warning_skull {
   opacity: 1;
 }
 .warning_cup {
-  border: 3px solid #e20202;
+  border: 3px solid #fb99ab;
   transition: border-color 0.6s ease-in-out;
 }
 #water_figure {
@@ -118,6 +118,6 @@ button:hover {
 }
 
 #result.warning {
-  background-color: #e20202;
+  background-color: #f1627d;
   transition: background-color 0.6s ease-in-out;
 }
