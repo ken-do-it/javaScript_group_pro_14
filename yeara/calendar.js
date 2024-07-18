@@ -107,16 +107,37 @@ let totalWater = localStorage.getItem('totalWater');
         const selectedSleepIcon = localStorage.getItem('selectedSleepIcon');
         const selectedPoopIcon = localStorage.getItem('selectedPoopIcon');
 
+        const moodEmojiMap = {
+            happy: '😄',
+            sad: '😢',
+            angry: '😡',
+            calm: '😌'
+        };
+    
+        const sleepEmojiMap = {
+            good: '💤',
+            average: '😴',
+            bad: '😵'
+        };
+    
+        const poopEmojiMap = {
+            success: '💩',
+            gold: '💩🌟',
+            hard: '💩😣',
+            diarrhea: '💩💦',
+            blood: '💩💉'
+        };
+    
         if (selectedMood && selectedSleepIcon && selectedPoopIcon) {
             const moodElement = document.createElement('div');
-            moodElement.textContent = `Mood: ${selectedMood}`;
-
+            moodElement.textContent = `Mood: ${moodEmojiMap[selectedMood]}`;
+    
             const sleepElement = document.createElement('div');
-            sleepElement.textContent = `Sleep: ${selectedSleepIcon}`;
-
+            sleepElement.textContent = `Sleep: ${sleepEmojiMap[selectedSleepIcon]}`;
+    
             const poopElement = document.createElement('div');
-            poopElement.textContent = `Poop: ${selectedPoopIcon}`;
-
+            poopElement.textContent = `Poop: ${poopEmojiMap[selectedPoopIcon]}`;
+    
             emojiContainer.appendChild(moodElement);
             emojiContainer.appendChild(sleepElement);
             emojiContainer.appendChild(poopElement);
