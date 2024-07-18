@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,19 +39,6 @@
     <div class="banner">
       <a href="">배너 부분</a>
     </div>
-    <!-- header -->
-    <div id="headerArea">
-      <div class="headTop">
-        <ul class="menuRight">
-          <li><a href="">로그인</a></li>
-          <li>
-            <a href="">테스트</a>
-          </li>
-          <li>
-            <a href="">테스트</a>
-          </li>
-        </ul>
-      </div>
       <!-- start header part -->
       <div id="headerArea">
         <div class="headTop">
@@ -75,7 +61,7 @@
         <!-- Start Slide Menu -->
       <div id="slideMenu" class="slide-menu">
         <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
-        <a href="/HJ/recipe-main.html">Recipes</a>
+        <a href="/HJ/recipe-home.html">Recipes</a>
         <a href="/yeara/recordYR.html">Today's workout</a>
         <a href="food_Intake.html">Diet</a>
         <a href="/yeara/calendar.html">Calendar</a>
@@ -105,7 +91,7 @@
         <div class="header_btm">
           <div class="menu_button">
             <ul class="menuLeft">
-              <li><a href="/HJ/recipe-main.html">Recipes</a></li>
+              <li><a href="/HJ/recipe-home.html">Recipes</a></li>
               <li><a href="/yeara/recordYR.html">Today's workout</a></li>
               <li><a href="food_Intake.html">Diet</a></li>
               <li><a href="/yeara/calendar.html">Calendar</a></li>
@@ -126,14 +112,10 @@
 
       <div class="head-img-container">
         <img src="imgYR/What-is-diet-culture.webp" class="head-img" alt="no-image">
-        <div class="img-text">
-          <div>A Better Version</div> 
-          <div class="myself">of Myself</div>
-        </div>
+          <div class="img-text">A Better Version of Myself</div>
         <button type="button" class="btn btn-warning download_app_btn">Download App</button>
       </div>
-    </div>
-  </nav>
+
 
 
   <main>
@@ -145,9 +127,8 @@
           <div class="flex-form-container">
 
             <div class="input-area">
-
+<!-- 예라님 추가 시작  -->
               <div class="body-info">
-                
                 <div>
                   <img src="imgYR/man369.png" class="body-photo">
                 </div>
@@ -188,24 +169,19 @@
             </div>
           </div>
 
-
-
         </form>
       </div>
       <div id="calculator-result"></div>
-    </div>
+
     <!--Calculator container-->
 
-    <div class="recipeYR mb-4">
+    <div class="recipeYR">
       <h2> Today's recommend recipe</h2>
-      <div class='recipe-container'></div>
+      <div class="row ">
+      <div class='recipe-container col' style="border: 2px solid red;"></div>
+    </div>
     </div>
 
-
-    <div>
-      
-    </div>
-  </main>
 
 
   <footer class="site-footer">
@@ -234,6 +210,15 @@
       </div>
     </div>
   </footer>
+
+
+<!-- class="calculator-container-CW"  이 div와 main 태그가 footer 밖에 있어야 화면이 줄었을때  BMI 과 recipe-result 안 겹쳐진다   -->
+</div> 
+</main>
+
+
+
+</nav>
 </div>
 
 
