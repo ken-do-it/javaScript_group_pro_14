@@ -31,7 +31,7 @@
 /* Hide hamburger icon by default */
 .headTop i {
   display: none;
-  font-size: 30px;
+  font-size: 35px;
   color: rgb(0, 134, 90);
 }
 
@@ -120,7 +120,7 @@
   width: 350px;
   height: 180px;
   padding-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 /* Icon Container */
@@ -143,21 +143,22 @@
 /* Header Bottom */
 .header_btm {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin-top: 45px;
-  height: 40px;
-  box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, 0.242);
+  margin-top: 70px;
+  height: 45px;
+  box-shadow: 0px 7px 6px -6px rgba(0, 0, 0, 0.434);
 }
 .menu_button {
   display: flex;
   justify-content: center;
-  padding-left: 100px;
 }
 .menuLeft {
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  align-items: center;
+  padding-left: 85px;
+  padding-top: 5px;
   list-style: none;
 }
 .menuLeft li a {
@@ -209,17 +210,49 @@
 }
 
 /* Media Query */
-@media (max-width: 700px) {
+
+@media (max-width: 1400px) {
+  .menuLeft {
+    padding-left: 95px;
+    padding-top: 5px;
+  }
+}
+@media (max-width: 990px) {
+  .menuLeft {
+    padding-left: 55px;
+    padding-top: 5px;
+  }
+  .menuLeft li a {
+    margin-right: 50px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 768px) {
   .headTop i {
     display: flex;
+    position: absolute;
+    top: 30px;
     margin-left: 20px;
   }
-
+  .headMid img {
+    width: 350px;
+    height: 170px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    margin-top: 90px;
+  }
+  .header_btm {
+    height: 10px;
+  }
   .iconContainer a {
     display: none;
   }
 
   .menu_button {
     display: none;
+  }
+  .header_btm {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.434);
   }
 }
