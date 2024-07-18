@@ -57,7 +57,7 @@ select, input[type="number"] {
 
 /* 버튼 스타일 */
 button {
-    background-color: #d6cc71; 
+    background-color: #FA8072; 
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -68,7 +68,7 @@ button {
 }
 
 button:hover {
-    background-color: #dcff145e; 
+    background-color: #c73626; 
 }
 
 /* 결과 스타일 */
