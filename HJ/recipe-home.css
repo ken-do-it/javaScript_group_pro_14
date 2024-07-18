@@ -25,19 +25,6 @@ header {
   vertical-align: middle;
 }
 
-#logo {
-  /* display: flex; */
-  padding-left: 10px;
-  font-size: 25px;
-  /* width: 10%;
-  height: 10%; */
-}
-
-/* #logo img {
-  width: 20%;
-  height: 10%;
-} */
-
 .fa-magnifying-glass:hover {
   cursor: pointer;
   transform: scale(1.2);
@@ -84,7 +71,7 @@ main {
 .main-title {
   text-align: center;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 27px;
   color: rgb(23, 67, 57);
   margin: 10px 0px 10px 0px;
 }
@@ -92,7 +79,7 @@ main {
 .container {
   display: grid;
   grid-gap: 1em;
-  padding: 1em;
+  padding: 1em 5em;
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-columns: auto auto auto auto; */
 }
@@ -113,6 +100,16 @@ main {
 
 .box:hover {
   cursor: pointer;
+}
+
+.box img {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+}
+
+.box img:hover {
+  transform: scale(1.1);
 }
 
 .recipe-url {
@@ -152,16 +149,6 @@ main {
 
 .ingredients-number {
   color: rgb(0, 134, 90);
-}
-
-.box img {
-  width: 140px;
-  height: 140px;
-  border-radius: 10px;
-}
-
-.box img:hover {
-  transform: scale(1.1);
 }
 
 .error-message {
@@ -211,4 +198,40 @@ main {
 .pagination-button.active {
   background-color: rgb(0, 134, 90);
   color: white;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    justify-content: center;
+    grid-template-columns: 0.8fr;
+  }
+  .main-title {
+    font-size: 23px;
+  }
+  .search-input-section {
+    display: flex;
+  }
+  #search-input {
+    width: 330px;
+    height: 35px;
+    margin-right: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  .search-button .fa-magnifying-glass {
+    font-size: 1em;
+    vertical-align: middle;
+  }
 }
