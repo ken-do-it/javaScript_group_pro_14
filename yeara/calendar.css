@@ -11,7 +11,7 @@ body {
 }
 
 .calendar {
-    width: 55%;
+    width: 45%;
     height: 60%;
     border: 2px solid #fdd835;
     border-radius: 15px;
@@ -89,7 +89,7 @@ body {
 }
 
 .memo {
-    width: 350px;
+    width: 400px;
     padding: 20px;
     border: 1px solid #d4af37;
     border-radius: 10px;
