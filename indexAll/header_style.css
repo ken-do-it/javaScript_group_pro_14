@@ -41,7 +41,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   list-style-type: none;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .menuRight li {
   margin-left: 23px;
@@ -222,6 +222,12 @@
     padding-left: 55px;
     padding-top: 5px;
   }
+}
+@media (max-width: 990px) {
+  .menuLeft {
+    padding-left: 55px;
+    padding-top: 5px;
+  }
   .menuLeft li a {
     margin-right: 50px;
     letter-spacing: 1px;
@@ -237,7 +243,7 @@
   }
   .headMid img {
     width: 350px;
-    height: 170px;
+    height: 200px;
     padding-bottom: 0px;
     margin-bottom: 10px;
     margin-top: 90px;
