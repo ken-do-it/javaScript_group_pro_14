@@ -1,6 +1,5 @@
 const API_TYPE = 'public';
 const APP_ID = 'eca0d2ce';
-// const APP_KEY = '5c7761a24073cbd7ea715a9b3b7ae84a';
 const APP_KEY = config.apiKey;
 
 const BASE_URL = `https://api.edamam.com/api/recipes/v2?type=${API_TYPE}&app_id=${APP_ID}&app_key=${APP_KEY}`;
@@ -16,10 +15,41 @@ const getRecipesInfo = async () => {
     }
     const data = await response.json();
     console.log(data);
-    const allRecipes = data.hits;
+
+    // const allRecipes = data.hits;
+    const allRecipes = await Promise.all(
+      data.hits.map(async (recipe) => {
+        const isValid = await isValidUrl(recipe.recipe.url);
+        return isValid ? recipe : null;
+      })
+    ).then((recipes) => recipes.filter((recipe) => recipe !== null));
+
     renderCarousel(allRecipes);
   } catch (error) {
     console.error('Failed to fetch recipes:', error);
+  }
+};
+
+// URL validation to check if it's not a "page not found" or similar error
+const isValidUrl = async (url) => {
+  if (!url) {
+    return false; // If URL is falsy (null or undefined), return false
+  }
+
+  // Check if the URL contains 'page-not-found' or '404' (case insensitive)
+  if (
+    url.toLowerCase().includes('page-not-found') ||
+    url.toLowerCase().includes('404')
+  ) {
+    return false;
+  }
+
+  try {
+    const response = await fetch(url);
+    return response.ok; // Check if the response is OK (status 200-299)
+  } catch (error) {
+    console.error('Error checking URL:', error);
+    return false; // Return false if there's an error (e.g., network issue)
   }
 };
 
@@ -68,10 +98,9 @@ const renderCarousel = (recipes) => {
 // Call getRecipesInfo to fetch data and render the carousel
 getRecipesInfo();
 
-
-
-
-// 혜정님 코드 시작 
+////////////// 밑에 주석처리한 전체코드는 삭제필요 ////////////
+//////////////////////////////////////////////////////
+// 혜정님 코드 시작
 // const renderRecipeBoxes = () => {
 //   const recipeContainer = document.querySelector('.recipe-container');
 
@@ -84,11 +113,7 @@ getRecipesInfo();
 // };
 
 // renderRecipeBoxes();
-//혜정님 코드 끝 
-
-
-
-
+//혜정님 코드 끝
 
 // mainHJ.js
 // const renderRecipeBoxes = () => {
