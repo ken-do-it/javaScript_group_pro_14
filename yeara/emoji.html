@@ -3,42 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>emoji</title>
+  <title>Emoji Mood Tracker</title>
   <link rel="stylesheet" href="/yeara/emoji.css">
 </head>
 <body>
   
   <div class="mood-selection">
-    <h2>오늘의 기분을 선택하세요:</h2>
-    <label><input type="radio" name="mood" value="happy"> 행복 😄</label>
-    <label><input type="radio" name="mood" value="sad"> 슬픔 😢</label>
-    <label><input type="radio" name="mood" value="angry"> 화남 😡</label>
-    <label><input type="radio" name="mood" value="calm"> 평온 😌</label>
+    <h2>Select your mood today:</h2>
+    <input type="radio" id="happy" name="mood" value="happy">
+    <label for="happy">Happy 😄</label>
+    <input type="radio" id="sad" name="mood" value="sad">
+    <label for="sad">Sad 😢</label>
+    <input type="radio" id="angry" name="mood" value="angry">
+    <label for="angry">Angry 😡</label>
+    <input type="radio" id="calm" name="mood" value="calm">
+    <label for="calm">Calm 😌</label>
   </div>
 
   <div class="sleep-info">
-    <h2>나의 수면 정보 입력:</h2>
-    
+    <h2>Enter your sleep information:</h2>
     <div class="sleep-icons">
-      <label><input type="radio" name="sleep-icon" value="good"> 좋음 💤</label>
-      <label><input type="radio" name="sleep-icon" value="average"> 보통 😴</label>
-      <label><input type="radio" name="sleep-icon" value="bad"> 나쁨 😵</label>
+      <input type="radio" id="good" name="sleep-icon" value="good">
+      <label for="good">Good 💤</label>
+      <input type="radio" id="average" name="sleep-icon" value="average">
+      <label for="average">Average 😴</label>
+      <input type="radio" id="bad" name="sleep-icon" value="bad">
+      <label for="bad">Bad 😵</label>
     </div>
   </div>
 
   <div class="poop-info">
-    <h2>응가 정보 입력:</h2>
+    <h2>Enter your poop information:</h2>
     <div class="poop-icons">
-      <label><input type="radio" name="poop-icon" value="success"> 응가 성공 💩</label>
-      <label><input type="radio" name="poop-icon" value="gold"> 황금똥 💩🌟</label>
-      <label><input type="radio" name="poop-icon" value="hard"> 딱딱 💩😣</label>
-      <label><input type="radio" name="poop-icon" value="diarrhea"> 설사 💩💦</label>
-      <label><input type="radio" name="poop-icon" value="blood"> 피똥 💩💉</label>
+      <input type="radio" id="success" name="poop-icon" value="success">
+      <label for="success">Success 💩</label>
+      <input type="radio" id="gold" name="poop-icon" value="gold">
+      <label for="gold">Golden 💩🌟</label>
+      <input type="radio" id="hard" name="poop-icon" value="hard">
+      <label for="hard">Hard 💩😣</label>
+      <input type="radio" id="diarrhea" name="poop-icon" value="diarrhea">
+      <label for="diarrhea">Diarrhea 💩💦</label>
+      <input type="radio" id="blood" name="poop-icon" value="blood">
+      <label for="blood">Bloody 💩💉</label>
     </div>
   </div>
-
-
-
 
   <script src="/yeara/emoji.js"></script>
 </body>

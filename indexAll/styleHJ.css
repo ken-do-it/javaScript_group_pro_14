@@ -31,3 +31,24 @@ h2 {
   height: 20%;
   /* filter: brightness(0.9); */
 }
+
+/* styleHJ.css */
+/* .box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1em; 
+
+  .recipe-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 1em;
+  padding: 1em;
+  width: 100%;
+}
+
+@media (max-width: 520px) {
+  .recipe-container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+ */
