@@ -6,10 +6,41 @@
 
 // let url = '';
 
+
+
+
+
+// 혜정님 코드 시작 
+// const renderRecipeBoxes = () => {
+//   const recipeContainer = document.querySelector('.recipe-container');
+
+//   for (let i = 1; i <= 8; i++) {
+//     const box = document.createElement('div');
+//     box.classList.add('box');
+//     box.textContent = `Recipe${i}`;
+//     recipeContainer.appendChild(box);
+//   }
+// };
+
+// renderRecipeBoxes();
+//혜정님 코드 끝 
+
+
+
+
+
+// mainHJ.js
 const renderRecipeBoxes = () => {
   const recipeContainer = document.querySelector('.recipe-container');
+  recipeContainer.innerHTML = ''; // 기존 박스 초기화
 
-  for (let i = 1; i <= 8; i++) {
+  const containerWidth = recipeContainer.offsetWidth;
+  const boxWidth = 150 + 16; // 박스 너비 + 그리드 갭
+  const minBoxesPerRow = Math.floor(containerWidth / boxWidth);
+  const numberOfRows = 2;
+  const numberOfBoxes = minBoxesPerRow * numberOfRows;
+
+  for (let i = 1; i <= numberOfBoxes; i++) {
     const box = document.createElement('div');
     box.classList.add('box');
     box.textContent = `Recipe${i}`;
@@ -17,4 +48,5 @@ const renderRecipeBoxes = () => {
   }
 };
 
-renderRecipeBoxes();
+window.addEventListener('resize', renderRecipeBoxes);
+window.addEventListener('load', renderRecipeBoxes);
