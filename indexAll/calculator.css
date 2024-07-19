@@ -77,6 +77,9 @@
 
 .body-info{
     display: flex;
+    justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .recipeYR{
@@ -235,17 +238,14 @@ body{
     align-items: center;
 }
 
-.body-info {
-    display: flex;
-    flex-wrap: wrap;
-   
-}
-
 
 .body-chart {
-    display: flex;
-    flex-direction: column;
-  
+  flex: 1;
+}
+
+.accordion {
+  flex: 1;
+  margin-left: 1rem; 
 }
 
 

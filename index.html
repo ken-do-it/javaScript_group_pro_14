@@ -82,7 +82,7 @@
     <!-- End Slide Menu -->
 
 
-   <!-- logo -->
+    <!-- logo -->
     <div class="logoContainer col headMid headMid_app">
       <a href="index.html"><img src="./img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png" alt=""
           class="logo"></a>
@@ -97,8 +97,8 @@
 
     <div class="header_btm">
       <div class="menu_button">
-        
-      
+
+
         <ul class="menuLeft">
           <li><a href="/HJ/recipe-home.html">Recipes</a></li>
           <li><a href="/yeara/recordYR.html">Workout</a></li>
@@ -123,7 +123,7 @@
   </div>
 
 
- <!--Calculator container-->
+  <!--Calculator container-->
   <div class="calculator-container-CW">
     <div class="form-container">
       <form class="bmr-form">
@@ -134,9 +134,9 @@
               <div>
                 <img src="imgYR/man369.png" class="body-photo">
               </div>
-  
+
               <div class="body-chart">
-                <div class="form-radio mt-4 mb-2">
+                <div class="form-radio">
                   <label id="gender">Gender:</label>
                   <input type="radio" name="gender" value="Male" id="male-radio"> Male
                   <input type="radio" name="gender" value="Female" id="female-radio"> Female
@@ -149,7 +149,7 @@
                   <label for="nme"><span>What's your height?</span></label>
                   <input type="text" name="name" class="question" id="weight-input" required autocomplete="off" />
                   <label for="nme"><span>What's your weight?</span></label>
-                 
+
                 </form>
 
                 <div class="calculator-buttons">
@@ -160,16 +160,74 @@
                   <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
                 </div>
               </div>
-  
-              <div class="mt-5 ms-5 bmrYR" id="calculator-result">
-              
+
+
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      What is Basal Metabolic Rate?
+                    </button>
+                  </h2>
+
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>BMR</strong> stands for Basal Metabolic Rate. It is the number of calories your body needs
+                      to perform basic, life-sustaining functions such as breathing, circulation, cell production,
+                      nutrient processing, and temperature regulation while at rest. Essentially, it represents the
+                      amount of energy expended by your body to maintain normal bodily functions when you're at rest in
+                      a neutral environment.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      What is Body Mass Index?
+                    </button>
+                  </h2>
+
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>BMI</strong>, which stands for Body Mass Index, is a numerical measurement derived from
+                      a person’s height and weight, used to gauge body fat levels.
+
+                      It categorizes individuals into underweight, normal weight, overweight, or obese categories,
+                      making
+                      it an essential tool in health assessments. Health professionals globally rely on BMI to evaluate
+                      weight-to-height ratios accurately.
+
+                      Keep in mind that BMI is not a perfect model, and there are situations where it should not be
+                      applied.
+
+                      Some examples of situations where BMI should not be applied are as follows:
+
+                      Children younger than the age of 18.
+                      People with developmental issues.
+                      People with disabilities.
+                      People with various diagnoses that can affect their body weight.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+              <div class=" bmrYR" id="calculator-result">
+
               </div>
             </div>
           </div>
         </div>
       </form>
     </div>
-  <div id="calculator-result"></div>
+    <div id="calculator-result"></div>
 
     <!--Calculator container-->
 
