@@ -10,53 +10,42 @@ body {
   background-color: #f8f8f8;
 }
 
-/* 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  background-color: rgb(0, 134, 90);
-  color: white;
-} */
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1200px; /* 최대 너비 설정 */
+}
 
 .search-input-section {
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
   position: relative;
-  display: inline-block;
 }
 
 #search-input {
   border-radius: 10px;
   border: 1px solid black;
-  width: 400px;
+  width: 100%;
+  max-width: 400px; /* 최대 너비 설정 */
   height: 45px;
-  /* margin-left: 20px; */
-  /* padding-left: 10px; */
-  padding-left: 2.5em; /* Adjust padding to make space for the icon */
-  margin-bottom: 10px;
-  margin-top: 10px;
+  padding-left: 2.5em; /* 아이콘 공간 확보를 위한 패딩 */
   font-size: 18px;
   box-sizing: border-box;
 }
 
-.fa-magnifying-glass {
+.search-icon-ke {
   position: absolute;
-  left: 15px; /* Adjust this value as needed to position the icon */
-  top: 43%;
+  left: 10px; /* 입력 창 내부 패딩에 맞게 위치 조정 */
+  top: 50%;
   transform: translateY(-50%);
-  font-size: 20px; /* Adjust the icon size as needed */
+  font-size: 20px; /* 아이콘 크기 조정 */
   vertical-align: middle;
   color: rgb(0, 134, 90);
 }
 
-.fa-magnifying-glass:hover {
+.search-icon-ke:hover {
   cursor: pointer;
-  /* transform: scale(1.1); */
 }
 
 .search-button {
@@ -66,50 +55,31 @@ header {
   cursor: pointer;
 }
 
-.menu-tab {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 25px;
-  padding-right: 10px;
-}
-
-.fa-bars:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-}
-
-main {
-  padding: 10px;
-}
-
 .main-title {
-  text-align: center;
   font-weight: bold;
   font-size: 30px;
   color: rgb(23, 67, 57);
-  margin: 10px 0px 10px 0px;
   padding-bottom: 10px;
 }
 
 .main-title-container {
   display: flex;
   justify-content: space-between;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  align-items: center;
+  flex-wrap: wrap; /* 항목을 다음 줄로 래핑 허용 */
   margin-top: 10px;
+  margin-bottom: 50px;
+  gap: 20px; /* 제목과 검색창 사이 간격 추가 */
 }
 
-.container {
+.recipe-container-ABC {
   display: grid;
   grid-gap: 1em;
-  padding: 1em 5em;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-columns: auto auto auto auto; */
 }
 
 .box {
-  background-color: (255, 266, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgb(0, 134, 90);
   border-radius: 10px;
   padding: 0.5em;
@@ -143,7 +113,7 @@ main {
 
 .recipe-label {
   font-weight: bold;
-  font-size: 17px;
+  font-size: 1rem;
   color: rgb(0, 134, 90);
   padding-top: 5px;
 }
@@ -158,8 +128,6 @@ main {
   margin-bottom: 5px;
   border-bottom: 2px solid lightgray;
   border-top: 2px solid lightgray;
-  /* float: center; */
-  /* width: 250px; */
 }
 
 .calories {
@@ -167,16 +135,11 @@ main {
 }
 
 .calories-number {
-  /* color: #f04232; */
   color: rgb(0, 134, 90);
 }
 
 .ingredients-number {
   color: rgb(0, 134, 90);
-}
-
-.box img:hover {
-  transform: scale(1.1);
 }
 
 .error-message {
@@ -217,7 +180,6 @@ main {
 }
 
 .pagination-button:hover {
-  /* cursor: pointer; */
   transform: scale(1.1);
   background-color: rgb(0, 134, 90);
   color: white;
@@ -229,342 +191,58 @@ main {
 }
 
 @media (max-width: 1200px) {
-  .container {
+  .recipe-container-ABC {
     grid-template-columns: repeat(3, 1fr);
+  }
+  /* 마지막 아이템을 중앙에 배치 */
+  .recipe-container-ABC .box:nth-last-child(1):nth-child(3n + 1) {
+    grid-column: span 3;
+    justify-self: center;
   }
 }
 
 @media (max-width: 935px) {
-  .container {
+  .recipe-container-ABC {
     grid-template-columns: repeat(2, 1fr);
   }
   .main-title-container {
-    display: flex;
     flex-direction: column;
+    align-items: center;
   }
   #search-input {
-    width: 400px;
-    padding-left: 2em; /* Adjust padding for smaller screens */
+    width: 100%;
+    max-width: 300px; /* 작은 화면에 맞춰 너비 조정 */
   }
 
-  .fa-magnifying-glass {
-    position: absolute;
-    right: 375px; /* Adjust this value as needed to position the icon */
-    top: 48%;
-    transform: translateY(-50%);
-    font-size: 20px; /* Adjust the icon size as needed */
+  .search-icon-ke {
+    left: 10px; /* 아이콘 위치를 작은 화면에 맞게 조정 */
+    font-size: 16px; /* 아이콘 크기 조정 */
+  }
+  /* 마지막 아이템을 중앙에 배치 */
+  .recipe-container-ABC .box:nth-last-child(1):nth-child(2n + 1) {
+    grid-column: span 2;
+    justify-self: center;
   }
 }
 
-@media (max-width: 600px) {
-  .container {
-    justify-content: center;
-    grid-template-columns: 0.8fr;
+@media (max-width: 700px) {
+  .recipe-container-ABC {
+    grid-template-columns: 1fr;
+    justify-items: center; /* 아이템을 가운데 정렬 */
   }
   .main-title-container {
-    vertical-align: middle;
+    text-align: center;
   }
   .main-title {
     font-size: 23px;
-    padding-top: 5px;
   }
-}
-
-/* ----------------------------- */
-/* 승혁님 css header 스타일링 - index.html*/
-
-/* Banner */
-/* .banner {
-  display: block;
-  position: relative;
-  text-align: center;
-  height: 55px;
-  width: 100%;
-  background-color: rgb(0, 134, 90);
-  font-size: 20px;
-  font-weight: 700px;
-  color: white;
-  padding: 12px 0;
-}
-.banner a {
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  cursor: pointer;
-  line-height: 25px;
-  letter-spacing: 2px;
-} */
-
-/* Head Top */
-.headTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Hide hamburger icon by default */
-.headTop i {
-  display: none;
-  font-size: 35px;
-  color: rgb(0, 134, 90);
-}
-
-/* Menu Right */
-.menuRight {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  list-style-type: none;
-  padding-top: 40px;
-  margin-right: 20px;
-}
-/* .menuRight li {
-  margin-left: 23px;
-} */
-.menuRight a {
-  text-decoration: none;
-  letter-spacing: 1px;
-  font-size: 25px;
-  line-height: 29px;
-  padding-left: 30px;
-  cursor: pointer;
-  color: rgba(28, 28, 28, 0.778);
-}
-.menuRight a:hover {
-  color: rgb(0, 134, 90);
-}
-.menuLeft a {
-  box-shadow: inset 0 0 0 0 blanchedalmond;
-
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.menuLeft a:hover {
-  color: #fff;
-  box-shadow: inset 200px 0 0 0 blanchedalmond;
-}
-/* .menuRight li:nth-child(2)::before,
-.menuRight li:nth-child(3)::before {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 13px;
-  background-color: rgba(33, 33, 33, 0.171);
-  margin-right: 20px;
-} */
-
-/* Slide Menu */
-.slideMenu::before {
-  font-size: 100px;
-}
-.slide-menu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-.slide-menu a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-.slide-menu a:hover {
-  color: #f1f1f1;
-}
-.slide-menu .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Head Mid */
-.headMid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  position: relative;
-}
-
-/* Logo Container */
-.logoContainer {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-/* Logo Image */
-.headMid img {
-  width: 350px;
-  height: 200px;
-  margin-bottom: 50px;
-}
-
-/* Icon Container */
-.headMid .iconContainer {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.headMid .iconContainer a {
-  color: rgba(28, 28, 28, 0.728);
-  font-size: 25px;
-}
-.headMid .iconContainer a:not(:first-child) {
-  padding-left: 20px;
-}
-
-/* Header Bottom */
-.header_btm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 70px;
-  height: 45px;
-  box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
-}
-.menu_button {
-  display: flex;
-  justify-content: center;
-}
-.menuLeft {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 85px;
-  padding-top: 5px;
-  list-style: none;
-}
-.menuLeft li a {
-  text-decoration: none;
-  letter-spacing: 1px;
-  font-size: 16px;
-  font-weight: bolder;
-  color: rgb(28, 28, 28);
-  margin-right: 90px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  flex: 1;
-  text-align: center;
-}
-.menuLeft li a:hover {
-  color: rgb(0, 134, 90);
-}
-
-/* Search Container */
-.search_container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.search_container input {
-  padding: 5px 15px;
-  padding-right: 30px;
-  border: none;
-  background-color: rgb(242, 242, 242);
-  font-size: 12px;
-  height: 34px;
-  line-height: 15px;
-  width: 220px;
-  border-radius: 5px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-.search_container button {
-  position: absolute;
-  right: 5px;
-  top: 4px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  opacity: 95%;
-  color: rgb(0, 134, 90);
-}
-
-/* Media Query */
-
-@media (max-width: 1400px) {
-  .menuLeft {
-    padding-left: 95px;
-    padding-top: 5px;
+  #search-input {
+    width: 100%;
+    max-width: 250px; /* 작은 화면에 맞춰 너비 조정 */
+    font-size: 16px;
   }
-}
-@media (max-width: 990px) {
-  .menuLeft {
-    padding-left: 55px;
-    padding-top: 5px;
-  }
-}
-@media (max-width: 990px) {
-  .menuLeft {
-    padding-left: 55px;
-    padding-top: 5px;
-  }
-  .menuLeft li a {
-    margin-right: 50px;
-    letter-spacing: 1px;
-  }
-}
-
-@media (max-width: 768px) {
-  .headTop i {
-    display: flex;
-    position: absolute;
-    top: 30px;
-    margin-left: 20px;
-  }
-  .headMid {
-    height: 170px;
-  }
-
-  .headMid img {
-    width: 350px;
-    height: 200px;
-    padding-bottom: 0px;
-    margin-bottom: 20px;
-    margin-top: 150px;
-  }
-  .headTop i {
-    z-index: 2;
-  }
-  .slide-menu {
-    z-index: 3;
-  }
-  .header_btm {
-    height: 10px;
-  }
-  .iconContainer a {
-    display: none;
-  }
-  .menuRight {
-    display: none;
-  }
-  .menu_button {
-    display: none;
-  }
-  .header_btm {
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.434);
-  }
-
-  .logoContainer {
-    box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
-    margin-bottom: 20px;
+  .search-icon-ke {
+    left: 10px; /* 작은 화면에 맞춰 위치 조정 */
+    font-size: 16px; /* 아이콘 크기 조정 */
   }
 }

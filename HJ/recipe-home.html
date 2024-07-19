@@ -26,132 +26,108 @@
 
     <!-- 혜정님 css 링크 -->
     <link rel="stylesheet" href="recipe-home.css" />
+
+    <link rel="stylesheet" href="/indexAll/header_style.css">
   </head>
 
   <body>
-    <nav>
-      <!-- banner -->
-      <!-- <div class="banner">
-        <a href="">배너 부분</a>
-      </div> -->
-      <!-- start header part -->
-      <div class="menuRight">
-        <a href="#"><i class="fas fa-bell icon-yr"></i></a>
-        <a href="#"><i class="far fa-user icon-yr"></i></a>
-      </div>
-
-      <div id="headerArea">
-        <div class="headTop">
-          <div class="side_menu_button">
-            <i class="fas fa-bars" onclick="openMenu()"></i>
-          </div>
-          <div>
-            <ul class="menuRight">
-              <!-- <li><a href=""><i class="fas fa-bell"></i></a></li>
-              <li>
-                <a href=""><i class="fas fa-bell"></i></a>
-              </li> -->
-            </ul>
-          </div>
+    <div class="container">
+      <nav>
+        <!-- start header part -->
+        <div class="menuRight">
+          <a href="#"><i class="fas fa-bell icon-yr"></i></a>
+          <a href="#"><i class="far fa-user icon-yr"></i></a>
         </div>
 
-        <!-- Start Slide Menu -->
-        <div id="slideMenu" class="slide-menu">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()"
-            >&times;</a
-          >
-          <a href="/HJ/recipe-home.html">Recipes</a>
-          <a href="/yeara/recordYR.html">Workout</a>
-          <a href="food_Intake.html">Diet</a>
-          <a href="/yeara/calendar.html">Calendar</a>
-          <a href="water_tracking.html">Consumption</a>
-          <a href="/yeara/emoji.html">Mood</a>
-
-          <div class="iconContainer_side">
-            <a href=""><i class="fas fa-bell"></i></a>
-            <a href=""><i class="far fa-user"></i></a>
+        <div id="headerArea">
+          <div class="headTop">
+            <div class="side_menu_button">
+              <i class="fas fa-bars" onclick="openMenu()"></i>
+            </div>
+            <div>
+              <ul class="menuRight"></ul>
+            </div>
           </div>
-        </div>
-        <!-- End Slide Menu -->
 
-        <div class="headMid headMid_app">
-          <div class="logoContainer">
-            <a href="../index.html"
-              ><img
-                src="../img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png"
-                alt=""
-                class="logo"
-            /></a>
-          </div>
-          <!-- <div class="iconContainer">
+          <!-- Start Slide Menu -->
+          <div id="slideMenu" class="slide-menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()"
+              >&times;</a
+            >
+            <a href="/index.html">home</a>
+            <a href="/HJ/recipe-home.html">Recipes</a>
+            <a href="/yeara/recordYR.html">Workout</a>
+            <a href="food_Intake.html">Diet</a>
+            <a href="/yeara/calendar.html">Calendar</a>
+            <a href="water_tracking.html">Consumption</a>
+            <a href="/yeara/emoji.html">Mood</a>
+
+            <div class="iconContainer_side">
               <a href=""><i class="fas fa-bell"></i></a>
               <a href=""><i class="far fa-user"></i></a>
-            </div> -->
-        </div>
-
-        <div class="header_btm">
-          <div class="menu_button">
-            <ul class="menuLeft">
-              <li><a href="/HJ/recipe-home.html">Recipes</a></li>
-              <li><a href="/yeara/recordYR.html">Workout</a></li>
-              <li><a href="../food_Intake.html">Diet</a></li>
-              <li><a href="/yeara/calendar.html">Calendar</a></li>
-              <li><a href="../water_tracking.html">Consumption</a></li>
-              <li><a href="/yeara/emoji.html">Mood</a></li>
-            </ul>
+            </div>
           </div>
-          <!-- <div class="search_container">
-              <input type="text" placeholder="검색어를 입력하세요." />
-              <button type="submit">
-                <i class="fa fa-search"></i>
-              </button>
-            </div> -->
+          <!-- End Slide Menu -->
+
+          <div class="headMid headMid_app">
+            <div class="logoContainer">
+              <a href="../index.html"
+                ><img
+                  src="../img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png"
+                  alt=""
+                  class="logo"
+              /></a>
+            </div>
+          </div>
+
+          <div class="header_btm">
+            <div class="menu_button">
+              <ul class="menuLeft">
+                <li><a href="/HJ/recipe-home.html">Recipes</a></li>
+                <li><a href="/yeara/recordYR.html">Workout</a></li>
+                <li><a href="../food_Intake.html">Diet</a></li>
+                <li><a href="/yeara/calendar.html">Calendar</a></li>
+                <li><a href="../water_tracking.html">Consumption</a></li>
+                <li><a href="/yeara/emoji.html">Mood</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- End header part  -->
+      </nav>
+      <!-- End header part  -->
 
-    <!-- <header>
-      <div class="search-input-section">
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Please enter a recipe or ingredients here..."
-        />
-        <button class="search-button" onClick="getRecipesByKeyword()">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </div>
-    </header> -->
-
-    <main>
-      <div class="main-title-container">
-        <div class="main-title">Today's recommended recipes</div>
-        <div class="search-input-section">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Please enter a recipe or ingredients here..."
-          />
-          <button class="search-button" onClick="getRecipesByKeyword()">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+      <main>
+        <div class="main-title-container">
+          <div class="main-title">Today's recommended recipes</div>
+          <div class="search-input-section">
+            <i class="fas fa-search search-icon-ke"></i>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Please enter a recipe or ingredients here..."
+            />
+            <button class="search-button" onClick="getRecipesByKeyword()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
         </div>
-      </div>
+      
+        <!-- 레시피 JS생성 컴포넌트 태그 -->
+        <div class="recipe-container-ABC"></div>
+        <!-- 레시피 컴포넌트 끝 -->
+      </main>
+      
 
-      <!-- 레시피 JS생성 컴포넌트 태그 -->
-      <div class="container"></div>
-      <!-- 레시피 컴포넌트 끝 -->
-    </main>
+      <div class="pagination"></div>
 
-    <div class="pagination"></div>
-
-    <script src="/config/apikey.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="recipe-home.js"></script>
+      <script src="/config/apikey.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+      <script src="recipe-home.js"></script>
+      <script src="responsive-placeholder.js"></script>
+    </div>
   </body>
 </html>
