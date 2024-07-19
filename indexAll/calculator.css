@@ -21,25 +21,27 @@ body {
   /* Container one */
   .body-img {
     flex: 1;
-    max-width: 100%;
-    margin-right: 20px;
+    width: 100%;
+    max-width:500px;
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     height: auto;
+    overflow: hidden;
   }
   
   .body-img img {
     max-width: 100%;
-    height: auto;
-    position: absolute;
+    height: 501px;
+    position: absolute center;
     top: 0;
     left: 0;
   }
   
   /* Container three */
-  .result-section {
+  .result-analysis {
     flex: 1;
     margin-left: 20px;
     max-width: 558px;
@@ -111,7 +113,7 @@ body {
     margin:0;
   }
   
-  .details input.question {
+  .details input.question {                                                                                                                
     font-size: 20px;
     font-weight: 400;
     border-radius: 2px;
@@ -245,3 +247,26 @@ body {
     display: flex;
     flex-direction: column;
   }
+
+  /*accordian css*/
+
+.accordion-button {
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+.accordion-content {
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.accordion-content.show {
+  display: block;
+}
