@@ -14,3 +14,8 @@ document.querySelectorAll('.slide-menu a').forEach(item => {
         closeMenu();
     });
 });
+
+function goMain() {
+    window.location.href = 'index.html';
+  }
+  
