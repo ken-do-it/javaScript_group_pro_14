@@ -192,3 +192,22 @@ input:focus {
     font-size: 36px;
     margin-left: 50px;
 }
+
+/* diet용 header_btm */
+
+.header-mini{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    height: 45px;
+    box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
+  
+  }
+
+  @media (max-width: 768px){
+    .header-mini{
+        margin-top: 3rem;
+    }
+  }

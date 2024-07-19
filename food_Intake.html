@@ -39,60 +39,62 @@
 
     <link rel="stylesheet" href="food_intake.css" />
   </head>
+  
   <body>
     <div class="container">
       <!-- start header part -->
+      <div class="menuRight">
+        <a href="#"><i class="fas fa-bell icon-yr"></i></a>
+        <a href="#"><i class="far fa-user icon-yr"></i></a>
+      </div>
+  
       <div id="headerArea">
-        <div class="headTop_App">
+  
+        <div class="headTop">
+  
           <div class="side_menu_button">
             <i class="fas fa-bars" onclick="openMenu()"></i>
           </div>
-          <ul class="menuRight">
-            <li><a href="">로그인</a></li>
-            <li>
-              <a href="">테스트</a>
-            </li>
-            <li>
-              <a href="">테스트</a>
-            </li>
-          </ul>
+  
+  
         </div>
-
-        <!-- Start Slide Menu -->
-        <div id="slideMenu" class="slide-menu">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()"
-            >&times;</a
-          >
-          <a href="index.html">Home</a>
-          <a href="/HJ/recipe-home.html">Recipes</a>
-          <a href="/yeara/recordYR.html">Today's workout</a>
-          <a href="food_Intake.html">Diet</a>
-          <a href="/yeara/calendar.html">Calendar</a>
-          <a href="water_tracking.html">Water consumption</a>
-          <a href="/yeara/emoji.html">Mood</a>
-        </div>
-
-        <!-- End Slide Menu -->
-
-        <div class="headMid headMid_app">
-          <div class="logoContainer">
-            <a href=""
-              ><img
-                src="./img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png"
-                alt=""
-                class="logo"
-            /></a>
-          </div>
-          <!-- <div class="iconWrapper"> -->
-          <!-- <div class="iconContainer">
+  
+  
+      </div>
+  
+      <!-- Start Slide Menu -->
+      <div id="slideMenu" class="slide-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+        <a href="/HJ/recipe-home.html">Recipes</a>
+        <a href="/yeara/recordYR.html">Today's workout</a>
+        <a href="food_Intake.html">Diet</a>
+        <a href="/yeara/calendar.html">Calendar</a>
+        <a href="water_tracking.html">Water consumption</a>
+        <a href="/yeara/emoji.html">Mood</a>
+  
+        <div class="iconContainer_side">
           <a href=""><i class="fas fa-bell"></i></a>
           <a href=""><i class="far fa-user"></i></a>
-        </div> -->
-          <!-- </div> -->
         </div>
-
-        <div class="header_btm_app"></div>
+  
       </div>
+      <!-- End Slide Menu -->
+  
+  
+      <!-- logo -->
+      <div class="headMid headMid_app">
+        <div class="logoContainer">
+          <a href="index.html"><img src="./img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png"
+              onclick="goMain()" alt="" class="logo"></a>
+        </div>
+      </div>
+  
+      <div class="header-mini">
+        
+      </div>
+  
+  
+    
       <!-- End header part  -->
 
       <div class="diet_food_img_ke">
