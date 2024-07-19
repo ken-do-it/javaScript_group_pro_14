@@ -15,41 +15,10 @@ const getRecipesInfo = async () => {
     }
     const data = await response.json();
     console.log(data);
-
-    // const allRecipes = data.hits;
-    const allRecipes = await Promise.all(
-      data.hits.map(async (recipe) => {
-        const isValid = await isValidUrl(recipe.recipe.url);
-        return isValid ? recipe : null;
-      })
-    ).then((recipes) => recipes.filter((recipe) => recipe !== null));
-
+    const allRecipes = data.hits;
     renderCarousel(allRecipes);
   } catch (error) {
     console.error('Failed to fetch recipes:', error);
-  }
-};
-
-// URL validation to check if it's not a "page not found" or similar error
-const isValidUrl = async (url) => {
-  if (!url) {
-    return false; // If URL is falsy (null or undefined), return false
-  }
-
-  // Check if the URL contains 'page-not-found' or '404' (case insensitive)
-  if (
-    url.toLowerCase().includes('page-not-found') ||
-    url.toLowerCase().includes('404')
-  ) {
-    return false;
-  }
-
-  try {
-    const response = await fetch(url);
-    return response.ok; // Check if the response is OK (status 200-299)
-  } catch (error) {
-    console.error('Error checking URL:', error);
-    return false; // Return false if there's an error (e.g., network issue)
   }
 };
 
