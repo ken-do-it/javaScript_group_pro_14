@@ -53,9 +53,9 @@ document
     dailyTotalWater += waterAmount;
 
     // 확인 필요 2
-    // localStorage.setItem(currentDate, dailyTotalWater); 승혁님꺼
+    // localStorage.setItem(currentDate, dailyTotalWater); 승혁님꺼 
 
-    localStorage.setItem('totalWater', totalWater); //예라
+    localStorage.setItem('totalWater', totalWater);//예라
   });
 
 function showResult(message, additionalMessage, isWarning) {
@@ -161,47 +161,48 @@ function checkResetTime() {
 //   });
 // }
 
-//승혁님꺼
+//승혁님꺼 
+
 
 function fireConfetti() {
   const count = 200,
-    defaults = {
-      origin: { y: 0.7 },
-    };
+      defaults = {
+          origin: { y: 0.7 },
+      };
 
   function fire(particleRatio, opts) {
-    confetti(
-      Object.assign({}, defaults, opts, {
-        particleCount: Math.floor(count * particleRatio),
-      })
-    );
+      confetti(
+          Object.assign({}, defaults, opts, {
+              particleCount: Math.floor(count * particleRatio),
+          })
+      );
   }
 
   fire(0.25, {
-    spread: 26,
-    startVelocity: 55,
+      spread: 26,
+      startVelocity: 55,
   });
 
   fire(0.2, {
-    spread: 60,
+      spread: 60,
   });
 
   fire(0.35, {
-    spread: 100,
-    decay: 0.91,
-    scalar: 0.8,
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8,
   });
 
   fire(0.1, {
-    spread: 120,
-    startVelocity: 25,
-    decay: 0.92,
-    scalar: 1.2,
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2,
   });
 
   fire(0.1, {
-    spread: 120,
-    startVelocity: 45,
+      spread: 120,
+      startVelocity: 45,
   });
 }
 

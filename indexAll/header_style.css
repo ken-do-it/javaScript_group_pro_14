@@ -273,7 +273,8 @@
     z-index: 3;
   }
   .header_btm {
-    height: 10px;
+    height: 105px;
+    box-shadow: none;
   }
   .iconContainer a {
     display: none;
@@ -284,7 +285,9 @@
   .menu_button {
     display: none;
   }
-  .header_btm {
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.434);
-  }
+
+  /* 위에 header_btm이랑 중복 */
+  /* .header_btm {
+    box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
+  } */
 }

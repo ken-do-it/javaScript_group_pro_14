@@ -1,14 +1,22 @@
 /* styleYR.css */
-.head-img {
+  .head-img-container {
     width: 100%;
     height: 25rem;
     margin-bottom: 3rem;
     margin-top: 3rem;
   }
+
+  .head-img {
+    width: 100%;
+    height: 25rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
   
   .img-text {
-    position: absolute;
-    top: 34rem;
+    position: relative;
+    top: -20rem;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -25,7 +33,7 @@
   
   .download_app_btn {
     position: relative;
-    top: -8rem;
+    top: -16rem;
     left: 51%;
     transform: translateX(-50%);
     width: 150px;
@@ -103,16 +111,24 @@
     margin-top: 20px;
   }
   
-  @media (max-width: 768px) {
+   @media (max-width: 768px) {
+
+    /* 768이하로 줄어들게 되면  */
+    /* .head-img {
+      margin-top: 9rem;
+     } */
+
     .img-text {
       flex-direction: column;
-    }
-  
+    } 
+
     .download_app_btn {
-      position: absolute;
-      top: 43rem;
+      position: relative;
+      top: -16rem;
     }
-  }
+  } 
+
+  
   
   @media (max-width: 520px) {
     .body-chart {
