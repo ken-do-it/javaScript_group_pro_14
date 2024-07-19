@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>물 섭취량 계산</title>
+    <title>Water Consumption Calculator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <link rel="stylesheet" href="water_tracking_style.css" />
     <script
@@ -12,31 +12,34 @@
     ></script>
   </head>
   <body>
-    <h2>오늘 물 섭취량은?</h2>
-    <h1 id="water_figure">0.00L</h1>
-    <div class="cup-container" id="container_cup">
-      <div class="water" id="water"></div>
-      <i class="fas fa-heart heart" id="water_heart_emoji"></i>
-      <i class="fas fa-skull skull" id="water_skull_emoji"></i>
-    </div>
-    <form id="waterIntakeForm">
-      <label for="waterAmount">섭취한 물의 양 (ml):</label>
-      <input
-        type="number"
-        id="waterAmount"
-        name="waterAmount"
-        class="water_input"
-        required
-      />
-      <button type="submit">기록하기</button>
-    </form>
+    <div class="background-animation"></div>
+    <div class="content">
+      <h3 class="water_title">Today's Water Intake</h3>
+      <h1 id="water_figure">0.00L</h1>
+      <div class="cup-container" id="container_cup">
+        <div class="water" id="water"></div>
+        <i class="fas fa-heart heart" id="water_heart_emoji"></i>
+        <i class="fas fa-skull skull" id="water_skull_emoji"></i>
+      </div>
+      <form id="waterIntakeForm">
+        <label for="waterAmount">Water Intake (ml):</label>
+        <input
+          type="number"
+          id="waterAmount"
+          name="waterAmount"
+          class="water_input"
+          placeholder="Water Intake (ml):"
+          required
+        />
+        <button type="submit">Record</button>
+      </form>
 
-    <div id="result">
-      <h3>물 섭취량 평가:<span id="smiley"></span></h3>
-      <p id="evaluationResult"></p>
-      <p id="additionalWater"></p>
+      <div id="result">
+        <h3>Water Intake Evaluation:<span id="smiley"></span></h3>
+        <p id="evaluationResult"></p>
+        <p id="additionalWater"></p>
+      </div>
     </div>
-
     <script src="water_tracking_function.js"></script>
   </body>
 </html>
