@@ -19,10 +19,9 @@ html{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 0rem;
-    width: 100%;
+    width: 25rem;
     text-align: center;
-    height: 70vh;
+    height: 80vh;
     align-items: center;
     justify-content: center;
 }

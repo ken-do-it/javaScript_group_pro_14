@@ -1,7 +1,6 @@
 const API_TYPE = 'public';
 const APP_ID = 'eca0d2ce';
-const APP_KEY = '5c7761a24073cbd7ea715a9b3b7ae84a';
-// const APP_KEY = config.apiKey;
+const APP_KEY = config.apiKey;
 
 const BASE_URL = `https://api.edamam.com/api/recipes/v2?type=${API_TYPE}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
@@ -68,10 +67,9 @@ const renderCarousel = (recipes) => {
 // Call getRecipesInfo to fetch data and render the carousel
 getRecipesInfo();
 
-
-
-
-// 혜정님 코드 시작 
+////////////// 밑에 주석처리한 전체코드는 삭제필요 ////////////
+//////////////////////////////////////////////////////
+// 혜정님 코드 시작
 // const renderRecipeBoxes = () => {
 //   const recipeContainer = document.querySelector('.recipe-container');
 
@@ -84,11 +82,7 @@ getRecipesInfo();
 // };
 
 // renderRecipeBoxes();
-//혜정님 코드 끝 
-
-
-
-
+//혜정님 코드 끝
 
 // mainHJ.js
 // const renderRecipeBoxes = () => {
