@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+      </style>
+      
+    
+    <link rel="stylesheet" href="/yeara/calendar.css">
+</head>
+
+<body>
+    <div class="calendar">
+        <div class="calendar-header">
+            <button id="prevMonth">&lt;</button>
+            <div class="month-year">
+                <span id="month"></span> <span id="year"></span>
+            </div>
+            <button id="nextMonth">&gt;</button>
+        </div>
+        <div class="calendar-body">
+            <div class="day-names">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days" id="days"></div>
+        </div>
+    </div>
+
+    <div class="status">
+        <div class="memo">
+            <div class="memo-header">
+                Today Date
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+
+            <div class="memo-body">
+                <div id="exercise-record" class="exercise-record">운동기록</div>
+                <div id="diet-record" >식단기록</div>
+                <div id="water-record"> Water:  <span id="waterIntake"></span></div>
+                <div class="mood" id="emoji">
+
+                </div>
+
+            </div>
+        </div>
+
+        
+
+    
+    </div>
+
+    
+
+    <script src="/yeara/calendar.js"></script>
+</body>
+
+</html>
