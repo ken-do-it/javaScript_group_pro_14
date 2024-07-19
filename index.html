@@ -1,65 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
     <!-- bootstrap latest version -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-      <!-- font family Ubuntu -->
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-  </style>
+    <!-- font family Ubuntu -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+    </style>
 
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
 
-  <!-- 승혁님 css 링크 -->
-  <link rel="stylesheet" href="indexAll/header_style.css" />
+    <!-- 승혁님 css 링크 -->
+    <link rel="stylesheet" href="indexAll/header_style.css" />
 
-  <!-- 예라님 css 링크 -->
-  <link rel="stylesheet" href="indexAll/styleYR.css" />
+    <!-- 예라님 css 링크 -->
+    <link rel="stylesheet" href="indexAll/styleYR.css" />
 
-  <!-- 혜정님 css 링크 -->
-  <link rel="stylesheet" href="indexAll/styleHJ.css">
+    <!-- 혜정님 css 링크 -->
+    <link rel="stylesheet" href="indexAll/styleHJ.css">
 
-  <!-- <link rel="stylesheet" href="calculator.css"> -->
+    <!-- <link rel="stylesheet" href="calculator.css"> -->
 
-  <!-- 찬우님 css 링크 -->
-  <link rel="stylesheet" href="indexAll/calculator.css">
-</head>
+    <!-- 찬우님 css 링크 -->
+    <link rel="stylesheet" href="indexAll/calculator.css">
+  </head>
 
 
-<div class="container">
-  <nav>
-    <!-- banner -->
-    <div class="banner">
-      <a href="">배너 부분</a>
-    </div>
-    <!-- header -->
-    <div id="headerArea">
-      <div class="headTop">
-        <ul class="menuRight">
-          <li><a href="">로그인</a></li>
-          <li>
-            <a href="">테스트</a>
-          </li>
-          <li>
-            <a href="">테스트</a>
-          </li>
-        </ul>
+  <div class="container">
+    <nav>
+      <!-- banner -->
+      <div class="banner">
+        <a href="">배너 부분</a>
       </div>
-      <!-- start header part -->
+      <!-- header -->
       <div id="headerArea">
         <div class="headTop">
-          <div class="side_menu_button">
-            <i class="fas fa-bars" onclick="openMenu()"></i>
-          </div>
-          <div>
           <ul class="menuRight">
             <li><a href="">로그인</a></li>
             <li>
@@ -69,211 +52,205 @@
               <a href="">테스트</a>
             </li>
           </ul>
-        </div>   
         </div>
-
-        <!-- Start Slide Menu -->
-      <div id="slideMenu" class="slide-menu">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
-        <a href="/HJ/recipe-main.html">Recipes</a>
-        <a href="/yeara/recordYR.html">Today's workout</a>
-        <a href="food_Intake.html">Diet</a>
-        <a href="/yeara/calendar.html">Calendar</a>
-        <a href="water_tracking.html">Water consumption</a>
-        <a href="/yeara/emoji.html">Mood</a>
-
-        <div class="iconContainer_side">
-          <a href=""><i class="fas fa-bell"></i></a>
-          <a href=""><i class="far fa-user"></i></a>
-        </div>
-      </div>
-      <!-- End Slide Menu -->
-
-
-        <div class="headMid headMid_app">
-          <div class="logoContainer col">
-          <a href=""><img src="./img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png" alt="" class="logo"></a>
-        </div>
-        <div class="iconWrapper">
-        <div class="iconContainer">
-          <a href=""><i class="fas fa-bell"></i></a>
-          <a href=""><i class="far fa-user"></i></a>
-        </div>
-        </div>
-      </div>
-       
-        <div class="header_btm">
-          <div class="menu_button">
-            <ul class="menuLeft">
-              <li><a href="/HJ/recipe-main.html">Recipes</a></li>
-              <li><a href="/yeara/recordYR.html">Today's workout</a></li>
-              <li><a href="food_Intake.html">Diet</a></li>
-              <li><a href="/yeara/calendar.html">Calendar</a></li>
-              <li><a href="water_tracking.html">Water consumption</a></li>
-              <li><a href="/yeara/emoji.html">Mood</a></li>
-
-            </ul>
+        <!-- start header part -->
+        <div id="headerArea">
+          <div class="headTop">
+            <div class="side_menu_button">
+              <i class="fas fa-bars" onclick="openMenu()"></i>
+            </div>
+            <div>
+              <ul class="menuRight">
+                <li><a href="">로그인</a></li>
+                <li>
+                  <a href="">테스트</a>
+                </li>
+                <li>
+                  <a href="">테스트</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="search_container">
-            <input type="text" placeholder="검색어를 입력하세요." />
-            <button type="submit">
-              <i class="fa fa-search"></i>
-            </button>
+
+          <!-- Start Slide Menu -->
+          <div id="slideMenu" class="slide-menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="/HJ/recipe-main.html">Recipes</a>
+            <a href="/yeara/recordYR.html">Today's workout</a>
+            <a href="food_Intake.html">Diet</a>
+            <a href="/yeara/calendar.html">Calendar</a>
+            <a href="water_tracking.html">Water consumption</a>
+            <a href="/yeara/emoji.html">Mood</a>
+
+            <div class="iconContainer_side">
+              <a href=""><i class="fas fa-bell"></i></a>
+              <a href=""><i class="far fa-user"></i></a>
+            </div>
           </div>
-        </div>
-      </div>
-      <!-- End header part  -->
-
-      <div class="head-img-container">
-        <img src="imgYR/What-is-diet-culture.webp" class="head-img" alt="no-image">
-        <div class="img-text">
-          <div>A Better Version</div> 
-          <div class="myself">of Myself</div>
-        </div>
-        <button type="button" class="btn btn-warning download_app_btn">Download App</button>
-      </div>
-    </div>
-  </nav>
+          <!-- End Slide Menu -->
 
 
-  <main>
-
-   <!--Calculator container-->
-   <div class="calculator-container-CW">
-    <div class="body-img">
-        <!-- image-->
-        <img class="img-fluid" id="female-image" src="imgCW/Career-Woman-Cartoon-Illustration-Graphics-6482800-1.jpg" alt="woman">
-        <img class="img-fluid" id="male-image" src="imgCW/man369.png" alt="man">
-        <!--image-->
-    </div>
-   
-        <!-- form -->
-        <div class="form-container">
-            <form class="questions">
-                <div class="form-group">
-                    <div class="input-radio">
-                      <label id="gender">Gender:</label>
-                        <input id="male-radio" type="radio" name="gender" value="Male"> 
-                        <label for="male-radio">Male</label>
-                        <input id="female-radio" type="radio" name="gender" value="Female">
-                        <label for="female-radio">Female</label>
-                    </div>
-                </div>
-                <div class="details">
-                <div class="form-group">
-                    <label for="age-input">What's your age?</label>
-                    <input type="number" name="age" class="question" id="age-input" required autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <label for="height-input">What's your height?</label>
-                    <input type="number" name="height" class="question" id="height-input" required autocomplete="off" placeholder="cm">
-                </div>
-                <div class="form-group">
-                    <label for="weight-input">What's your weight?</label>
-                    <input type="number" name="weight" class="question" id="weight-input" required autocomplete="off" placeholder="kg">
-                </div>
-              </div>
-            </form>
-            <!-- form -->
-  
-            <!-- form- buttons -->
-            <div class="calculator-buttons">
-              <div class="button-group inline-buttons">
-                  <button class="btn btn-warning bmr" type="button" id="calculate-bmr">Check my BMR</button>
-                  <button class="btn btn-warning bmi" type="button" id="calculate-bmi">Check my BMI</button>
-              </div>
-              <div class="reset-button">
-                  <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
-              </div>
-          </div>
-            <!-- form- buttons -->
-        </div>
-  
-        <!-- result section -->
-        <div class="result-section">
-            <div class="result-area" id="calculator-result">
-              
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      What is Basal Metabolic Rate?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      What is Body Mass Index?
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>BMI</strong> BMI, which stands for Body Mass Index, is a numerical measurement derived from a person’s height and weight, used to gauge body fat levels.
-
-                      It categorizes individuals into underweight, normal weight, overweight, or obese categories, making it an essential tool in health assessments. Health professionals globally rely on BMI to evaluate weight-to-height ratios accurately.
-                      
-                      Keep in mind that BMI is not a perfect model, and there are situations where it should not be applied.
-                      
-                      Some examples of situations where BMI should not be applied are as follows:
-                      
-                      Children younger than the age of 18.
-                      People with developmental issues.
-                      People with disabilities.
-                      People with various diagnoses that can affect their body weight.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              
-                  <!--Calculator container-->
-      <div class="calculator-container-CW">
-
-        <div class="form-container">
-          <form class="bmr-form">
-            <div class="flex-form-container">
-              <div class="input-area">
-                <div class="form-radio">
-                  <label>Gender:</label>
-                  <input type="radio" name="gender" value="Male"> Male
-                  <input type="radio" name="gender" value="Female"> Female
-                </div>
-                <div class="form-row">
-                  <label for="height-input">Height (cm):</label>
-                  <input type="number" id="height-input" name="height">
-                </div>
-                <div class="form-row">
-                  <label for="weight-input">Weight (kg):</label>
-                  <input type="number" id="weight-input" name="weight">
-                </div>
-                <div class="form-row">
-                  <label for="age-input">Age:</label>
-                  <input type="number" id="age-input" name="age">
-                </div>
-              </div>
-
-              <div class="calculator-buttons">
-                <button class="btn btn-warning bmr" type="button" id="calculate-bmr">Calculate BMR</button><br>
-                <button class="btn btn-warning bmi" type="button" id="calculate-bmi">Calculate BMI</button><br>
-                <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
+          <div class="headMid headMid_app">
+            <div class="logoContainer col">
+              <a href=""><img src="./img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png" alt=""
+                  class="logo"></a>
+            </div>
+            <div class="iconWrapper">
+              <div class="iconContainer">
+                <a href=""><i class="fas fa-bell"></i></a>
+                <a href=""><i class="far fa-user"></i></a>
               </div>
             </div>
-          </form>
-        </div>
-        <div id="calculator-result"></div>
-      </div>
-      <!--Calculator container-->
+          </div>
 
-      <div class="mt-4 mb-4">
-        <h2> Today's recommend recipe</h2>
-        <div class='recipe-container'></div>
+          <div class="header_btm">
+            <div class="menu_button">
+              <ul class="menuLeft">
+                <li><a href="/HJ/recipe-main.html">Recipes</a></li>
+                <li><a href="/yeara/recordYR.html">Today's workout</a></li>
+                <li><a href="food_Intake.html">Diet</a></li>
+                <li><a href="/yeara/calendar.html">Calendar</a></li>
+                <li><a href="water_tracking.html">Water consumption</a></li>
+                <li><a href="/yeara/emoji.html">Mood</a></li>
+
+              </ul>
+            </div>
+            <div class="search_container">
+              <input type="text" placeholder="검색어를 입력하세요." />
+              <button type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- End header part  -->
+
+        <div class="head-img-container">
+          <img src="imgYR/What-is-diet-culture.webp" class="head-img" alt="no-image">
+          <div class="img-text">
+            <div>A Better Version</div>
+            <div class="myself">of Myself</div>
+          </div>
+          <button type="button" class="btn btn-warning download_app_btn">Download App</button>
+        </div>
       </div>
+    </nav>
+
+
+    <main>
+
+      
+    <!--Calculator container-->
+    <div class="calculator-container-CW">
+      <div class="body-img">
+
+         <!--image-->
+        <img class="img-fluid" id="female-image" src="imgCW/Career-Woman-Cartoon-Illustration-Graphics-6482800-1.jpg"
+          alt="woman">
+        <img class="img-fluid" id="male-image" src="imgCW/man369.png" alt="man">
+        <img class="img-fluid" id="default-image" src="imgCW/body-img-default.png" alt="man-and-woman">
+
+        
+      </div>
+<!--image-->
+      
+       <!--form-->
+      <div class="form-container">
+        
+        <form class="questions">
+            <div class="form-group">
+                <div class="input-radio">
+                  <label id="gender">Gender:</label>
+                    <input id="male-radio" type="radio" name="gender" value="Male"> 
+                    <label for="male-radio">Male</label>
+                    <input id="female-radio" type="radio" name="gender" value="Female">
+                    <label for="female-radio">Female</label>
+                </div>
+            </div>
+
+            <div class="details">
+              <div class="body-chart">
+
+                <form class="form-row">
+                  <input type="text" name="name" class="question" id="age-input" required autocomplete="off" />
+                  <label for="nme"><span>What's your age?</span></label>
+                  <input type="text" name="name" class="question" id="height-input" required autocomplete="off" />
+                  <label for="nme"><span>What's your height?</span></label>
+                  <input type="text" name="name" class="question" id="weight-input" required autocomplete="off" />
+                  <label for="nme"><span>What's your weight?</span></label>
+                </form>
+
+              </div>
+          </div>
+        </form>
+        <!--form-->
+
+         <!--form - button-->
+        <div class="calculator-buttons">
+          <div class="button-group inline-buttons">
+            <button class="btn btn-warning bmr" type="button" id="calculate-status">Check my body status</button>
+            <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
+          </div>
+          </div>
+      </div>
+
+      <!--result-section-->
+      <div class="result-section">
+        <div class="result-area" id="calculator-result">
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  What is Basal Metabolic Rate?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>BMR</strong> stands for Basal Metabolic Rate. It is the number of calories your body needs to perform basic, life-sustaining functions such as breathing, circulation, cell production, nutrient processing, and temperature regulation while at rest. Essentially, it represents the amount of energy expended by your body to maintain normal bodily functions when you're at rest in a neutral environment.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is Body Mass Index?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>BMI</strong>, which stands for Body Mass Index, is a numerical measurement derived from
+                  a person’s height and weight, used to gauge body fat levels.
+
+                  It categorizes individuals into underweight, normal weight, overweight, or obese categories, making
+                  it an essential tool in health assessments. Health professionals globally rely on BMI to evaluate
+                  weight-to-height ratios accurately.
+
+                  Keep in mind that BMI is not a perfect model, and there are situations where it should not be
+                  applied.
+
+                  Some examples of situations where BMI should not be applied are as follows:
+
+                  Children younger than the age of 18.
+                  People with developmental issues.
+                  People with disabilities.
+                  People with various diagnoses that can affect their body weight.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <!--result section-->
+    <!--Calculator container-->
+
+        <div class="mt-4 mb-4">
+          <h2> Today's recommend recipe</h2>
+          <div class='recipe-container'></div>
+        </div>
     </main>
 
 
@@ -303,10 +280,10 @@
         </div>
       </div>
     </footer>
-  </nav>
+    </nav>
   </div>
-  
- 
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
@@ -318,6 +295,6 @@
   <script src="indexAll/header.js"></script>
   <script src="HJ/mainHJ.JS"></script>
   <script src="indexAll/calculator.js"></script>
-</body>
+  </body>
 
 </html>

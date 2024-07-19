@@ -1,10 +1,10 @@
 body {
     font-family: "Ubuntu", sans-serif;
-
-}
-
-/* Existing styles */
-.calculator-container-CW {
+  
+  }
+  
+  /* Existing styles */
+  .calculator-container-CW {
     text-align: center;
    
     border-radius: 2px;
@@ -16,31 +16,40 @@ body {
     margin-top: 20px;
     overflow: hidden;
     height: 501px;
-}
-
-/* Container one */
-.body-img {
+  }
+  
+  /* Container one */
+  .body-img {
     flex: 1;
-    max-width: 501px;
+    max-width: 100%;
     margin-right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     position: relative;
-    height: 100%;
-}
-
-.body-img img {
+    height: auto;
+  }
+  
+  .body-img img {
     max-width: 100%;
     height: auto;
     position: absolute;
     top: 0;
     left: 0;
-}
-
-/* Container two */
-.form-container {
+  }
+  
+  /* Container three */
+  .result-section {
+    flex: 1;
+    margin-left: 20px;
+    max-width: 558px;
+    /* Adjust the width as needed */
+    margin-left: 20px;
+    /* Space between form and result */
+  }
+  
+  /* Container two */
+  .form-container {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -48,98 +57,170 @@ body {
     align-items: stretch;
     text-align: center;
     height: 100%;
-}
-
-.input-radio {
+  }
+  
+  .input-radio {
     display: flex;
     align-items: center;
     /* Align items vertically */
     justify-content: center;
     padding-bottom: 5px;
-}
-
-.input-radio label {
+  }
+  
+  .input-radio label {
     font-family: "Ubuntu", sans-serif;
     font-style: italic;
     font-weight: 800;
     margin-right: 5px;
-}
-
-.input-radio input[type="radio"] {
+  }
+  
+  .input-radio input[type="radio"] {
     margin: 10px;
-}
-
-
-.details {
+  }
+  
+  /*Details section*/
+  .details {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
+    justify-content: space-evenly;
     /* Adjust the gap between form groups */
-}
-
-.details .form-group {
-    flex: 1 1 calc(50% - 0.5rem);
+  }
+  
+  .details .form-group {
+    flex: 1 1 calc(50%);
     /* Adjust the width of each form group */
     display: flex;
     align-items: center;
-}
-
-.details label {
-    flex: 0 0 50%;
+    justify-content: space-evenly;
+  }
+  
+  .details label {
+    flex: 0 0 40%;
     /* Adjust the width of the label */
-    margin-right: 1rem;
+   
     /* Adjust space between label and input */
-    text-align: right;
+    text-align: center;
     /* Align labels to the right */
     font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
+    font-weight: 800;
     font-style: italic;
-    
-    margin-right: 10px;
-}
-
-.details input.question {
-    width: 150px;
-    /* Let input take remaining space */
-    padding: 5px;
-    /* Adjust input padding */
-    font-size: 1rem;
-    /* Adjust input font size */
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    /* Example border styling */
-}
-
-.details input.question::placeholder {
+  }
+  
+  .details input.question {
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    width: 60%;
+    background: rgba(0, 0, 0, 0);
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+    justify-content: center;
+  }
+  
+  .details input.question::placeholder {
     font-family: "Ubuntu", sans-serif;
     font-style: italic;
     font-weight: 800;
     color: grey;
     /* Other placeholder styles */
-}
-
-.calculator-container-CW input[type="number"] {
+  }
+  
+  /*this fills te background color to the inputs
+  .calculator-container-CW input[type="number"] {
     border-radius: 5px;
     background-color: #ffc107;
-}
-
-.calculator-buttons {
+  }
+  */
+  
+  /*YR CSS*/
+  .details input:focus {
+    outline: 0;
+  }
+  
+  .details input.question + label {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    border-top: 4px solid #FFD35A;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+    margin-bottom: 2rem;
+  }
+  
+  input.question:focus + label{
+    width: 80%;
+  }
+  
+  input.question:focus,
+    input.question:valid {
+      padding-top: 35px;
+    }
+  
+    input.question:focus + label > span,
+    input.question:valid + label > span {
+      top: -60px;
+      font-size: 20px;
+      color: #333;
+    }
+  
+    input.question:valid + label {
+      border-color: #FFD35A;
+    }
+  
+    input.question:invalid {
+      box-shadow: none;
+    }
+  
+    input.question + label > span {
+      font-weight: 400;
+      margin: 0;
+      position: absolute;
+      color: #8F8F8F;
+      font-size: 20px;
+      top: -30px;
+      left: 0px;
+      z-index: -1;
+      -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+      transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    }
+    
+    @-webkit-keyframes appear {
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes appear {
+      100% {
+        opacity: 1;
+      }
+    }
+    
+  
+  .calculator-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     /* Adjust the gap between button groups */
     justify-content: center;
     /* Align items to the start */
-}
-
-.calculator-buttons .inline-buttons {
+  }
+  
+  .calculator-buttons .inline-buttons {
     display: flex;
     gap: 1rem;
     /* Adjust the gap between inline buttons */
     margin-top: 1rem;
-}
-
-.calculator-buttons button {
+  }
+  
+  .calculator-buttons button {
     border: none;
     border-radius: 5px;
     background-color: #ffc107;
@@ -147,131 +228,39 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-style: italic;
     font-weight: 800;
-    width: 150px;
+    width: 190px;
     /* Limit the maximum width of each button */
-}
-
-.calculator-buttons .reset {
-    margin-top: 1rem;
-    /* Add space between the inline buttons and the reset button */
-    align-self: flex-start;
-    /* Move the reset button to the start of the flex container */
-    max-width: 150px;
-    /* Ensure the reset button spans the full width */
-}
-
-.calculator-buttons .button-group {
+  }
+  
+  .calculator-buttons .button-group {
     display: flex;
     gap: 10px;
     /* Adjust the gap between buttons */
-}
-
-.calculator-buttons .reset-button {
-    margin-top: 2px;
-    /* Add space between the button groups */
-    align-self: flex-start;
-    /* Move the reset button to the start of the flex container */
-    width: 100%;
-    /* Ensure the reset button spans the full width */
-}
-
-/* Container three */
-.result-section {
-    flex: 1;
-    margin-left: 20px;
-    max-width: 558px;
-    /* Adjust the width as needed */
-    margin-left: 20px;
-    /* Space between form and result */
-}
-
-
-
-
-.body-info {
+  }
+  
+  .body-chart {
     display: flex;
-}
-
-textarea:focus,
-input:focus {
-    outline: 0;
-}
-
-/* New styles for form input section */
-
-.input-container {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.input-container input.question,
-.input-container textarea.question {
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 2px;
-    border: none;
-    width: 100%;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0);
-    transition: border-color 0.3s ease;
-}
-
-.input-container input.question:focus,
-.input-container textarea.question:focus {
-    outline: none;
-    border-color: #FFD35A;
-}
-
-.input-container label {
-    position: absolute;
-    left: 0;
-    bottom: 100%;
-    width: 100%;
-    border-top: 4px solid transparent;
-    transition: border-color 0.3s ease, top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
-}
-
-.input-container input.question:focus+label,
-.input-container textarea.question:focus+label,
-.input-container input.question:valid+label,
-.input-container textarea.question:valid+label {
-    border-color: #FFD35A;
-    top: -1.5rem;
-    font-size: 0.8em;
-    color: #333;
-}
-
-.input-container input.question:valid+label,
-.input-container textarea.question:valid+label {
-    border-color: #FFD35A;
-    top: -1.5rem;
-    font-size: 0.8em;
-    color: #333;
-}
-
-.input-container input[type="number"] {
-    -moz-appearance: textfield;
-}
-
-.input-container input::-webkit-outer-spin-button,
-.input-container input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-.input-container input[type="number"] {
-    appearance: textfield;
-}
-
-
-.body-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    /* Adjust as needed */
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
+    flex-direction: column;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const genderInputs = document.querySelectorAll('input[name="gender"]');
         genderInputs.forEach(input => input.checked = false);
         resultDiv.innerHTML = ''; // Clear the result div
-    
+        
         // Hide the images
         femaleImage.style.display = 'none';
         maleImage.style.display = 'none';
