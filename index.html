@@ -151,128 +151,160 @@
           <div class="details">
             <div class="body-chart">
               <form class="form-row">
-                <input type="number" name="name" class="question" id="age-input" required autocomplete="off" />
+                <input type="text" name="name" class="question" id="age-input" required autocomplete="off" />
                 <label for="nme"><span>What's your age?</span></label>
-                <input type="number" name="name" class="question" id="height-input" required autocomplete="off" />
+                <input type="text" name="name" class="question" id="height-input" required autocomplete="off" />
                 <label for="nme"><span>What's your height?</span></label>
-                <input type="number" name="name" class="question" id="weight-input" required autocomplete="off" />
+                <input type="text" name="name" class="question" id="weight-input" required autocomplete="off" />
                 <label for="nme"><span>What's your weight?</span></label>
               </form>
             </div>
           </div>
         </form>
         <!--form-->
-        <div class="result-section" id="calculator-result">
-          
-
-
-        </div>
 
         <!--form - button-->
         <div class="calculator-buttons">
-          <div class="button-group inline-buttons">
-            <button class="btn btn-warning bmr" type="button" id="calculate-status">Check my body status</button>
-            <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
-          </div>
+          <button class="btn btn-warning bmr" type="button" id="bmr-calculate-button">Calculate BMR</button><br>
+          <button class="btn btn-warning bmi" type="button" id="bmi-calculate-button">Calculate BMI</button><br>
+          <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
         </div>
       </div>
+    
 
-      <!--result-section-->
-      <div class="result-analysis">
-        <div class="result-analysis-area" id="result">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
-                  What is Basal Metabolic Rate?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>BMR</strong> (Basal Metabolic Rate) is the number of calories your body needs to perform basic
-                  life-sustaining functions (like breathing and circulation) while at rest. It reflects the energy
-                  required to maintain vital bodily functions without any physical activity. BMR is influenced by
-                  factors such as age, sex, weight, and height, and it's used to estimate total daily calorie needs when
-                  combined with activity levels.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  What is BMI?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>BMI</strong> (Body Mass Index) is a measure that uses an individual's weight and height to
-                  classify them into different categories to assess whether they have a healthy body weight for their
-                  height. The BMI categories are:
-                  <li>
-                    <ul>Underweight: BMI less than 18.5</ul>
-                    <ul>Normal weight: BMI 18.5 to 24.9</ul>
-                    <ul>Overweight: BMI 25 to 29.9</ul>
-                    <ul>Obesity: BMI 30 or greater</ul>
-                  </li>
-                  While BMI is useful for screening potential weight problems, it doesn't directly measure body fat and
-                  can sometimes be misleading, especially for athletes with high muscle mass.
-                </div>
+    <!--result-section-->
+    <div class="result-analysis">
+      <div class="result-analysis-area" id="result">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                What is Basal Metabolic Rate?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>BMR</strong> (Basal Metabolic Rate) is the number of calories your body needs to perform basic
+                life-sustaining functions (like breathing and circulation) while at rest. It reflects the energy
+                required to maintain vital bodily functions without any physical activity. BMR is influenced by
+                factors such as age, sex, weight, and height, and it's used to estimate total daily calorie needs when
+                combined with activity levels.
               </div>
             </div>
           </div>
-          <!--accordian-->
-        </div>
-      </div>
-    </div>
-    <!--result section-->
-    <!--Calculator container-->
-
-
-    <div class="recipeYR">
-      <h2> Today's recommend recipe</h2>
-      <div class="row ">
-        <div class='recipe-container col' style="border: 2px solid red;"></div>
-      </div>
-    </div>
-
-
-    <!-- class="calculator-container-CW"  이 div와 main 태그가 footer 밖에 있어야 화면이 줄었을때  BMI 과 recipe-result 안 겹쳐진다   -->
-
-
-
-
-
-    <footer class="site-footer">
-      <div class="row">
-        <div class="col-md-4">
-          <h3>Company Information</h3>
-          <p>Address: 16 james st, Northbridge, AU</p>
-          <p>Phone: 0429-432-942</p>
-        </div>
-        <div class="col-md-4">
-          <h3>Links</h3>
-          <ul class="footer-links">
-            <li><a href="#">Diet Plan</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h3>Follow Us</h3>
-          <p style="font-weight: 800;">Follow us on:</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                What is BMI?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>BMI</strong> (Body Mass Index) is a measure that uses an individual's weight and height to
+                classify them into different categories to assess whether they have a healthy body weight for their
+                height. The BMI categories are:
+                <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th>Classification</th>
+                          <th>BMI range - kg/m<sup>2</sup></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="table-danger">
+                          <td>Severe Thinness</td>
+                          <td>&lt; 16</td>
+                      </tr>
+                      <tr class="table-warning">
+                          <td>Moderate Thinness</td>
+                          <td>16 - 17</td>
+                      </tr>
+                      <tr class="table-warning">
+                          <td>Mild Thinness</td>
+                          <td>17 - 18.5</td>
+                      </tr>
+                      <tr class="table-success">
+                          <td>Normal</td>
+                          <td>18.5 - 25</td>
+                      </tr>
+                      <tr class="table-warning">
+                          <td>Overweight</td>
+                          <td>25 - 30</td>
+                      </tr>
+                      <tr class="table-danger">
+                          <td>Obese Class I</td>
+                          <td>30 - 35</td>
+                      </tr>
+                      <tr class="table-danger">
+                          <td>Obese Class II</td>
+                          <td>35 - 40</td>
+                      </tr>
+                      <tr class="table-danger">
+                          <td>Obese Class III</td>
+                          <td>&gt; 40</td>
+                      </tr>
+                  </tbody>
+              </table>
+                While BMI is useful for screening potential weight problems, it doesn't directly measure body fat and
+                can sometimes be misleading, especially for athletes with high muscle mass.
+              </div>
+            </div>
           </div>
         </div>
+        <!--accordian-->
       </div>
-    </footer>
+    </div>
+  </div>
+</div>
+  <!--result section-->
+  <!--Calculator container-->
 
 
-    <!-- class="calculator-container-CW"  이 div와 main 태그가 footer 밖에 있어야 화면이 줄었을때  BMI 과 recipe-result 안 겹쳐진다   -->
+  <div class="recipeYR">
+    <h2> Today's recommend recipe</h2>
+    <div class="row ">
+      <div class='recipe-container col' style="border: 2px solid red;"></div>
+    </div>
+  </div>
+
+
+  <!-- class="calculator-container-CW"  이 div와 main 태그가 footer 밖에 있어야 화면이 줄었을때  BMI 과 recipe-result 안 겹쳐진다   -->
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Company Information</h3>
+        <p>Address: 16 james st, Northbridge, AU</p>
+        <p>Phone: 0429-432-942</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Diet Plan</a></li>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Follow Us</h3>
+        <p style="font-weight: 800;">Follow us on:</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- class="calculator-container-CW"  이 div와 main 태그가 footer 밖에 있어야 화면이 줄었을때  BMI 과 recipe-result 안 겹쳐진다   -->
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
