@@ -21,28 +21,13 @@ header {
   color: white;
 } */
 
-.search-button .fa-magnifying-glass {
-  /* border: 1px solid #eee; */
-  font-size: 22px;
-  vertical-align: middle;
-  margin-left: 10px;
-  color: rgb(0, 134, 90);
-}
-
-.fa-magnifying-glass {
-  vertical-align: middle;
-}
-
-.fa-magnifying-glass:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-}
-
 .search-input-section {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  display: inline-block;
 }
 
 #search-input {
@@ -50,11 +35,28 @@ header {
   border: 1px solid black;
   width: 400px;
   height: 45px;
-  /* margin-right: 10px; */
-  margin-left: 20px;
-  padding-left: 20px;
+  /* margin-left: 20px; */
+  /* padding-left: 10px; */
+  padding-left: 2.5em; /* Adjust padding to make space for the icon */
   margin-bottom: 10px;
+  margin-top: 10px;
   font-size: 18px;
+  box-sizing: border-box;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  left: 15px; /* Adjust this value as needed to position the icon */
+  top: 43%;
+  transform: translateY(-50%);
+  font-size: 20px; /* Adjust the icon size as needed */
+  vertical-align: middle;
+  color: rgb(0, 134, 90);
+}
+
+.fa-magnifying-glass:hover {
+  cursor: pointer;
+  /* transform: scale(1.1); */
 }
 
 .search-button {
@@ -84,10 +86,18 @@ main {
 .main-title {
   text-align: center;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
   color: rgb(23, 67, 57);
   margin: 10px 0px 10px 0px;
   padding-bottom: 10px;
+}
+
+.main-title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-top: 10px;
 }
 
 .container {
@@ -224,9 +234,25 @@ main {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 935px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .main-title-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #search-input {
+    width: 400px;
+    padding-left: 2em; /* Adjust padding for smaller screens */
+  }
+
+  .fa-magnifying-glass {
+    position: absolute;
+    right: 375px; /* Adjust this value as needed to position the icon */
+    top: 48%;
+    transform: translateY(-50%);
+    font-size: 20px; /* Adjust the icon size as needed */
   }
 }
 
@@ -235,29 +261,40 @@ main {
     justify-content: center;
     grid-template-columns: 0.8fr;
   }
+  .main-title-container {
+    vertical-align: middle;
+  }
   .main-title {
     font-size: 23px;
-  }
-  .search-input-section {
-    display: flex;
-  }
-  #search-input {
-    width: 330px;
-    height: 35px;
-    /* margin-right: 10px; */
-    padding-left: 10px;
-    font-size: 14px;
-  }
-  .search-button .fa-magnifying-glass {
-    font-size: 1em;
-  }
-  .fa-magnifying-glass {
-    vertical-align: middle;
+    padding-top: 5px;
   }
 }
 
 /* ----------------------------- */
-/* 승혁님 css 스타일링 - index.html*/
+/* 승혁님 css header 스타일링 - index.html*/
+
+/* Banner */
+/* .banner {
+  display: block;
+  position: relative;
+  text-align: center;
+  height: 55px;
+  width: 100%;
+  background-color: rgb(0, 134, 90);
+  font-size: 20px;
+  font-weight: 700px;
+  color: white;
+  padding: 12px 0;
+}
+.banner a {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 25px;
+  letter-spacing: 2px;
+} */
 
 /* Head Top */
 .headTop {
@@ -279,7 +316,7 @@ main {
   flex-wrap: wrap;
   justify-content: flex-end;
   list-style-type: none;
-  padding-top: 10px;
+  padding-top: 40px;
   margin-right: 20px;
 }
 /* .menuRight li {
@@ -288,7 +325,7 @@ main {
 .menuRight a {
   text-decoration: none;
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 29px;
   padding-left: 30px;
   cursor: pointer;
@@ -357,7 +394,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10px;
+  height: 100px;
   position: relative;
 }
 
@@ -370,9 +407,9 @@ main {
 
 /* Logo Image */
 .headMid img {
-  width: 220px;
-  height: 100px;
-  /* margin-bottom: 50px; */
+  width: 350px;
+  height: 200px;
+  margin-bottom: 50px;
 }
 
 /* Icon Container */
@@ -410,7 +447,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding-left: 85px;
-  /* padding-top: 5px; */
+  padding-top: 5px;
   list-style: none;
 }
 .menuLeft li a {
@@ -466,7 +503,7 @@ main {
 @media (max-width: 1400px) {
   .menuLeft {
     padding-left: 95px;
-    /* padding-top: 5px; */
+    padding-top: 5px;
   }
 }
 @media (max-width: 990px) {
@@ -490,20 +527,19 @@ main {
   .headTop i {
     display: flex;
     position: absolute;
-    top: 10px;
+    top: 30px;
     margin-left: 20px;
-    font-size: 35px;
   }
   .headMid {
-    height: 130px;
+    height: 170px;
   }
 
   .headMid img {
-    width: 220px;
-    height: 150px;
-    padding-bottom: 10px;
-    /* margin-bottom: 20px; */
-    margin-top: 100px;
+    width: 350px;
+    height: 200px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    margin-top: 150px;
   }
   .headTop i {
     z-index: 2;
@@ -525,7 +561,6 @@ main {
   }
   .header_btm {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.434);
-    margin-top: 45px;
   }
 
   .logoContainer {
