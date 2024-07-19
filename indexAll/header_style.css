@@ -68,6 +68,9 @@
 }
 
 /* Slide Menu */
+.slideMenu::before {
+  font-size: 100px;
+}
 .slide-menu {
   height: 100%;
   width: 0;
@@ -247,6 +250,12 @@
     padding-bottom: 0px;
     margin-bottom: 10px;
     margin-top: 90px;
+  }
+  .headTop i {
+    z-index: 2;
+  }
+  .slide-menu {
+    z-index: 3;
   }
   .header_btm {
     height: 10px;
