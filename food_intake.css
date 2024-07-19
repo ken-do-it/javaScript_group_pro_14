@@ -1,11 +1,11 @@
 /* 기본 스타일 설정 */
 body {
-    font-family: 'Indie Flower', cursive; 
+    font-family: "Ubuntu", sans-serif;
     background-color: #f0f8ff; /* 부드러운 파란색 배경 */
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* 수직 정렬을 위해 추가 */
     align-items: center;
     height: 100vh;
     overflow-x: hidden; /* 슬라이드 메뉴 표시를 위해 */
@@ -18,25 +18,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 90%;
-    height: 100%;
     max-width: 600px;
     text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    z-index: 1; /* 추가: 다른 요소들보다 위에 표시되도록 */
 }
-
-/* 제목 스타일 */
-.container h1 {
-    font-family: 'Indie Flower', cursive;
-    color: #333333;
-    margin-bottom: 20px;
-}
-
-
 
 /* bell, acc_icon */
-.iconContainer a {
-    display: none;
+.menuRight a {
+    text-decoration: none;
 }
-
 
 .headTop_App {
     display: flex;
@@ -55,15 +46,13 @@ body {
     justify-content: space-around;
     align-items: center;
     margin: 10px 0px;
-    /* height: 40px; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.242);
 }
 
-.headMid_app{
+.headMid_app {
     display: flex;
     justify-content: center;
 }
-
 
 .diet_food_img_ke {
     display: flex;
@@ -71,16 +60,11 @@ body {
 }
 
 .diet_food_img_ke img {
-    width: 80%; /* 창 너비의 80% */
+    width: 65%; /* 창 너비의 80% */
     height: auto; /* 높이를 자동으로 조절하여 비율을 유지 */
     max-width: 100%; /* 최대 너비를 부모 요소의 너비로 제한 */
     border-radius: 10px;
     margin-bottom: 20px;
-}
-
-/* 입력 그룹 스타일 */
-.input-group {
-    margin-bottom: 15px;
 }
 
 /* 라벨 스타일 */
@@ -102,7 +86,7 @@ select {
     margin-bottom: 20px;
     font-size: 16px;
     box-sizing: border-box;
-    font-family: 'Indie Flower', cursive; /* Indie Flower 폰트 적용 */
+    font-family: "Ubuntu", sans-serif;
 }
 
 .input-group button,
@@ -115,6 +99,10 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.addBtn_center {
+    justify-content: center;
 }
 
 .input-group button:hover,
@@ -169,6 +157,9 @@ input:focus {
 
 /* 슬라이드 메뉴 스타일 */
 .slide-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     height: 100%;
     width: 0;
     position: fixed;
@@ -182,7 +173,7 @@ input:focus {
 }
 
 .slide-menu a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -201,4 +192,3 @@ input:focus {
     font-size: 36px;
     margin-left: 50px;
 }
-
