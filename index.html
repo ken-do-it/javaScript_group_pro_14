@@ -82,12 +82,10 @@
     <!-- End Slide Menu -->
 
 
-    <!-- logo -->
-    <div class="headMid headMid_app">
-      <div class="logoContainer">
-        <a href="index.html"><img src="./img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png" alt=""
-            class="logo"></a>
-      </div>
+   <!-- logo -->
+    <div class="logoContainer col headMid headMid_app">
+      <a href="index.html"><img src="./img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png" alt=""
+          class="logo"></a>
     </div>
     <!-- <div class="iconWrapper">
         <div class="iconContainer">
@@ -99,6 +97,8 @@
 
     <div class="header_btm">
       <div class="menu_button">
+        
+      
         <ul class="menuLeft">
           <li><a href="/HJ/recipe-home.html">Recipes</a></li>
           <li><a href="/yeara/recordYR.html">Workout</a></li>
@@ -123,27 +123,23 @@
   </div>
 
 
-
-
-  <!--Calculator container-->
+ <!--Calculator container-->
   <div class="calculator-container-CW">
     <div class="form-container">
       <form class="bmr-form">
         <div class="flex-form-container">
-
           <div class="input-area">
-            <!-- 예라님 추가 시작  -->
+            <!-- 예라님 추가 시작 -->
             <div class="body-info">
               <div>
                 <img src="imgYR/man369.png" class="body-photo">
               </div>
-
+  
               <div class="body-chart">
-
                 <div class="form-radio mt-4 mb-2">
-                  <label>Gender:</label>
-                  <input type="radio" name="gender" value="Male"> Male
-                  <input type="radio" name="gender" value="Female"> Female
+                  <label id="gender">Gender:</label>
+                  <input type="radio" name="gender" value="Male" id="male-radio"> Male
+                  <input type="radio" name="gender" value="Female" id="female-radio"> Female
                 </div>
 
                 <form class="form-row">
@@ -153,28 +149,27 @@
                   <label for="nme"><span>What's your height?</span></label>
                   <input type="text" name="name" class="question" id="weight-input" required autocomplete="off" />
                   <label for="nme"><span>What's your weight?</span></label>
-
+                 
                 </form>
 
                 <div class="calculator-buttons">
                   <button class="btn btn-warning bmr mt-4" type="button" id="calculate-bmr">Check my BMR</button><br>
                   <button class="btn btn-warning bmi" type="button" id="calculate-bmi">Check my BMI</button><br>
-                  <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
-                  <!-- <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button> -->
                 </div>
-
+                <div class="reset-button">
+                  <button class="btn btn-warning reset" type="button" id="reset-button">Reset</button>
+                </div>
               </div>
-
-              <div class="mt-5 ms-5 bmrYR">
-                check my bmr 나오는 곳
+  
+              <div class="mt-5 ms-5 bmrYR" id="calculator-result">
+              
               </div>
             </div>
           </div>
         </div>
-
       </form>
     </div>
-    <div id="calculator-result"></div>
+  <div id="calculator-result"></div>
 
     <!--Calculator container-->
 
@@ -209,7 +204,7 @@
         </div>
         <div class="col-md-4">
           <h3>Follow Us</h3>
-          <p>Follow us on:</p>
+          <p style="font-weight: 800;">Follow us on:</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
