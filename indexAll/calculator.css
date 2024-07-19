@@ -88,23 +88,27 @@ body {
   }
   
   .details .form-group {
-    flex: 1 1 calc(50%);
+    
     /* Adjust the width of each form group */
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    
+    gap: 1rem;
   }
   
   .details label {
     flex: 0 0 40%;
     /* Adjust the width of the label */
-   
+    position:relative;
     /* Adjust space between label and input */
-    text-align: center;
+    text-align: right;
     /* Align labels to the right */
     font-family: "Ubuntu", sans-serif;
     font-weight: 800;
     font-style: italic;
+    display:flex;
+    align-items: center;
+    margin:0;
   }
   
   .details input.question {
@@ -112,12 +116,11 @@ body {
     font-weight: 400;
     border-radius: 2px;
     margin: 0;
-    border: none;
+    border: 1px solid black;/*need to make it none after fixing the issue*/
     width: 60%;
     background: rgba(0, 0, 0, 0);
     transition: padding-top 0.2s ease, margin-top 0.2s ease;
     overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
-    justify-content: center;
   }
   
   .details input.question::placeholder {
@@ -165,7 +168,7 @@ body {
   
     input.question:focus + label > span,
     input.question:valid + label > span {
-      top: -60px;
+      top: -30px;
       font-size: 20px;
       color: #333;
     }
@@ -184,9 +187,9 @@ body {
       position: absolute;
       color: #8F8F8F;
       font-size: 20px;
-      top: -30px;
+      top: 0px;
       left: 0px;
-      z-index: -1;
+      z-index: 1;
       -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
       transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
     }
@@ -242,25 +245,3 @@ body {
     display: flex;
     flex-direction: column;
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
