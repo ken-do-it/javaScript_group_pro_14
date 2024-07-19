@@ -113,6 +113,23 @@ const renderPagination = (totalItems, currentPage) => {
   }
 };
 
+// header //
+// side menu hamburger
+function openMenu() {
+  document.getElementById('slideMenu').style.width = '250px';
+}
+
+function closeMenu() {
+  document.getElementById('slideMenu').style.width = '0';
+}
+
+document.querySelectorAll('.slide-menu a').forEach((item) => {
+  item.addEventListener('click', (event) => {
+    closeMenu();
+  });
+});
+///////
+
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('search-input');
 
