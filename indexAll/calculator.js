@@ -1,47 +1,55 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    let bmrWeightInput = document.getElementById("bmr-weight-input");
-    let bmrHeightInput = document.getElementById("bmr-height-input");
-    let bmrAgeInput = document.getElementById("bmr-age-input");
-    let bmrCalculateButton = document.getElementById("bmr-calculate-button");
-    let bmrResetButton = document.getElementById("bmr-reset-button");
-    let bmrResultDiv = document.getElementById("bmr-result");
+    let weightInput = document.getElementById("weight-input");
+    let heightInput = document.getElementById("height-input");
+    let ageInput = document.getElementById("age-input");
+    let bmrCalculateButton = document.getElementById("calculate-bmr");
+    let bmiCalculateButton = document.getElementById("calculate-bmi");
+    let resetButton = document.getElementById("reset-button");
+    let resultDiv = document.getElementById("calculator-result"); // 수정된 부분
+    let femaleRadio = document.querySelector('input[name="gender"][value="Female"]'); // 수정된 부분
+    let maleRadio = document.querySelector('input[name="gender"][value="Male"]'); // 수정된 부분
+    let femaleImage = document.getElementById("female-image");
+    let maleImage = document.getElementById("male-image");
 
     const validateInput = (event) => {
         const input = event.target;
         input.value = input.value.replace(/[^0-9]/g, '');
     };
 
-    bmrWeightInput.addEventListener('input', validateInput);
-    bmrHeightInput.addEventListener('input', validateInput);
-    bmrAgeInput.addEventListener('input', validateInput);
+    weightInput.addEventListener('input', validateInput);
+    heightInput.addEventListener('input', validateInput);
+    ageInput.addEventListener('input', validateInput);
 
-    bmiWeightInput.addEventListener('input', validateInput);
-    bmiHeightInput.addEventListener('input', validateInput);
-    bmiAgeInput.addEventListener('input', validateInput);
+    femaleRadio.addEventListener('change', () => {
+        if (femaleRadio.checked) {
+            femaleImage.style.display = 'block';
+            maleImage.style.display = 'none';
+        }
+    });
 
+    maleRadio.addEventListener('change', () => {
+        if (maleRadio.checked) {
+            femaleImage.style.display = 'none';
+            maleImage.style.display = 'block';
+        }
+    });
 
-    const bmrFromCheck = () => {
-        if (bmrHeightInput.value === '') {
+    const checkForm = () => {
+        if (heightInput.value === '') {
             alert("Please enter your height");
-            bmrHeightInput.focus();
+            heightInput.focus();
             return false;
         }
 
-        if (bmrWeightInput.value === '') {
+        if (weightInput.value === '') {
             alert("Please enter your weight");
-            bmrWeightInput.focus();
+            weightInput.focus();
             return false;
         }
 
-        if (bmrAgeInput.value === '') {
+        if (ageInput.value === '') {
             alert("Please enter your age");
-            bmrAgeInput.focus();
-            return false;
-        }
-
-        const bmrSelectedGender = document.querySelector('input[name="gender"]:checked');
-        if (!selectedGender) {
-            alert("Please select your gender");
+            ageInput.focus();
             return false;
         }
 
@@ -53,10 +61,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
 
-        const weight = parseFloat(weightInput.value);
-        const height = parseFloat(heightInput.value);
-        const age = parseFloat(ageInput.value);
-        const gender = document.querySelector('input[name="gender"]:checked').value;
+        let weight = parseFloat(weightInput.value);
+        let height = parseFloat(heightInput.value);
+        let age = parseFloat(ageInput.value);
+        let gender = document.querySelector('input[name="gender"]:checked').value;
 
         let bmr = 0;
 
@@ -66,42 +74,55 @@ document.addEventListener('DOMContentLoaded', (event) => {
             bmr = (655.1 + (9.563 * weight) + (1.85 * height) - (4.676 * age)).toFixed(2);
         }
 
-        console.log("Calculated BMR:", bmr);
-
-        bmrResultDiv.innerHTML = `
-            <h2>Your BMR Result</h2>
-            <div>
-                Weight: ${weight} kg <br>
-                Height: ${height} cm <br>
-                Age: ${age} <br>
-                Gender: ${gender} <br>
-            </div>
-            Your BMR is: ${bmr} Calories / day
-        `;
+        renderResult({
+            title: "Your BMR Result",
+            weight: weight,
+            height: height,
+            age: age,
+            gender: gender,
+            result: `${bmr} Calories / day`
+        });
     };
 
     const calculateBMI = () => {
         if (!checkForm()) {
             return;
         }
-        
-        let height = parseFloat(heightInput.value);
+
         let weight = parseFloat(weightInput.value);
+        let height = parseFloat(heightInput.value);
         let age = parseFloat(ageInput.value);
-        let genderInput = document.querySelector('input[name="gender"]:checked');
-        let gender = genderInput.value;
+        let gender = document.querySelector('input[name="gender"]:checked').value;
+
         let bmi = (weight / ((height / 100) * (height / 100))).toFixed(1);
 
-        document.getElementById('bmi-result').innerHTML = `
-            Your BMI is: ${bmi}<br>
-            Height: ${heightInput.value} cm<br>
-            Weight: ${weightInput.value} kg<br>
-            Age: ${ageInput.value}<br>
-            Gender: ${gender}
-        `;
-        resetForm();
+        renderResult({
+            title: "Your BMI Result",
+            weight: weight,
+            height: height,
+            age: age,
+            gender: gender,
+            result: bmi
+        });
     };
 
+    const renderResult = ({ title, weight, height, age, gender, result }) => {
+        let resultHTML = `
+            <h2>${title}</h2>
+            <div>
+                Weight: ${weight} kg <br>
+                Height: ${height} cm <br>
+                Age: ${age} <br>
+                Gender: ${gender} <br>
+            </div>
+            Your result is: ${result}
+            <br><button type="button" id="reset-button">Reset</button>
+        `;
+
+        resultDiv.innerHTML = resultHTML;
+        // Reassign the event listener for the new reset button
+        document.getElementById("reset-button").addEventListener("click", resetForm);
+    };
 
     const resetForm = () => {
         heightInput.value = '';
@@ -109,10 +130,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         ageInput.value = '';
         const genderInputs = document.querySelectorAll('input[name="gender"]');
         genderInputs.forEach(input => input.checked = false);
-        bmrResultDiv.innerHTML = ''; // Clear the result div
+        resultDiv.innerHTML = ''; // Clear the result div
+
+        // Hide the images
+        femaleImage.style.display = 'none';
+        maleImage.style.display = 'none';
+
+        // Optionally, you can set a placeholder text or adjust height of container
+        // bodyImgContainer.style.height = '200px'; // Adjust the height as needed
     };
 
-    calculateButton.addEventListener("click", calculateBMR);
+    bmrCalculateButton.addEventListener("click", calculateBMR);
+    bmiCalculateButton.addEventListener("click", calculateBMI);
     resetButton.addEventListener("click", resetForm);
-    calculateButton.addEventListener("click", calculateBMI);
 });
