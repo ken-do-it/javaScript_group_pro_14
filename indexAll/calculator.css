@@ -254,6 +254,61 @@ body{
     flex-direction: column;
     
 }
+
+/* bmr 꾸미기 */
+
+.result-container {
+  background-color: #f8f9fa;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.result-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.result-details {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.result-details p {
+  margin: 5px 0;
+}
+
+.result-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.result-value span {
+  color: #ff6347; /* You can change the color as needed */
+}
+
+.result-reset-button {
+  background-color: #ffc107;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.result-reset-button:hover {
+  background-color: #e0a800;
+}
+
   
   
   

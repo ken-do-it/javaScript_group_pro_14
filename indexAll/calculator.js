@@ -109,15 +109,17 @@ const calculateBMI = () => {
 
 const renderResult = ({ title, weight, height, age, gender, result }) => {
     let resultHTML = `
-        <h2>${title}</h2>
-        <div>
-            Weight: ${weight} kg <br>
-            Height: ${height} cm <br>
-            Age: ${age} <br>
-            Gender: ${gender} <br>
+    <div class="result-container">
+            <h2 class="result-title">${title}</h2>
+            <div class="result-details">
+                <p><strong>Weight:</strong> ${weight} kg</p>
+                <p><strong>Height:</strong> ${height} cm</p>
+                <p><strong>Age:</strong> ${age}</p>
+                <p><strong>Gender:</strong> ${gender}</p>
+            </div>
+            <p class="result-value">Your result is: <span>${result}</span></p>
+            <button type="button" id="reset-button" class="result-reset-button">Reset</button>
         </div>
-        Your result is: ${result}
-        <br><button type="button" id="reset-button">Reset</button>
     `;
 
     resultDiv.innerHTML = resultHTML;
