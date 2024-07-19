@@ -8,7 +8,7 @@
   
   .img-text {
     position: absolute;
-    top: 34rem;
+    top: 30rem;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -25,7 +25,7 @@
   
   .download_app_btn {
     position: relative;
-    top: -8rem;
+    top: -11rem;
     left: 51%;
     transform: translateX(-50%);
     width: 150px;
@@ -110,10 +110,10 @@
       flex-direction: column;
     }
   
-    .download_app_btn {
+    /* .download_app_btn {
       position: absolute;
-      top: 43rem;
-    }
+      
+    } */
   }
   
   @media (max-width: 520px) {
@@ -133,5 +133,15 @@
   }
 
   /* nav */
+
+  @media (max-width: 600px) {
+
+    .download_app_btn {
+      position: absolute;
+      top: 38rem;
+      
+    }
+
+  }
 
   
