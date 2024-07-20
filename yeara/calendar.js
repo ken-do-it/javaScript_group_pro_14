@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let i = 1; i <= lastDateOfMonth; i++) {
             const dayElement = document.createElement('div');
             dayElement.textContent = i;
+            dayElement.classList.add('calendar-day'); // 클래스 추가
             if (i === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
                 dayElement.classList.add('today');
                 renderWorkoutInfo(dayElement);
