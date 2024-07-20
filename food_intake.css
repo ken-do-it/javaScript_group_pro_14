@@ -38,6 +38,7 @@ body {
 .side_menu_button {
     margin-right: auto;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 /* between logo and noona diet h1 */

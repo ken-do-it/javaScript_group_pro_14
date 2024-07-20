@@ -18,30 +18,28 @@ document
     if (waterHeight > 100) waterHeight = 100;
 
     document.getElementById('water').style.height = waterHeight + '%';
+
     let waterLiters = (totalWater / 1000).toFixed(2);
+    animateWaterFigure(waterLiters);
+
     document.getElementById('water_figure').innerHTML = `${waterLiters}L`;
 
     if (totalWater > 2100) {
-      showResult(
-        '수분 섭취량이 과다합니다!',
-        '권장량은 2 ~ 2.1L 입니다.',
-        true
-      );
+      showResult('Excessive water intake!', 'Recommended: 2 - 2.1L.', true);
       goodHeart.classList.remove('great_heart');
-      document.getElementById('container_cup').style.borderColor = '#e20202';
+      document.getElementById('container_cup').style.borderColor = '#F1627D';
     } else if (totalWater >= recommendedWaterAmount) {
-
-      showResult('충분한 섭취량 입니다!', '', false);
+      showResult('Sufficient intake!', '', false);
       document.getElementById('container_cup').style.borderColor = '#4beaff';
       goodHeart.classList.add('great_heart');
-      showResult('충분한 섭취량 입니다!', '');
+      showResult('Sufficient intake!', '');
 
       fireConfetti();
-} else {
+    } else {
       let additionalWater = recommendedWaterAmount - totalWater;
       showResult(
-        '수분 섭취가 부족합니다.',
-        `추가로 ${additionalWater}ml의 물을 더 마셔야 합니다.`,
+        'Insufficient water intake!',
+        `Drink an additional  ${additionalWater}ml Water.`,
         false
       );
     }
@@ -55,9 +53,9 @@ document
     dailyTotalWater += waterAmount;
 
     // 확인 필요 2
-    // localStorage.setItem(currentDate, dailyTotalWater); 승혁님꺼 
+    // localStorage.setItem(currentDate, dailyTotalWater); 승혁님꺼
 
-    localStorage.setItem('totalWater', totalWater);//예라
+    localStorage.setItem('totalWater', totalWater); //예라
   });
 
 function showResult(message, additionalMessage, isWarning) {
@@ -72,10 +70,10 @@ function showResult(message, additionalMessage, isWarning) {
   resultElement.textContent = message;
   additionalWaterElement.textContent = additionalMessage;
 
-  if (message === '충분한 섭취량 입니다!') {
+  if (message === 'Sufficient intake!') {
     smileyElement.textContent = '😊';
     // fireConfetti();
-  } else if (message === '수분 섭취가 부족합니다.') {
+  } else if (message === 'Insufficient water intake!') {
     smileyElement.textContent = '😔';
   } else {
     smileyElement.textContent = '😫';
@@ -118,7 +116,6 @@ function checkResetTime() {
     }
   }
 }
-
 
 // 승혁님꺼
 //confetti
@@ -164,47 +161,65 @@ function checkResetTime() {
 //   });
 // }
 
-//승혁님꺼 
-
+//승혁님꺼
 
 function fireConfetti() {
   const count = 200,
-      defaults = {
-          origin: { y: 0.7 },
-      };
+    defaults = {
+      origin: { y: 0.7 },
+    };
 
   function fire(particleRatio, opts) {
-      confetti(
-          Object.assign({}, defaults, opts, {
-              particleCount: Math.floor(count * particleRatio),
-          })
-      );
+    confetti(
+      Object.assign({}, defaults, opts, {
+        particleCount: Math.floor(count * particleRatio),
+      })
+    );
   }
 
   fire(0.25, {
-      spread: 26,
-      startVelocity: 55,
+    spread: 26,
+    startVelocity: 55,
   });
 
   fire(0.2, {
-      spread: 60,
+    spread: 60,
   });
 
   fire(0.35, {
-      spread: 100,
-      decay: 0.91,
-      scalar: 0.8,
+    spread: 100,
+    decay: 0.91,
+    scalar: 0.8,
   });
 
   fire(0.1, {
-      spread: 120,
-      startVelocity: 25,
-      decay: 0.92,
-      scalar: 1.2,
+    spread: 120,
+    startVelocity: 25,
+    decay: 0.92,
+    scalar: 1.2,
   });
 
   fire(0.1, {
-      spread: 120,
-      startVelocity: 45,
+    spread: 120,
+    startVelocity: 45,
   });
+}
+
+function animateWaterFigure(targetValue) {
+  let currentValue = parseFloat(
+    document.getElementById('water_figure').textContent
+  );
+  targetValue = parseFloat(targetValue);
+
+  let increment = (targetValue - currentValue) / 50;
+
+  let interval = setInterval(function () {
+    currentValue += increment;
+    document.getElementById('water_figure').textContent =
+      currentValue.toFixed(2) + 'L';
+
+    if (currentValue.toFixed(2) === targetValue.toFixed(2)) {
+      clearInterval(interval);
+    }
+  }, 20);
 }
