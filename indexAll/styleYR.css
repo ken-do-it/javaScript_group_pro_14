@@ -59,9 +59,10 @@
 
 /* 사이트 푸터 스타일 */
 .site-footer {
-  background-color: #f2f2f2;
-  padding: 20px 0 20px 0px;
-  color: #333;
+  background-color: #e0f2f1; 
+  padding: 50px 0;
+  color: #042520; 
+  padding: 13px;
 }
 
 .site-footer .container {
@@ -71,16 +72,17 @@
 }
 
 .site-footer h3 {
-  color: #555;
+  color: #00796b;
   font-size: 18px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .site-footer p {
   font-size: 14px;
   line-height: 1.6;
-  color: #777;
+  color: #004d40;
 }
 
 .site-footer .footer-links {
@@ -93,7 +95,7 @@
 }
 
 .site-footer .footer-links a {
-  color: #777;
+  color: #00796b; 
   text-decoration: none;
 }
 
@@ -102,17 +104,17 @@
 }
 
 .site-footer .social-links a {
-  color: #555;
+  color:  #00796b;
   font-size: 20px;
   margin-right: 15px;
 }
 
 .site-footer .social-links a:hover {
-  color: #333;
+  color: #004d40;
 }
 
 .site-footer hr {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #b2dfdb;
   margin: 20px 0;
 }
 
@@ -122,7 +124,6 @@
   text-align: center;
   margin-top: 20px;
 }
-
 @media (max-width: 768px) {
   .img-text {
     flex-direction: column;

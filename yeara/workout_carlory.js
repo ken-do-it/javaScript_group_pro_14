@@ -77,3 +77,7 @@ function goBack() {
     window.history.back();
 }
 
+function goMain() {
+    window.location.href = '/index.html';
+  }
+  

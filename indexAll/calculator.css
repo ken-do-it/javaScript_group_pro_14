@@ -127,7 +127,6 @@ body {
     display: flex;
     align-items: center;
     /* Align items vertically */
-    justify-content: center;
     padding-bottom: 5px;
 }
 
@@ -311,7 +310,7 @@ input.question+label>span {
     flex-direction: column;
     gap: 2px;
     margin-bottom: 20px;
-    align-items: center;
+    
     /* Adjust the gap between button groups */
     /* justify-content: center; */
     /* Align items to the start */
@@ -508,6 +507,10 @@ tr:nth-child(even) {
     }
 }
 
+
+
+
+
 @media (max-width: 480px) {
     .calculator-container-CW {
         flex-direction: column;
@@ -567,4 +570,16 @@ tr:nth-child(even) {
         max-width: 100%;
         margin-left: 10px;
     }
+}
+
+/* img margin yeara */
+
+#default-image{
+ position: relative;
+
+}
+
+#female-image{
+ position:relative;
+ left: 32px;
 }
