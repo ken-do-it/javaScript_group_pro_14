@@ -9,8 +9,7 @@ let url = '';
 
 const container = document.querySelector('.recipe-container-ABC');
 
-
-//검색창 placeholder 
+//검색창 placeholder
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('search-input');
 
@@ -30,8 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // placeholder end
-
-
 
 //pagination
 const paginationContainer = document.querySelector('.pagination');
