@@ -29,7 +29,7 @@ body {
   width: 100%;
   max-width: 400px; /* 최대 너비 설정 */
   height: 45px;
-  padding-left: 2.5em; /* 아이콘 공간 확보를 위한 패딩 */
+  padding-left: 2em; /* 아이콘 공간 확보를 위한 패딩 */
   font-size: 18px;
   box-sizing: border-box;
 }
@@ -60,6 +60,7 @@ body {
   font-size: 30px;
   color: rgb(23, 67, 57);
   padding-bottom: 10px;
+  padding-left: 5px;
 }
 
 .main-title-container {
@@ -67,8 +68,8 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; /* 항목을 다음 줄로 래핑 허용 */
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 35px;
   gap: 20px; /* 제목과 검색창 사이 간격 추가 */
 }
 
@@ -78,7 +79,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.box {
+.box-recipe {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgb(0, 134, 90);
   border-radius: 10px;
@@ -116,6 +117,7 @@ body {
   font-size: 1rem;
   color: rgb(0, 134, 90);
   padding-top: 5px;
+  text-align: center;
 }
 
 .recipe-info {
@@ -165,6 +167,7 @@ body {
 .pagination {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
