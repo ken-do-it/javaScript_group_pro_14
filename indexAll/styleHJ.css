@@ -10,7 +10,7 @@ h2 {
 .mb-4 {
   text-align: center;
   color: rgb(0, 134, 90);
-  margin: 8em;
+  /* margin: 8em; */
 }
 
 .carousel-item .row {
