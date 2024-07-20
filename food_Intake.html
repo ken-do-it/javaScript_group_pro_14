@@ -23,8 +23,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- 승혁님 css 링크 -->
-    <link rel="stylesheet" href="indexAll/header_style.css" />
+
 
     <!-- 예라님 css 링크 -->
     <link rel="stylesheet" href="indexAll/styleYR.css" />
@@ -42,8 +41,51 @@
   
   <body>
     <div class="container">
+      <nav>
+        <div class="menuRight">
+          <a href="#"><i class="fas fa-bell icon-yr"></i></a>
+          <a href="#"><i class="far fa-user icon-yr"></i></a>
+        </div>
+        
+        <div id="headerArea">
+          <div class="headTop">
+            <div class="side_menu_button">
+              <i class="fas fa-bars" id="menuIcon" onclick="openMenu()"></i>
+            </div>
+          </div>
+  
+          <!-- Start Slide Menu -->
+          <div id="slideMenu" class="slide-menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="/HJ/recipe-home.html">Recipes</a>
+            <a href="/yeara/recordYR.html">Workout</a>
+            <a href="food_Intake.html">Diet</a>
+            <a href="/yeara/calendar.html">Calendar</a>
+            <a href="water_tracking.html">Consumption</a>
+            <a href="/yeara/emoji.html">Mood</a>
+            <div class="iconContainer_side">
+              <a href="#"><i class="fas fa-bell"></i></a>
+              <a href="#"><i class="far fa-user"></i></a>
+            </div>
+          </div>
+          <!-- End Slide Menu -->
+  
+          <div class="headMid headMid_app">
+            <div class="logoContainer">
+              <a href="index.html"><img src="./img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png" alt="Noona's Diet Logo" class="logo"></a>
+            </div>
+          </div>
+  
+          <div class="header_btm">
+            <div class="menu_button">
+              
+            </div>
+          </div>
+        </div>
+      </nav>             
+      <!-- End header part -->
       
-      <div class="diet_food_img_ke">
+      <div class="diet_food_img_ke mt-4">
         <img src="./img_ke/diet_food.png" alt="" />
       </div>
 
