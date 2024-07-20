@@ -76,10 +76,11 @@ input[type="radio"]:checked + label {
 .container {
   background-color:antiquewhite;
   height: 100%;
+  height: 800px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   text-align: center;
 }
@@ -94,9 +95,31 @@ input[type="radio"]:checked + label {
   }
 }
 
+#menuIcon {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mood-icon, .sleep-icon {
+    font-size: 3rem; 
+  }
+
+  h1, h2 {
+    font-size: 1.2rem; 
+  }
+
+  #menuIcon {
+    display: block; /* 화면이 작을 때 메뉴 아이콘 보이기 */
+    font-size: 35px; 
+    color: rgb(0, 134, 90); 
+    cursor: pointer; /
+  }
+}
+
 /* header==================================== */
 
-.headTop {
+ /* Head Top */
+ .headTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,7 +138,7 @@ input[type="radio"]:checked + label {
   flex-wrap: wrap;
   justify-content: flex-end;
   list-style-type: none;
-  padding-top: 40px;
+  
   margin-right: 20px;
 }
 /* .menuRight li {
@@ -143,15 +166,6 @@ input[type="radio"]:checked + label {
   color: #fff;
   box-shadow: inset 200px 0 0 0 blanchedalmond;
 }
-/* .menuRight li:nth-child(2)::before,
-.menuRight li:nth-child(3)::before {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 13px;
-  background-color: rgba(33, 33, 33, 0.171);
-  margin-right: 20px;
-} */
 
 /* Slide Menu */
 .slideMenu::before {
@@ -208,10 +222,9 @@ input[type="radio"]:checked + label {
 .headMid img {
   width: 300px;
   height: 150px;
-  margin-bottom: 10rem;
-  margin-top: 3.5rem;
- 
+  
 }
+
 
 /* Icon Container */
 .headMid .iconContainer {
@@ -235,9 +248,10 @@ input[type="radio"]:checked + label {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
   height: 45px;
   box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
+  /* margin-bottom: 30px; */
+  
 }
 .menu_button {
   display: flex;
@@ -296,5 +310,7 @@ input[type="radio"]:checked + label {
   cursor: pointer;
   color: #333;
   opacity: 95%;
-  color: rgb(0, 134, 90);
+  color: #00865a;
 }
+
+/* header finish */
