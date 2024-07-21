@@ -270,3 +270,16 @@
     box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
   } */
 }
+
+
+@media (max-width: 600px) {
+  .headTop i {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    margin-left: 20px;
+  }
+  .headMid {
+    height: 170px;
+  }
+}

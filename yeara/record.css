@@ -1,23 +1,46 @@
 /* record.css */
 
-html{
+  html{
     font-family: "Ubuntu", sans-serif;
-    background-color: antiquewhite;
+    background-color: #f0f8ff;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+}
+
+.background{
+  background-image: url('../imgYR/last.jpg');
+  border-color: none;
+  background-repeat: no-repeat;
+  background-size: 800px 800px; 
+  background-position: center; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  text-align: center;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto; /* 가운데 정렬 */
 }
 
 body{
-    width: 750px;
+   /* background-color: rgb(240, 248, 255); */
+  width: 90%;
+  max-width: 600px;
+  background-color: antiquewhite;
 }
 
+/* 
 nav{
     background-color: antiquewhite;
-}
+} */
 
 /* header---------------------- */
   /* Head Top */
@@ -29,7 +52,7 @@ nav{
   
   /* Hide hamburger icon by default */
   .headTop i {
-    display: none;
+    display: block;
     font-size: 35px;
     color: rgb(0, 134, 90);
   }
@@ -68,7 +91,6 @@ nav{
     color: #fff;
     box-shadow: inset 200px 0 0 0 blanchedalmond;
   }
- 
   /* Slide Menu */
   .slideMenu::before {
     font-size: 100px;
@@ -217,7 +239,7 @@ nav{
   
   /* Media Query */
   
-  @media (max-width: 1400px) {
+  /* @media (max-width: 1400px) {
     .menuLeft {
       padding-left: 95px;
       padding-top: 5px;
@@ -260,6 +282,7 @@ nav{
     }
     .headTop i {
       z-index: 2;
+      
     }
     .slide-menu {
       z-index: 3;
@@ -272,35 +295,10 @@ nav{
     .iconContainer a {
       display: none;
     }
- 
- 
-   
-  }
+  } */
 
 /* header finish---------------- */
 
-.background{
-    background-image: url('../imgYR/last.jpg');
-    border-color: none;
-    background-repeat: no-repeat;
-    background-size: 800px 800px; 
-    background-position: center; 
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-    height: 70vh;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-body{
-    background-color: antiquewhite;
-}
 
 
 .heading {
