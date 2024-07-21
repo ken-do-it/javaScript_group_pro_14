@@ -144,3 +144,51 @@ let totalWater = localStorage.getItem('totalWater');
             emojiContainer.appendChild(poopElement);
         }
     });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get today's date
+        const today = new Date();
+        const day = today.getDate();
+        const month = today.getMonth() + 1; // January is 0
+        const year = today.getFullYear();
+
+        // Format date as DD.MM.YYYY
+        const formattedDate = `Today date: ${day}.${month}.${year}`;
+
+        // Insert formatted date into #today-date element
+        const todayDateElement = document.getElementById('today-date');
+        todayDateElement.textContent = formattedDate;
+    });  //오늘의 날짜 
+
+    
+    
+    // side menu hamburger
+function openMenu() {
+    document.getElementById("slideMenu").style.width = "250px";
+    document.getElementById("menuIcon").style.display = "none"; // 아이콘 숨기기
+}
+
+function closeMenu() {
+    document.getElementById("slideMenu").style.width = "0";
+    document.getElementById("menuIcon").style.display = "block"; // 아이콘 보이기
+}
+
+document.querySelectorAll('.slide-menu a').forEach(item => {
+    item.addEventListener('click', event => {
+        closeMenu();
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const barsIcon = document.querySelector(".headTop i.fas.fa-bars");
+    const slideMenu = document.getElementById("slideMenu");
+
+    barsIcon.addEventListener("click", function() {
+        if (slideMenu.style.width === "250px") {
+            slideMenu.style.width = "0";
+        } else {
+            slideMenu.style.width = "250px";
+        }
+    });
+});
