@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         } else if (type === 'BMR') {
             additionalInfoHTML = `
                 <div class="bmr-table">
-                    <h3>Daily Calorie Needs</h3>
+                    <h6>Daily Calorie Needs</h6>
                     <p>Your BMR is the number of calories your body needs to maintain basic physiological functions at rest. To estimate your daily calorie needs, you can multiply your BMR by an activity factor based on your level of physical activity:</p>
                     <table class="table table-bordered">
                         <thead>
