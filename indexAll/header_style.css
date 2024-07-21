@@ -27,8 +27,12 @@
   justify-content: flex-end;
   list-style-type: none;
   padding-top: 40px;
+  padding-bottom: 40px;
   margin-right: 20px;
 }
+
+
+
 /* .menuRight li {
   margin-left: 23px;
 } */
@@ -41,9 +45,17 @@
   cursor: pointer;
   color: rgba(28, 28, 28, 0.778);
 }
+
 .menuRight a:hover {
-  color: rgb(0, 134, 90);
+  color: #2e7d32;
 }
+
+.menuRight i {
+  display: flex;
+  font-size: 35px;
+}
+
+
 .menuLeft a {
   box-shadow: inset 0 0 0 0 blanchedalmond;
 
@@ -216,12 +228,7 @@
     padding-top: 5px;
   }
 }
-@media (max-width: 990px) {
-  .menuLeft {
-    padding-left: 55px;
-    padding-top: 5px;
-  }
-}
+
 @media (max-width: 990px) {
   .menuLeft {
     padding-left: 55px;
@@ -277,16 +284,4 @@
   /* .header_btm {
     box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
   } */
-}
-
-@media (max-width: 600px) {
-  .headTop i {
-    display: flex;
-    position: absolute;
-    top: 30px;
-    margin-left: 20px;
-  }
-  .headMid {
-    height: 170px;
-  }
 }
