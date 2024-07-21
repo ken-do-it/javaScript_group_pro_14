@@ -218,7 +218,13 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
+.side_menu_button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px; /* padding을 추가하여 클릭 가능한 영역을 확장 */
 }
 
 /* Hide hamburger icon by default */
@@ -358,7 +364,6 @@ button:hover {
   /* width: 100%;
   width: 700px;
   text-align: center; */
-  
 }
 .menu_button {
   display: flex;

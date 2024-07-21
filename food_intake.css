@@ -1,6 +1,6 @@
 /* 기본 스타일 설정 */
 body {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   background-color: #f0f8ff; /* 부드러운 파란색 배경 */
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ body {
   width: 90%;
   max-width: 600px;
   text-align: center;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   z-index: 1; /* 추가: 다른 요소들보다 위에 표시되도록 */
 }
 
@@ -32,6 +32,13 @@ body {
   align-items: center;
 }
 
+.side_menu_button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px; /* padding을 추가하여 클릭 가능한 영역을 확장 */
+}
+
 /* 기본적으로 햄버거 아이콘 숨기기 */
 .headTop i {
   display: none;
@@ -39,13 +46,9 @@ body {
   color: rgb(0, 134, 90);
 }
 
-
-.headTop i:hover {
+/* .headTop i:hover {
   background-color: #d6cc71;
-}
-
-
-
+} */
 
 /* Menu Right */
 .menuRight {
@@ -234,63 +237,63 @@ body {
 /* 미디어 쿼리 */
 @media (max-width: 1400px) {
   .menuLeft {
-      padding-left: 95px;
-      padding-top: 5px;
+    padding-left: 95px;
+    padding-top: 5px;
   }
 }
 
 @media (max-width: 990px) {
   .menuLeft {
-      padding-left: 55px;
-      padding-top: 5px;
+    padding-left: 55px;
+    padding-top: 5px;
   }
-  
+
   .menuLeft li a {
-      margin-right: 50px;
-      letter-spacing: 1px;
+    margin-right: 50px;
+    letter-spacing: 1px;
   }
 }
 
 @media (max-width: 700px) {
   .headTop i {
-      display: flex;
-      position: absolute;
-      top: 30px;
-      margin-left: 20px;
+    display: flex;
+    position: absolute;
+    top: 30px;
+    margin-left: 20px;
   }
 
   .headMid {
-      height: 170px;
+    height: 170px;
   }
 
   .headMid img {
-      width: 300px;
-      height: 150px;
+    width: 300px;
+    height: 150px;
   }
 
   .headTop i {
-      z-index: 2;
+    z-index: 2;
   }
 
   .slide-menu {
-      z-index: 3;
+    z-index: 3;
   }
 
   .header_btm {
-      height: 20px;
-      box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
+    height: 20px;
+    box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
   }
 
   .iconContainer a {
-      display: none;
+    display: none;
   }
 
   .menuRight {
-      display: none;
+    display: none;
   }
 
   .menu_button {
-      display: none;
+    display: none;
   }
 }
 
@@ -350,7 +353,7 @@ label {
 
 /* 인풋 및 셀렉트 스타일 */
 .input-group input,
-input[type="number"],
+input[type='number'],
 select {
   width: 100%;
   padding: 10px;
@@ -359,12 +362,12 @@ select {
   margin-bottom: 20px;
   font-size: 16px;
   box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .input-group button,
 button {
-  background-color: #d6cc71; 
+  background-color: #d6cc71;
   color: #ffffff;
   padding: 10px 20px;
   border: none;
@@ -380,7 +383,7 @@ button {
 
 .input-group button:hover,
 button:hover {
-  background-color: #dcff145e; 
+  background-color: #dcff145e;
 }
 
 /* 로그 스타일 */
@@ -421,7 +424,7 @@ input::placeholder {
   color: #aaaaaa;
 }
 
-select:focus, 
+select:focus,
 input:focus {
   outline: none;
   border-color: #ff69b4;
@@ -479,6 +482,6 @@ input:focus {
 
 @media (max-width: 768px) {
   .header-mini {
-      margin-top: 3rem;
+    margin-top: 3rem;
   }
 }
