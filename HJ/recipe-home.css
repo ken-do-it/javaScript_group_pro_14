@@ -93,18 +93,16 @@ body {
   text-transform: capitalize;
 }
 
-.box:hover {
-  cursor: pointer;
-}
-
-.box img {
-  width: 140px;
-  height: 140px;
+.box-recipe img {
+  /* width: 140px;
+  height: 140px; */
+  width: 80%;
+  height: 80%;
   border-radius: 10px;
 }
 
-.box img:hover {
-  transform: scale(1.1);
+.box-recipe img:hover {
+  transform: scale(1.05);
 }
 
 .recipe-url {
