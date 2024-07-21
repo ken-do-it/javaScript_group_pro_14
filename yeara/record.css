@@ -1,6 +1,6 @@
 /* record.css */
 
-  html{
+  /* html{
     font-family: "Ubuntu", sans-serif;
     background-color: #f0f8ff;
     margin: 0;
@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .background{
   background-image: url('../imgYR/last.jpg');
@@ -27,21 +27,42 @@
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  margin: 30px auto; /* 가운데 정렬 */
+  margin: 30px auto; 
+  /* 가운데 정렬 */
 }
 
-body{
-   /* background-color: rgb(240, 248, 255); */
+/* body{
+   background-color: rgb(240, 248, 255);
   width: 90%;
   max-width: 600px;
-  background-color: beige;
-  /* background-color: antiquewhite; */
+  background-color: antiquewhite;
+} */
+
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #f0f8ff; /* 부드러운 파란색 배경 */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* 수직 정렬을 위해 추가 */
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden; /* 슬라이드 메뉴 표시를 위해 */
 }
 
-/* 
-nav{
-    background-color: antiquewhite;
-} */
+.container {
+  background-color: beige;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  z-index: 1; /* 추가: 다른 요소들보다 위에 표시되도록 */
+}
+
 
 /* header---------------------- */
   /* Head Top */
@@ -51,26 +72,41 @@ nav{
     align-items: center;
   }
   
+  .bell-acc-icon {
+    display: flex; /* 가로로 정렬 */
+    gap: 30px; /* 아이콘 간의 간격 조절 */
+    justify-content: space-between;
+  }
+
+  .bell-acc-icon a {
+    color: rgba(28, 28, 28, 0.778);
+    text-decoration: none;
+  }
+
+  .bell-acc-icon a:hover {
+    color: #2e7d32; /* hover 시 색상 유지 */
+    text-decoration: none; /* hover 시 밑줄 제거 */
+  }
+
   /* Hide hamburger icon by default */
   .headTop i {
-    display: block;
+    display: flex;
     font-size: 35px;
-    color: rgb(0, 134, 90);
   }
   
   /* Menu Right */
-  .menuRight {
+  /* .menuRight {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     list-style-type: none;
     
     margin-right: 20px;
-  }
+  } */
   /* .menuRight li {
     margin-left: 23px;
   } */
-  .menuRight a {
+  /* .menuRight a {
     text-decoration: none;
     letter-spacing: 1px;
     font-size: 25px;
@@ -91,11 +127,11 @@ nav{
   .menuLeft a:hover {
     color: #fff;
     box-shadow: inset 200px 0 0 0 blanchedalmond;
-  }
+  } */
   /* Slide Menu */
-  .slideMenu::before {
+  /* .slideMenu::before {
     font-size: 100px;
-  }
+  } */
   .slide-menu {
     height: 100%;
     width: 0;
@@ -175,7 +211,6 @@ nav{
     align-items: center;
     height: 45px;
     box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
-    /* margin-bottom: 30px; */
     
   }
   .menu_button {
@@ -190,7 +225,7 @@ nav{
     padding-top: 5px;
     list-style: none;
   }
-  .menuLeft li a {
+  /* .menuLeft li a {
     text-decoration: none;
     letter-spacing: 1px;
     font-size: 16px;
@@ -201,18 +236,18 @@ nav{
     cursor: pointer;
     flex: 1;
     text-align: center;
-  }
-  .menuLeft li a:hover {
+  } */
+  /* .menuLeft li a:hover {
     color: rgb(0, 134, 90);
-  }
+  } */
   
   /* Search Container */
-  .search_container {
+  /* .search_container {
     position: relative;
     display: flex;
     justify-content: center;
-  }
-  .search_container input {
+  } */
+  /* .search_container input {
     padding: 5px 15px;
     padding-right: 30px;
     border: none;
@@ -225,8 +260,8 @@ nav{
     margin-left: 20px;
     margin-bottom: 20px;
     letter-spacing: 1px;
-  }
-  .search_container button {
+  } */
+  /* .search_container button {
     position: absolute;
     right: 5px;
     top: 4px;
@@ -236,7 +271,7 @@ nav{
     color: #333;
     opacity: 95%;
     color: rgb(0, 134, 90);
-  }
+  } */
   
   /* Media Query */
   
@@ -299,6 +334,24 @@ nav{
   } */
 
 /* header finish---------------- */
+
+
+.side_menu_button {
+  color: rgba(28, 28, 28, 0.778);
+  margin-right: auto;
+  cursor: pointer;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.side_menu_button:hover{
+  color: #2e7d32;
+}
+
+
+
+
+
 
 
 

@@ -144,7 +144,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 45px;
-  /* box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649); */
+  box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
 }
 
 .menu_button {
@@ -152,14 +152,14 @@ body {
   justify-content: center;
 }
 
-.menuLeft {
+/* .menuLeft {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 85px;
   padding-top: 5px;
   list-style: none;
-}
+} */
 
 /* .menuLeft li a {
   text-decoration: none;
@@ -277,11 +277,11 @@ body {
   text-decoration: none;
 } */
 
-.headTop_App {
+/* .headTop_App {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 .side_menu_button {
   color: rgba(28, 28, 28, 0.778);
