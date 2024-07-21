@@ -1,5 +1,5 @@
 /* General Styles */
-body {
+/* body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -8,125 +8,67 @@ body {
   align-items: center;
   justify-content: center;
   height: 80%;
-  /* display: block; */
-}
-
-h1, h2 {
-  color: #2e7d32;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin: 10px 0;
-  font-size: 1.2rem;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-input[type="radio"] + label {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color: #c8e6c9;
-  color: #2e7d32;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-input[type="radio"]:checked + label {
-  background-color: #81c784;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.mood-selection, .sleep-info, .poop-info {
-  margin-bottom: 20px;
-}
-
-.mood-selection label, .sleep-info label, .poop-info label {
-  display: inline-block;
-  margin: 5px 10px;
-  font-size: 1.2rem;
-}
-
-.icon-display {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mood-icon, .sleep-icon {
-  font-size: 4rem;
-  margin: 10px;
-}
-
-.sleep-icons, .poop-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.sleep-icons label, .poop-icons label {
-  margin: 5px;
-}
-
-.container {
-  background-color:antiquewhite;
-  height: 100%;
-  height: 800px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
-}
-
-@media (max-width: 600px) {
-  .mood-icon, .sleep-icon {
-    font-size: 3rem;
-  }
-
-  h1, h2 {
-    font-size: 1.2rem;
-  }
-}
-
-/* #menuIcon {
-  display: block;
+  /*display: block;*//*
 } */
 
-@media (max-width: 600px) {
-  .mood-icon, .sleep-icon {
-    font-size: 3rem; 
-  }
-
-  h1, h2 {
-    font-size: 1.2rem; 
-  }
-
-  #menuIcon {
-    display: block; /* 화면이 작을 때 메뉴 아이콘 보이기 */
-    font-size: 35px; 
-    color: rgb(0, 134, 90); 
-    cursor: pointer; /
-  }
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #f0f8ff; /* 부드러운 파란색 배경 */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* 수직 정렬을 위해 추가 */
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden; /* 슬라이드 메뉴 표시를 위해 */
 }
 
-/* header==================================== */
 
- /* Head Top */
- .headTop {
+/* 컨테이너 스타일 */
+.container {
+  background-color: beige;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  height: 100%;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  z-index: 1; /* 추가: 다른 요소들보다 위에 표시되도록 */
+}
+
+
+/* Head Top */
+.headTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.bell-acc-icon {
+  display: flex; /* 가로로 정렬 */
+  gap: 30px; /* 아이콘 간의 간격 조절 */
+  justify-content: space-between;
+}
+
+
+.bell-acc-icon a {
+  color: rgba(28, 28, 28, 0.778);
+  text-decoration: none;
+}
+
+
+.bell-acc-icon a:hover {
+  color: #2e7d32; /* hover 시 색상 유지 */
+  text-decoration: none; /* hover 시 밑줄 제거 */
+}
+
+
+
 .side_menu_button {
   display: flex;
+  margin-right: auto;
   align-items: center;
   cursor: pointer;
   padding: 20px; /* padding을 추가하여 클릭 가능한 영역을 확장 */
@@ -136,22 +78,22 @@ input[type="radio"]:checked + label {
 .headTop i {
   display: block;
   font-size: 35px;
-  color: rgb(0, 134, 90);
+  /* color: rgb(0, 134, 90); */
 }
 
 /* Menu Right */
-.menuRight {
+/* .menuRight {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   list-style-type: none;
   
   margin-right: 20px;
-}
+} */
 /* .menuRight li {
   margin-left: 23px;
 } */
-.menuRight a {
+/* .menuRight a {
   text-decoration: none;
   letter-spacing: 1px;
   font-size: 25px;
@@ -172,12 +114,12 @@ input[type="radio"]:checked + label {
 .menuLeft a:hover {
   color: #fff;
   box-shadow: inset 200px 0 0 0 blanchedalmond;
-}
+} */
 
 /* Slide Menu */
-.slideMenu::before {
+/* .slideMenu::before {
   font-size: 100px;
-}
+} */
 .slide-menu {
   height: 100%;
   width: 0;
@@ -242,10 +184,12 @@ input[type="radio"]:checked + label {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .headMid .iconContainer a {
   color: rgba(28, 28, 28, 0.728);
   font-size: 25px;
 }
+
 .headMid .iconContainer a:not(:first-child) {
   padding-left: 20px;
 }
@@ -264,7 +208,7 @@ input[type="radio"]:checked + label {
   display: flex;
   justify-content: center;
 }
-.menuLeft {
+/* .menuLeft {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -286,10 +230,10 @@ input[type="radio"]:checked + label {
 }
 .menuLeft li a:hover {
   color: rgb(0, 134, 90);
-}
+} */
 
 /* Search Container */
-.search_container {
+/* .search_container {
   position: relative;
   display: flex;
   justify-content: center;
@@ -318,6 +262,141 @@ input[type="radio"]:checked + label {
   color: #333;
   opacity: 95%;
   color: #00865a;
+} */
+
+/* header finish */
+
+
+
+
+
+
+
+
+
+
+
+
+h1, h2 {
+  color: #2e7d32;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #c8e6c9;
+  color: #2e7d32;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #81c784;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.mood-selection, .sleep-info, .poop-info {
+  margin-bottom: 20px;
+}
+
+.mood-selection label, .sleep-info label, .poop-info label {
+  display: inline-block;
+  margin: 5px 10px;
+  font-size: 1.2rem;
+}
+
+.icon-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mood-icon, .sleep-icon {
+  font-size: 4rem;
+  margin: 10px;
+}
+
+.sleep-icons, .poop-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sleep-icons label, .poop-icons label {
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .mood-icon, .sleep-icon {
+    font-size: 3rem;
+  }
+
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+  .container{
+    height: auto;
+  }
+}
+
+/* #menuIcon {
+  display: block;
+} */
+/* header==================================== */
+
+/* Menu Right */
+/* .menuRight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style-type: none;
+  
+  margin-right: 20px;
+} */
+/* .menuRight li {
+  margin-left: 23px;
+} */
+/* .menuRight a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 25px;
+  line-height: 29px;
+  padding-left: 30px;
+  cursor: pointer;
+  color: rgba(28, 28, 28, 0.778);
+}
+.menuRight a:hover {
+  color: rgb(0, 134, 90);
+}
+.menuLeft a {
+  box-shadow: inset 0 0 0 0 blanchedalmond;
+
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.menuLeft a:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 blanchedalmond;
+} */
+
+/* Slide Menu */
+/* .slideMenu::before {
+  font-size: 100px;
+} */
+
 
 /* header finish */
