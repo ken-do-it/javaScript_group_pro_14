@@ -1,487 +1,476 @@
 /* 기본 스타일 설정 */
 body {
-    font-family: "Ubuntu", sans-serif;
-    background-color: #f0f8ff;  /* 부드러운 파란색 배경 */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* 수직 정렬을 위해 추가 */
-    align-items: center;
-    height: 100vh;
-    overflow-x: hidden; /* 슬라이드 메뉴 표시를 위해 */
+  font-family: "Ubuntu", sans-serif;
+  background-color: #f0f8ff; /* 부드러운 파란색 배경 */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* 수직 정렬을 위해 추가 */
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden; /* 슬라이드 메뉴 표시를 위해 */
 }
 
 /* 컨테이너 스타일 */
 .container {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    font-family: "Ubuntu", sans-serif;
-    z-index: 1; /* 추가: 다른 요소들보다 위에 표시되도록 */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  z-index: 1; /* 추가: 다른 요소들보다 위에 표시되도록 */
 }
 
 /* header---------------------- */
-  /* Head Top */
+/* Head Top */
 .headTop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Hide hamburger icon by default */
-  .headTop i {
-    display: none;
-    font-size: 35px;
-    color: rgb(0, 134, 90);
-  }
-  
-  /* Menu Right */
-  .menuRight {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    list-style-type: none;
-    
-    margin-right: 20px;
-  }
-  /* .menuRight li {
-    margin-left: 23px;
-  } */
-  .menuRight a {
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-size: 25px;
-    line-height: 29px;
-    padding-left: 30px;
-    cursor: pointer;
-    color: rgba(28, 28, 28, 0.778);
-  }
-  .menuRight a:hover {
-    color: rgb(0, 134, 90);
-  }
-  .menuLeft a {
-    box-shadow: inset 0 0 0 0 blanchedalmond;
-  
-    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .menuLeft a:hover {
-    color: #fff;
-    box-shadow: inset 200px 0 0 0 blanchedalmond;
-  }
-  /* .menuRight li:nth-child(2)::before,
-  .menuRight li:nth-child(3)::before {
-    content: '';
-    display: inline-block;
-    width: 1px;
-    height: 13px;
-    background-color: rgba(33, 33, 33, 0.171);
-    margin-right: 20px;
-  } */
-  
-  /* Slide Menu */
-  .slideMenu::before {
-    font-size: 100px;
-  }
-  .slide-menu {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  .slide-menu a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  .slide-menu a:hover {
-    color: #f1f1f1;
-  }
-  .slide-menu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /* Head Mid */
-  .headMid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    position: relative;
-  }
-  
-  /* Logo Container */
-  .logoContainer {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-  }
-  
-  /* Logo Image */
-  .headMid img {
-    width: 300px;
-    height: 150px;
-    
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  /* Icon Container */
-  .headMid .iconContainer {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .headMid .iconContainer a {
-    color: rgba(28, 28, 28, 0.728);
-    font-size: 25px;
-  }
-  .headMid .iconContainer a:not(:first-child) {
-    padding-left: 20px;
-  }
-  
-  /* Header Bottom */
-  .header_btm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
-    box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
-  }
-  .menu_button {
-    display: flex;
-    justify-content: center;
-  }
+/* 기본적으로 햄버거 아이콘 숨기기 */
+.headTop i {
+  display: none;
+  font-size: 35px;
+  color: rgb(0, 134, 90);
+}
+
+/* Menu Right */
+.menuRight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.menuRight a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 25px;
+  line-height: 29px;
+  padding-left: 30px;
+  cursor: pointer;
+  color: rgba(28, 28, 28, 0.778);
+}
+
+.menuRight a:hover {
+  color: rgb(0, 134, 90);
+}
+
+/* Menu Left */
+.menuLeft a {
+  box-shadow: inset 0 0 0 0 blanchedalmond;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.menuLeft a:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 blanchedalmond;
+}
+
+/* Slide Menu */
+.slide-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.slide-menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.slide-menu a:hover {
+  color: #f1f1f1;
+}
+
+.slide-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Head Mid */
+.headMid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  position: relative;
+}
+
+/* 로고 컨테이너 */
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* 로고 이미지 */
+.headMid img {
+  width: 300px;
+  height: 150px;
+}
+
+/* 아이콘 컨테이너 */
+.headMid .iconContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.headMid .iconContainer a {
+  color: rgba(28, 28, 28, 0.728);
+  font-size: 25px;
+}
+
+.headMid .iconContainer a:not(:first-child) {
+  padding-left: 20px;
+}
+
+/* Header Bottom */
+.header_btm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
+}
+
+.menu_button {
+  display: flex;
+  justify-content: center;
+}
+
+.menuLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 85px;
+  padding-top: 5px;
+  list-style: none;
+}
+
+.menuLeft li a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: bolder;
+  color: rgb(28, 28, 28);
+  margin-right: 90px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+}
+
+.menuLeft li a:hover {
+  color: rgb(0, 134, 90);
+}
+
+/* 검색 컨테이너 */
+.search_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.search_container input {
+  padding: 5px 15px;
+  padding-right: 30px;
+  border: none;
+  background-color: rgb(242, 242, 242);
+  font-size: 12px;
+  height: 34px;
+  line-height: 15px;
+  width: 220px;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.search_container button {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  opacity: 95%;
+  color: rgb(0, 134, 90);
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 1400px) {
   .menuLeft {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 85px;
-    padding-top: 5px;
-    list-style: none;
-  }
-  .menuLeft li a {
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-size: 16px;
-    font-weight: bolder;
-    color: rgb(28, 28, 28);
-    margin-right: 90px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    flex: 1;
-    text-align: center;
-  }
-  .menuLeft li a:hover {
-    color: rgb(0, 134, 90);
-  }
-  
-  /* Search Container */
-  .search_container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  .search_container input {
-    padding: 5px 15px;
-    padding-right: 30px;
-    border: none;
-    background-color: rgb(242, 242, 242);
-    font-size: 12px;
-    height: 34px;
-    line-height: 15px;
-    width: 220px;
-    border-radius: 5px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-  }
-  .search_container button {
-    position: absolute;
-    right: 5px;
-    top: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-    opacity: 95%;
-    color: rgb(0, 134, 90);
-  }
-  
-  /* Media Query */
-  
-  @media (max-width: 1400px) {
-    .menuLeft {
       padding-left: 95px;
       padding-top: 5px;
-    }
   }
-  @media (max-width: 990px) {
-    .menuLeft {
+}
+
+@media (max-width: 990px) {
+  .menuLeft {
       padding-left: 55px;
       padding-top: 5px;
-    }
-  }
-  @media (max-width: 990px) {
-    .menuLeft {
-      padding-left: 55px;
-      padding-top: 5px;
-    }
-    .menuLeft li a {
-      margin-right: 50px;
-      letter-spacing: 1px;
-    }
   }
   
-  @media (max-width: 700px) {
-    .headTop i {
+  .menuLeft li a {
+      margin-right: 50px;
+      letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 700px) {
+  .headTop i {
       display: flex;
       position: absolute;
       top: 30px;
       margin-left: 20px;
-    }
-    .headMid {
+  }
+
+  .headMid {
       height: 170px;
-    }
-  
-    .headMid img {
+  }
+
+  .headMid img {
       width: 300px;
       height: 150px;
-      
-      
-      
-    }
-    .headTop i {
+  }
+
+  .headTop i {
       z-index: 2;
-    }
-    .slide-menu {
+  }
+
+  .slide-menu {
       z-index: 3;
-    }
-    .header_btm {
+  }
+
+  .header_btm {
       height: 20px;
       box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
-      /* box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.434); */
-      /* box-shadow: none; */
-    }
-    .iconContainer a {
-      display: none;
-    }
-    .menuRight {
-      display: none;
-    }
-    .menu_button {
-      display: none;
-    }
-  
-   
   }
+
+  .iconContainer a {
+      display: none;
+  }
+
+  .menuRight {
+      display: none;
+  }
+
+  .menu_button {
+      display: none;
+  }
+}
 
 /* header finish---------------- */
 
 /* bell, acc_icon */
 .menuRight a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .headTop_App {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .side_menu_button {
-    margin-right: auto;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  margin-right: auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 /* between logo and noona diet h1 */
 .header_btm_app {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px 0px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.242);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.242);
 }
 
 .headMid_app {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .diet_food_img_ke {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .diet_food_img_ke img {
-    width: 65%; /* 창 너비의 80% */
-    height: auto; /* 높이를 자동으로 조절하여 비율을 유지 */
-    max-width: 100%; /* 최대 너비를 부모 요소의 너비로 제한 */
-    border-radius: 10px;
-    margin-bottom: 20px;
+  width: 65%; /* 창 너비의 80% */
+  height: auto; /* 높이를 자동으로 조절하여 비율을 유지 */
+  max-width: 100%; /* 최대 너비를 부모 요소의 너비로 제한 */
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 /* 라벨 스타일 */
 .input-group label,
 label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555555;
+  display: block;
+  margin-bottom: 5px;
+  color: #555555;
 }
 
 /* 인풋 및 셀렉트 스타일 */
 .input-group input,
 input[type="number"],
 select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #cccccc;
-    margin-bottom: 20px;
-    font-size: 16px;
-    box-sizing: border-box;
-    font-family: "Ubuntu", sans-serif;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  margin-bottom: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .input-group button,
 button {
-    background-color: #d6cc71; 
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #d6cc71; 
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .addBtn_center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .input-group button:hover,
 button:hover {
-    background-color: #dcff145e; 
+  background-color: #dcff145e; 
 }
 
 /* 로그 스타일 */
 .log {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .log-item {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* edit, delete  */
+/* edit, delete 아이콘 스타일 */
 .edit_del_icon {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 /* 총 칼로리 스타일 */
 .total-calories {
-    margin-top: 10px;
-    font-weight: bold;
-    border-top: 1px solid #ddd;
-    padding-top: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
 }
 
 /* 결과 스타일 */
 .result {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333333;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333333;
 }
 
 /* 추가 스타일 */
 input::placeholder {
-    color: #aaaaaa;
+  color: #aaaaaa;
 }
 
 select:focus, 
 input:focus {
-    outline: none;
-    border-color: #ff69b4;
-    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+  outline: none;
+  border-color: #ff69b4;
+  box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
 }
 
 /* 슬라이드 메뉴 스타일 */
 .slide-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 .slide-menu a {
-    padding: 8px 8px 8px 8px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
 .slide-menu a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .slide-menu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 /* diet용 header_btm */
+.header-mini {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  height: 45px;
+  box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
+}
 
-.header-mini{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    height: 45px;
-    box-shadow: 0px 7px 6px -6px rgba(0, 134, 89, 0.649);
-  
+@media (max-width: 768px) {
+  .header-mini {
+      margin-top: 3rem;
   }
-
-  @media (max-width: 768px){
-    .header-mini{
-        margin-top: 3rem;
-    }
-  }
+}

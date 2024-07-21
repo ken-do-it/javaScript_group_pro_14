@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noona's Diet</title>
    
-  <!-- Bootstrap latest version -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap 최신 버전 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <!-- Font family Ubuntu -->
+  <!-- Ubuntu 폰트 패밀리 -->
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
   </style>
@@ -17,7 +16,7 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
 
-  <!-- CSS links -->
+  <!-- CSS 링크 -->
   <link rel="stylesheet" href="indexAll/header_style.css">
   <link rel="stylesheet" href="indexAll/styleYR.css">
   <link rel="stylesheet" href="indexAll/styleHJ.css">
@@ -27,6 +26,7 @@
 <body>
 
   <div class="container">
+    <!-- 내비게이션 메뉴 -->
     <nav>
       <div class="menuRight">
         <a href="#"><i class="fas fa-bell icon-yr"></i></a>
@@ -40,7 +40,7 @@
           </div>
         </div>
 
-        <!-- Start Slide Menu -->
+        <!-- 사이드 메뉴 시작 -->
         <div id="slideMenu" class="slide-menu">
           <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
           <a href="/HJ/recipe-home.html">Recipes</a>
@@ -54,7 +54,7 @@
             <a href="#"><i class="far fa-user"></i></a>
           </div>
         </div>
-        <!-- End Slide Menu -->
+        <!-- 사이드 메뉴 끝 -->
 
         <div class="headMid headMid_app">
           <div class="logoContainer">
@@ -76,8 +76,9 @@
         </div>
       </div>
     </nav>             
-    <!-- End header part -->
+    <!-- 헤더 부분 끝 -->
 
+    <!-- 히어로 이미지 및 텍스트 -->
     <div class="head-img-container">
       <img src="imgYR/What-is-diet-culture.webp" class="head-img" alt="Diet Culture">
       <div class="img-text">A Better Version of Myself</div>
@@ -86,18 +87,18 @@
     </div>
 
     <main>
-      <!-- Calculator container -->
+      <!-- 계산기 컨테이너 -->
       <div class="calculator-container-CW">
 
-        <!-- Start image -->
+        <!-- 이미지 시작 -->
         <div class="body-img">
           <img class="img-fluid" id="female-image" src="imgCW/woman.png" alt="woman">
           <img class="img-fluid" id="male-image" src="imgCW/man369.png" alt="man">
           <img class="img-fluid" id="default-image" src="imgCW/body-img-default.png" alt="man-and-woman">
         </div>
-        <!-- End image -->
+        <!-- 이미지 끝 -->
 
-        <!-- Form -->
+        <!-- 폼 -->
         <div class="form-container">
           <form class="questions">
             <div class="form-group">
@@ -121,7 +122,7 @@
               </div>
             </div>
           </form>
-          <!-- Form - button -->
+          <!-- 폼 버튼 -->
           <div class="calculator-buttons">
             <button class="btn btn-warning bmr" type="button" id="bmr-calculate-button">Calculate BMR</button><br>
             <button class="btn btn-warning bmi" type="button" id="bmi-calculate-button">Calculate BMI</button><br>
@@ -129,39 +130,31 @@
           </div>
         </div>
 
-        <!-- Result section -->
+        <!-- 결과 섹션 -->
         <div class="result-analysis">
           <div class="result-analysis-area" id="result">
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     What is Basal Metabolic Rate?
                   </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>BMR</strong> (Basal Metabolic Rate) is the number of calories your body needs to perform basic
-                    life-sustaining functions (like breathing and circulation) while at rest. It reflects the energy
-                    required to maintain vital bodily functions without any physical activity. BMR is influenced by
-                    factors such as age, sex, weight, and height, and it's used to estimate total daily calorie needs when
-                    combined with activity levels.
+                    <strong>BMR</strong> (Basal Metabolic Rate) is the number of calories your body needs to perform basic life-sustaining functions (like breathing and circulation) while at rest. It reflects the energy required to maintain vital bodily functions without any physical activity. BMR is influenced by factors such as age, sex, weight, and height, and it's used to estimate total daily calorie needs when combined with activity levels.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     What is BMI?
                   </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>BMI</strong> (Body Mass Index) is a measure that uses an individual's weight and height to
-                    classify them into different categories to assess whether they have a healthy body weight for their
-                    height. The BMI categories are:
+                    <strong>BMI</strong> (Body Mass Index) is a measure that uses an individual's weight and height to classify them into different categories to assess whether they have a healthy body weight for their height. The BMI categories are:
                     <table class="table table-bordered">
                       <thead>
                         <tr>
@@ -204,19 +197,18 @@
                         </tr>
                       </tbody>
                     </table>
-                    While BMI is useful for screening potential weight problems, it doesn't directly measure body fat and
-                    can sometimes be misleading, especially for athletes with high muscle mass.
+                    While BMI is useful for screening potential weight problems, it doesn't directly measure body fat and can sometimes be misleading, especially for athletes with high muscle mass.
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Accordion -->
+            <!-- 아코디언 -->
           </div>
         </div>
       </div>
-      <!-- Calculator container -->
+      <!-- 계산기 컨테이너 끝 -->
 
-      <!-- Recipe carousel component by HJ -->
+      <!-- HJ의 레시피 캐러셀 컴포넌트 -->
       <div class="mt-4 mb-4">
         <h2>Today's recommend recipes</h2>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -238,7 +230,7 @@
       </div>
     </main>
     
-    <!-- Footer -->
+    <!-- 푸터 -->
     <footer class="site-footer">
       <div class="row">
         <div class="col-md-4">
@@ -267,6 +259,7 @@
     </footer>
   </div>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <script src="/config/apikey.js"></script>
   <script src="mainYR.js"></script>
