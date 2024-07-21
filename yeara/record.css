@@ -1,6 +1,6 @@
 /* record.css */
 
-html{
+  html{
     font-family: "Ubuntu", sans-serif;
     background-color: #f0f8ff;
     margin: 0;
@@ -32,15 +32,15 @@ html{
 
 body{
    /* background-color: rgb(240, 248, 255); */
-   width: 90%;
-   max-width: 600px;
+  width: 90%;
+  max-width: 600px;
   background-color: antiquewhite;
 }
 
-
+/* 
 nav{
-    /* background-color: antiquewhite; */
-}
+    background-color: antiquewhite;
+} */
 
 /* header---------------------- */
   /* Head Top */
@@ -91,7 +91,6 @@ nav{
     color: #fff;
     box-shadow: inset 200px 0 0 0 blanchedalmond;
   }
- 
   /* Slide Menu */
   .slideMenu::before {
     font-size: 100px;
