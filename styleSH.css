@@ -1,4 +1,4 @@
-banner {
+/* banner {
     display: block;
     position: relative;
     text-align: center;
@@ -18,7 +18,7 @@ banner {
     cursor: pointer;
     line-height: 25px;
     letter-spacing: 2px;
-  }
+  } */
   .headTop {
     display: block;
     height: 40px;
@@ -42,6 +42,8 @@ banner {
     cursor: pointer;
     color: rgba(28, 28, 28, 0.778);
   }
+
+  
   .menuRight li a:hover {
     color: rgb(0, 134, 90);
   }

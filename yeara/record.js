@@ -19,12 +19,6 @@ document.querySelectorAll('.slide-menu a').forEach(item => {
 
 
 
-
-
-
-
-
-
 // DOMContentLoaded 이벤트 핸들러
 document.addEventListener('DOMContentLoaded', function() {
     let caloriesBurned = localStorage.getItem('caloriesBurned');

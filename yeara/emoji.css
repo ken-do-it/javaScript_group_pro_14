@@ -1,7 +1,6 @@
 /* General Styles */
 body {
-  font-family: "Edu AU VIC WA NT Hand", cursive;
-  
+  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   text-align: center;
   background-color: #e0f7e9;
@@ -9,6 +8,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 80%;
+  /* display: block; */
 }
 
 h1, h2 {
@@ -95,9 +95,9 @@ input[type="radio"]:checked + label {
   }
 }
 
-#menuIcon {
-  display: none;
-}
+/* #menuIcon {
+  display: block;
+} */
 
 @media (max-width: 600px) {
   .mood-icon, .sleep-icon {
@@ -127,7 +127,7 @@ input[type="radio"]:checked + label {
 
 /* Hide hamburger icon by default */
 .headTop i {
-  display: none;
+  display: block;
   font-size: 35px;
   color: rgb(0, 134, 90);
 }
