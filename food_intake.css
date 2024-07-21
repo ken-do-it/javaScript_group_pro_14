@@ -42,6 +42,15 @@ body {
   text-decoration: none; /* 밑줄 제거 */
 }
 
+
+.bell-acc-icon a:hover {
+color: red;
+  /* color: rgb(0, 134, 90); hover 시 색상 유지 */
+  text-decoration: none; /* hover 시 밑줄 제거 */
+}
+
+
+
 /* 기본적으로 햄버거 아이콘 숨기기 */
 .headTop i {
   display: flex;
