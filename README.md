@@ -1,3 +1,1 @@
-# to_do_list_project
-
-# amazing-team-project
+netlify address: https://noona-diet-main.netlify.app/ 
