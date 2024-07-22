@@ -1,53 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous">
 
-    </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="/yeara/record.css">
-</head>
+    <!-- font family Ubuntu -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+    </style>
 
-<body>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/2c827c8cca.js"
+      crossorigin="anonymous"
+    ></script>
 
+    <link rel="stylesheet" href="/yeara/record.css" />
+  </head>
+
+  <body>
     <div class="container">
+      <nav>
+        <!-- <div class="menuRight mt-3">
+                <a href="#"><i class="fas fa-bell icon-yr"></i></a>
+                <a href="#"><i class="far fa-user icon-yr"></i></a>
+            </div> -->
 
-        <div class="heading">
-            Today my total workout time
+        <div id="headerArea">
+          <div class="headTop">
+            <div class="side_menu_button">
+              <i class="fas fa-bars" id="menuIcon" onclick="openMenu()"></i>
+            </div>
+            <div class="bell-acc-icon">
+              <a href="#"><i class="fas fa-bell icon-yr"></i></a>
+              <a href="#"><i class="far fa-user icon-yr"></i></a>
+            </div>
+          </div>
+
+          <!-- Start Slide Menu -->
+          <div id="slideMenu" class="slide-menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()"
+              >&times;</a
+            >
+            <a href="/index.html">home</a>
+            <a href="/HJ/recipe-home.html">Recipes</a>
+            <a href="/yeara/recordYR.html">Workout</a>
+            <a href="/food_Intake.html">Diet</a>
+            <a href="/yeara/calendar.html">Calendar</a>
+            <a href="/water_tracking.html">Consumption</a>
+            <a href="/yeara/emoji.html">Mood</a>
+            <!-- <div class="iconContainer_side">
+              <a href="#"><i class="fas fa-bell"></i></a>
+              <a href="#"><i class="far fa-user"></i></a>
+            </div> -->
+          </div>
+          <!-- End Slide Menu -->
+
+          <div class="headMid headMid_app">
+            <div class="logoContainer">
+              <a href="/index.html"
+                ><img
+                  src="../img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png"
+                  alt="Noona's Diet Logo"
+                  class="logo"
+                  onclick="goMain()"
+              /></a>
+            </div>
+          </div>
+
+          <div class="header_btm">
+            <div class="menu_button"></div>
+          </div>
         </div>
+      </nav>
+      <!-- End header part -->
+
+      <div class="background">
+        <div class="heading">Today my total workout time</div>
 
         <div class="time">
-            <span id="workoutTime">
-                <span>
-                    Time :
-                </span> 
-                
-                <minutes id="workoutTimeDisplay">0 minutes</span>
+          <span id="workoutTime">
+            <span> Time : </span>
+
+            <minutes id="workoutTimeDisplay">0 minutes</minutes>
+          </span>
         </div>
 
-
-
         <div class="calories">
-            <span id="caloriesBurned">  kcal</span> 
+          <span id="caloriesBurned"> kcal</span>
         </div>
 
         <div class="record-link">
-            <a href="workout_calory.html">Record</a>
-
+          <a href="workout_calory.html">Record</a>
         </div>
-
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
     <script src="/yeara/record.js"></script>
-</body>
+  </body>
 </html>
-
-

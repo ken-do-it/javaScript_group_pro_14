@@ -1,36 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Water Consumption Calculator</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-    <link rel="stylesheet" href="water_tracking_style.css" />
-    <script
-      src="https://kit.fontawesome.com/ebf5d5da1d.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Consumption Calculator</title>
+
+  <!-- bootstrap latest version -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- font family Ubuntu -->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+  </style>
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/ebf5d5da1d.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="water_tracking_style.css" />
+ 
+</head>
+
+<body>
+  <div class="container">
+
+    <nav>
+      <!-- start header part -->
+      <div class="menuRight">
+        <a href="#"><i class="fas fa-bell icon-yr"></i></a>
+        <a href="#"><i class="far fa-user icon-yr"></i></a>
+      </div>
+
+      <div id="headerArea">
+        <div class="headTop">
+          <div class="side_menu_button">
+            <i class="fas fa-bars" onclick="openMenu()"></i>
+          </div>
+          <div>
+            <ul class="menuRight"></ul>
+          </div>
+        </div>
+
+        <!-- Start Slide Menu -->
+        <div id="slideMenu" class="slide-menu">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()"
+            >&times;</a
+          >
+          <a href="/index.html">home</a>
+          <a href="/HJ/recipe-home.html">Recipes</a>
+          <a href="/yeara/recordYR.html">Workout</a>
+          <a href="/food_Intake.html">Diet</a>
+          <a href="/yeara/calendar.html">Calendar</a>
+          <a href="water_tracking.html">Consumption</a>
+          <a href="/yeara/emoji.html">Mood</a>
+
+          <div class="iconContainer_side">
+            <a href=""><i class="fas fa-bell"></i></a>
+            <a href=""><i class="far fa-user"></i></a>
+          </div>
+        </div>
+        <!-- End Slide Menu -->
+
+        <div class="headMid headMid_app">
+          <div class="logoContainer">
+            <a href="../index.html"
+              ><img
+                src="../img_ke/Noona_s_Diet_logo_high_quality_1-removebg-250X126px.png"
+                alt=""
+                class="logo"
+            /></a>
+          </div>
+        </div>
+
+        <div class="header_btm">
+          <div class="menu_button">
+            <ul class="menuLeft">
+              <li><a href="/HJ/recipe-home.html">Recipes</a></li>
+              <li><a href="/yeara/recordYR.html">Workout</a></li>
+              <li><a href="/food_Intake.html">Diet</a></li>
+              <li><a href="/yeara/calendar.html">Calendar</a></li>
+              <li><a href="/water_tracking.html">Consumption</a></li>
+              <li><a href="/yeara/emoji.html">Mood</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End header part  -->
+
+    
     <div class="background-animation"></div>
+    
     <div class="content">
-      <h3 class="water_title">Today's Water Intake</h3>
+      
+      <h3 class="water_title mt-3">Today's Water Intake</h3>
+      
       <h1 id="water_figure">0.00L</h1>
+      
       <div class="cup-container" id="container_cup">
         <div class="water" id="water"></div>
         <i class="fas fa-heart heart" id="water_heart_emoji"></i>
         <i class="fas fa-skull skull" id="water_skull_emoji"></i>
       </div>
+      
       <form id="waterIntakeForm">
         <label for="waterAmount">Water Intake (ml):</label>
-        <input
-          type="number"
-          id="waterAmount"
-          name="waterAmount"
-          class="water_input"
-          placeholder="Water Intake (ml):"
-          required
-        />
+        <input type="number" id="waterAmount" name="waterAmount" class="water_input" placeholder="Water Intake (ml):"
+          required />
         <button type="submit">Record</button>
       </form>
 
@@ -39,7 +120,15 @@
         <p id="evaluationResult"></p>
         <p id="additionalWater"></p>
       </div>
+    
     </div>
-    <script src="water_tracking_function.js"></script>
-  </body>
+  
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+  <script src="water_tracking_function.js"></script>
+</body>
+
 </html>

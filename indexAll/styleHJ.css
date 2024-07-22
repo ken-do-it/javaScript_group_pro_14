@@ -1,18 +1,72 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.mb-4 {
+  text-align: center;
+  color: rgb(0, 134, 90);
+  /* margin: 8em; */
+}
+
+.carousel-item .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 25px 0px 5px 0px; */
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 50px;
+  padding-bottom: 10px;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgb(0, 134, 90);
+  border-radius: 10px;
+  width: 35%;
+  height: 20%;
+  filter: brightness(0.8);
+}
+
+@media (max-width: 900px) {
+  .mb-4 {
+    margin: 0.8em;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 22px;
+  }
+  .mb-4 {
+    margin: 0.5em;
+  }
+}
+
 /* styleHJ.css */
-.box {
+/* .box {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid black;
   border-radius: 10px;
-  padding: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
-  font-weight: 600;
-  text-transform: capitalize;
-}
+  padding: 1em; 
 
-.recipe-container {
+  .recipe-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 1em;
@@ -24,4 +78,4 @@
   .recipe-container {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   }
-}
+ */

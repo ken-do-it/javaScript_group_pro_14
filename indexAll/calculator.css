@@ -1,19 +1,322 @@
-.calculator-container-CW {
-    border-radius: 2px; 
-    height: 30rem;
-    margin-bottom: 2rem;
-    
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.body-img {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    position: sticky; /* 추가된 부분 */
+    top: 20px; /* 고정된 위치 */
 }
 
 
-.calculator-container-CW input[type="number"] {
+
+
+
+.body-img img {
+    max-width: 100%;
+    height: 501px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*this stops the images when page is loaded*/
+#female-image,
+#male-image {
+    display: none;
+}
+
+#default-image {
+    display: block;
+}
+
+
+
+
+/* Existing styles */
+.calculator-container-CW {
+    text-align: center;
     
+    
+    background-color: none; /*background none from white*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin-top: 20px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+/* Container one */
+.body-img {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    position: sticky;
+    top: 20px;
+    order: 1; /* Ensure body-img is always displayed first */
+}
+
+
+
+
+/* .body-img img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+} */
+
+/* 이미지 위치고정  */
+.body-img img {
+    max-width: 100%;
+    height: 501px;  /* 이미지 위치고정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+/*this stops the images when page is loaded*/
+#female-image,
+#male-image {
+    display: none;
+}
+
+#default-image {
+    display: block;
+}
+
+
+
+
+/* Container two */
+.form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: center;
+    height: 100%;
+    margin-top: 25px;
+    order: 2; /* Ensure form-container is displayed second */
+}
+
+
+.input-radio {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    padding-bottom: 5px;
+}
+
+.input-radio label {
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+.input-radio input[type="radio"] {
+    margin: 10px;
+}
+
+/*Details section*/
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-evenly;
+    /* Adjust the gap between form groups */
+}
+
+.details .form-group {
+
+    /* Adjust the width of each form group */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.details label {
+    flex: 0 0 40%;
+    /* Adjust the width of the label */
+    position: relative;
+    /* Adjust space between label and input */
+    text-align: right;
+    /* Align labels to the right */
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.details input.question {
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    /*need to make it none after fixing the issue*/
+    width: 60%;
+    background: rgba(0, 0, 0, 0);
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden;
+    /* Hack to make "rows" attribute apply in Firefox. */
+}
+
+.details input.question::placeholder {
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    color: grey;
+    /* Other placeholder styles */
+}
+
+
+
+/* Container three */
+.result-analysis {
+    flex: 1;
+    margin-left: auto;
+    max-width: 558px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 3; /* Ensure result-analysis is displayed last */
+}
+
+/* Additional style for centering */
+.result-analysis-area {
+    width: 100%;
+    text-align: center;
+}
+
+.result-container {
+    margin:10px;
+}
+
+
+
+
+/*this fills te background color to the inputs
+  .calculator-container-CW input[type="number"] {
     border-radius: 5px;
     background-color: #ffc107;
+  }
+  */
+
+/*YR CSS*/
+.details input:focus {
+    outline: 0;
+}
+
+.details input.question + label {
+    display: block;
+    
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    border-top: 4px solid #FFD35A;;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+    margin-bottom: 2rem;
+}
+
+input.question:focus+label {
+    width: 60%;
+}
+
+input.question:focus,
+input.question:valid {
+    padding-top: 35px;
+}
+
+input.question:focus+label>span,
+input.question:valid+label>span {
+    top: 4px;
+    font-size: 20px;
+    color: #333;
+}
+
+input.question:valid+label {
+    border-color: #FFD35A;
+}
+
+input.question:invalid {
+    box-shadow: none;
+}
+
+input.question+label>span {
+    font-weight: 400;
+    margin: 0;
+    position: absolute;
+    color: #8F8F8F;
+    font-size: 20px;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+@-webkit-keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+#bmr-calculate-button {
+    margin-top: 3rem;
+}
+
+#reset-button {
+    margin-top: 1rem;
+}
+
+.calculator-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 20px;
+    
+    /* Adjust the gap between button groups */
+    /* justify-content: center; */
+    /* Align items to the start */
 }
 
 .calculator-buttons button {
-  
     border: none;
     border-radius: 5px;
     background-color: #ffc107;
@@ -21,271 +324,262 @@
     font-family: "Ubuntu", sans-serif;
     font-style: italic;
     font-weight: 800;
-
+    width: 190px;
+    /* Limit the maximum width of each button */
 }
 
-
-.input-area {
-    padding: 2rem;
-}
-
-.calculator-buttons {
-
+.calculator-buttons .button-group {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    
-
+    gap: 10px;
+    /* Adjust the gap between buttons */
 }
-
-.form-row {
-    display: flex;
-    
-    margin-bottom: 15px;
-    margin-top: 3rem;
-}
-
-.form-row label {
-    
-    /* Adjust the width as needed */
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    
-    margin-right: 10px;
-}
-
-.form-radio {
-
-  /* Adjust the width as needed */
-    font-family: "Ubuntu", sans-serif;
-    font-style: italic;
-    font-weight: 530;
-    display: flex;
-    
-   
-}
-
-.form-container input[type="radio"] {
-    margin: 7px;
- 
-}
-
-.form-row input{
-    width: 5rem;
-}
-
-.body-info{
-    display: flex;
-}
-
-.recipeYR{
-    margin-top: 10rem;
-}
-
-body{
-    font-family:"Ubuntu", sans-serif; ;
-}
-
-/* input start */
-
-.form-radio .form-row {
-    font-family: 'Lora', sans-serif;
-    
-  }
-  
-  /* body {
-    margin: 5% auto 0 auto;
-    width: 90%;
-    max-width: 1125px;
-  }
-   */
-  /* input,
-  span,
-  label,
-  textarea {
-    font-family: 'Ubuntu', sans-serif;
-    display: block;
-    margin: 10px;
-    padding: 5px;
-    border: none;
-    font-size: 22px;
-  } */
-  
-  textarea:focus,
-  input:focus {
-    outline: 0;
-  }
-  /* Question */
-  
-  input.question,
-  textarea.question {
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 2px;
-    margin: 0;
-    border: none;
-    width: 60%;
-    background: rgba(0, 0, 0, 0);
-    transition: padding-top 0.2s ease, margin-top 0.2s ease;
-    overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
-  }
-  /* Underline and Placeholder */
-  
-  input.question + label,
-  textarea.question + label {
-    display: block;
-    position: relative;
-    white-space: nowrap;
-    padding: 0;
-    margin: 0;
-    width: 10%;
-    border-top: 4px solid #FFD35A;
-    -webkit-transition: width 0.4s ease;
-    transition: width 0.4s ease;
-    height: 0px;
-    margin-bottom: 2rem;
-    
-  }
-  
-  input.question:focus + label,
-  textarea.question:focus + label {
-    width: 80%;
-  }
-  
-  input.question:focus,
-  input.question:valid {
-    padding-top: 35px;
-  }
-  
-  textarea.question:valid,
-  textarea.question:focus {
-    margin-top: 35px;
-    
-  }
-  
-  input.question:focus + label > span,
-  input.question:valid + label > span {
-    top: -60px;
-    font-size: 20px;
-    color: #333;
-  }
-  
-  textarea.question:focus + label > span,
-  textarea.question:valid + label > span {
-    top: -150px;
-    font-size: 10px;
-    color: #333;
-  }
-  
-  input.question:valid + label,
-  textarea.question:valid + label {
-    border-color: #FFD35A;
-  }
-  
-  input.question:invalid,
-  textarea.question:invalid {
-    box-shadow: none;
-  }
-  
-  input.question + label > span,
-  textarea.question + label > span {
-    font-weight: 400;
-    margin: 0;
-    position: absolute;
-    color: #8F8F8F;
-    font-size: 20px;
-    top: -30px;
-    left: 0px;
-    z-index: -1;
-    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
-    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
-  }
-  
-  input[type="submit"] {
-    -webkit-transition: opacity 0.2s ease, background 0.2s ease;
-    transition: opacity 0.2s ease, background 0.2s ease;
-    display: block;
-    opacity: 0;
-  
-    
-    cursor: pointer;
-  }
-
-  .question{
-    margin-bottom: 2rem;
-  }
-
-  .body-photo{
-    margin-left: 5rem;
-    margin-right: 7rem;
-}
-
-
-.flex-form-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-   
-}
-
-.input-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.body-info {
-    display: flex;
-    flex-wrap: wrap;
-   
-}
-
 
 .body-chart {
     display: flex;
     flex-direction: column;
-  
 }
 
+/*accordian css*/
 
-.calculator-buttons {
-    display: flex;
-    flex-direction: column;
-    
+.accordion-button {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
 }
-  
-  
-  
-  @-webkit-keyframes appear {
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes appear {
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @media (max-width:768px){
 
-    .body-photo{
-        margin: 0px;
-        margin-right: 15px;
+.accordion-content {
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.accordion-content.show {
+    display: block;
+}
+
+.result-section {
+    background-color: #f8f9fa;
+    /*border: 2px solid #ffc107;*/
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.result-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.result-details {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #555;
+}
+
+.result-details p {
+    margin: 5px 0;
+}
+
+.result-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.result-value span {
+    color: #ff6347;
+    /* You can change the color as needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.footnote {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.footnote p {
+    margin: 5px 0;
+}
+
+.bmi-table {
+    margin-top: 20px;
+}
+
+.bmi-table table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.bmi-table th,
+.bmi-table td {
+    text-align: center;
+}
+
+.table-danger {
+    background-color: #f8d7da;
+}
+
+.table-warning {
+    background-color: #fff3cd;
+}
+
+.table-success {
+    background-color: #d4edda;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .calculator-container-CW {
         flex-direction: column;
-    }
-    
-
-    .body-photo {
-        margin-bottom: 20px;
+        align-items: center;
     }
 
-    .bmrYR {
-        order: 1;
-        margin-top: 20px;
-        margin-left: 0;
+    .input-group {
+        width: 80%;
+    }
+
+    input.question {
+        font-size: 18px;
+    }
+
+    input.question + label {
+        border-top-width: 3px;
+    }
+
+    input.question:focus,
+    input.question:valid {
+        padding-top: 30px;
+    }
+
+    input.question:focus + label > span,
+    input.question:valid + label > span {
+        top: 4px;
+        font-size: 14px;
+    }
+
+    .result-analysis {
+        max-width: 100%;
+        margin-left: 10px;
         text-align: center;
     }
-  }
+
+
+    .body-img {
+        display: flex; /* Ensure body-img is always displayed */
+    }
+
+    .body-img img {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .calculator-container-CW {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-group {
+        width: 90%;
+    }
+
+    input.question {
+        font-size: 16px;
+    }
+
+    input.question + label {
+        border-top-width: 2px;
+    }
+
+    input.question:focus,
+    input.question:valid {
+        padding-top: 25px;
+    }
+
+    input.question:focus + label > span,
+    input.question:valid + label > span {
+        top: 4px;
+        font-size: 12px;
+    }
+
+    .body-img img {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .body-img {
+        display: flex; /* Ensure body-img is always displayed */
+        order: 1; /* Ensure body-img is displayed first */
+    }
+
+    .form-container {
+        order: 2; /* Ensure form-container is displayed second */
+    }
+
+    .calculator-buttons {
+        order: 3;
+    }
+
+    .accordion-content {
+        order: 4;
+    }
+
+    .result-analysis {
+        order: 5; /* Ensure result-analysis is displayed last */
+        max-width: 100%;
+        margin-left: 10px;
+    }
+}
+
+/* img margin yeara */
+
+#default-image{
+ position: relative;
+
+}
+
+#female-image{
+ position:relative;
+ left: 32px;
+}

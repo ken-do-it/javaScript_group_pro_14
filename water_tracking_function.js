@@ -223,3 +223,20 @@ function animateWaterFigure(targetValue) {
     }
   }, 20);
 }
+
+// side menu hamburger
+function openMenu() {
+  document.getElementById("slideMenu").style.width = "250px";
+  document.getElementById("menuIcon").style.display = "none"; // 아이콘 숨기기
+}
+
+function closeMenu() {
+  document.getElementById("slideMenu").style.width = "0";
+  document.getElementById("menuIcon").style.display = "block"; // 아이콘 보이기
+}
+
+document.querySelectorAll('.slide-menu a').forEach(item => {
+  item.addEventListener('click', event => {
+      closeMenu();
+  });
+});
