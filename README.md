@@ -1,6 +1,6 @@
 # 健康管理Webアプリケーション（グループ開発）
 
-▶️ [デモサイトはこちら]([https://todolistbyshk.netlify.app/](https://noona-diet-main.netlify.app/])
+▶️ [デモサイトはこちら]https://todolistbyshk.netlify.app/](https://noona-diet-main.netlify.app/
 
 ## プロジェクト概要
 
