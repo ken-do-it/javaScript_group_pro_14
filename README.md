@@ -26,7 +26,6 @@
 
 ## 工夫した点・学んだこと
 
-- Google Charts APIを活用した動的なグラフ描画
 - JavaScriptによるDOM操作とバリデーション処理
 - チーム開発におけるGitブランチ戦略の活用（branch/shを作成し開発）
 
